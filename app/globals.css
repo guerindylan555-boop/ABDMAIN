@@ -6,4 +6,34 @@
 
 :root {
   color-scheme: light dark;
+  /* Design tokens */
+  --surface: #ffffff;
+  --card: #ffffff;
+  --text: #0b1220;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --ring: #5b8cff33;
+  --brand: #5b8cff;
+  --brand-600: #3f6fe8;
+  --gradient-from: #5b8cff;
+  --gradient-to: #935bff;
 }
+
+/* Apply dark tokens when <html class="dark"> */
+.dark:root,
+html.dark {
+  --surface: #0b1220;
+  --card: #0f172a;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --border: #1f2937;
+  --ring: #5b8cff66;
+  --brand: #5b8cff;
+  --brand-600: #7aa3ff;
+  --gradient-from: #5b8cff;
+  --gradient-to: #8f5bff;
+}
+
+/* Subtle utility when needed */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

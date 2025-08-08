@@ -9,6 +9,7 @@ import CTA from "./components/sections/CTA";
 import { SliceZone } from "@prismicio/react";
 import { components } from "./slices/components";
 import { createClient } from "../prismicio";
+import ScrollProgress from "./components/ScrollProgress";
 
 export default async function HomePage() {
   const client = createClient();
@@ -16,12 +17,14 @@ export default async function HomePage() {
     const page = await client.getSingle("homepage");
     return (
       <main>
+        <ScrollProgress />
         <SliceZone slices={page.data.slices} components={components} />
       </main>
     );
   } catch {
     return (
       <main>
+        <ScrollProgress />
         <Hero />
         <Logos />
         <Services />

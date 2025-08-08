@@ -44,14 +44,14 @@ export default function Services() {
           {services.map((s) => (
             <article
               key={s.title}
-              className="rounded-xl border border-neutral-200 p-6 bg-white shadow-[0_1px_0_0_rgba(0,0,0,0.02)]"
+              className="rounded-xl border border-neutral-200 dark:border-neutral-800 p-6 bg-white dark:bg-[--card] shadow-[0_1px_0_0_rgba(0,0,0,0.02)] transition-transform hover:scale-[1.01]"
             >
               <h3 className="font-semibold text-lg">{s.title}</h3>
-              <p className="mt-2 text-sm text-neutral-600">{s.description}</p>
+              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">{s.description}</p>
               <ul className="mt-4 space-y-2 text-sm text-neutral-700">
                 {s.features.map((f) => (
                   <li key={f} className="flex items-center gap-2">
-                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-[--color-brand]" />
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />
                     {f}
                   </li>
                 ))}

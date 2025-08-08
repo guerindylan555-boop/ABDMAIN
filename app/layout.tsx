@@ -5,6 +5,7 @@ import SmoothScroll from "./smooth-scroll";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SeoJsonLd from "./components/SeoJsonLd";
+import NoFlashScript from "./components/NoFlashScript";
 
 export const metadata: Metadata = {
   title: {
@@ -30,8 +31,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="fr">
-      <body className="antialiased bg-white text-neutral-900">
+    <html lang="fr" suppressHydrationWarning>
+      <body className="antialiased bg-[--surface] text-[--text]">
+        <NoFlashScript />
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded focus:bg-neutral-900 focus:text-white focus:px-3 focus:py-2">Aller au contenu</a>
         <SmoothScroll />
         <SeoJsonLd />
