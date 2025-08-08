@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "prismic": {
+      "command": "npx",
+      "args": ["-y", "@prismicio/mcp-server@latest"],
+      "env": {
+        "PRISMIC_REPOSITORY": "ab-digital"
+      }
+    }
+  }
+}
+
+

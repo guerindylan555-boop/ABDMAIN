@@ -1,0 +1,8 @@
+{
+  "repositoryName": "ab-digital",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./slices"],
+  "apiEndpoint": "https://ab-digital.cdn.prismic.io/api/v2"
+}
+
+

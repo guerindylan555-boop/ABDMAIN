@@ -1,0 +1,12 @@
+{
+  "apiEndpoint": "https://ab-digital.cdn.prismic.io/api/v2",
+  "localSliceSimulatorURL": "http://localhost:9999/slice-simulator",
+  "libraries": ["./slices"],
+  "env": {
+    "development": {
+      "apiEndpoint": "https://ab-digital.cdn.prismic.io/api/v2"
+    }
+  }
+}
+
+
