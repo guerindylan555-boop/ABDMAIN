@@ -25,9 +25,7 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <div className="pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(60%_60%_at_50%_30%,#000_40%,transparent_80%)]">
-        <div className="absolute -top-20 left-1/2 h-72 w-[56rem] -translate-x-1/2 rounded-full bg-[conic-gradient(from_90deg,theme(colors.blue.400),theme(colors.violet.500))] opacity-20 blur-[72px]" />
-      </div>
+      <div className="pointer-events-none absolute inset-0 -z-10" />
     </section>
   );
 }

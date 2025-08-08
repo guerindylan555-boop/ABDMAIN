@@ -24,9 +24,9 @@ export default function Testimonials() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {testimonials.map((t) => (
-            <blockquote key={t.name} className="rounded-xl border border-neutral-200 p-6 bg-white">
-              <p className="text-neutral-800">“{t.text}”</p>
-              <footer className="mt-4 text-sm text-neutral-600">{t.name}</footer>
+            <blockquote key={t.name} className="rounded-xl p-6 glass">
+              <p className="text-neutral-900 dark:text-neutral-100">“{t.text}”</p>
+              <footer className="mt-4 text-sm text-neutral-700 dark:text-neutral-300">{t.name}</footer>
             </blockquote>
           ))}
         </div>

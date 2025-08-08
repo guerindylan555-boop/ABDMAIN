@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Ensure dark: variant is class-based for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-brand: #5b8cff;
 }
@@ -7,6 +10,8 @@
 :root {
   color-scheme: light dark;
   /* Design tokens */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "BlinkMacSystemFont", "Inter", "Segoe UI", "Roboto", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
   --surface: #ffffff;
   --card: #ffffff;
   --text: #0b1220;
@@ -22,6 +27,8 @@
 /* Apply dark tokens when <html class="dark"> */
 .dark:root,
 html.dark {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "BlinkMacSystemFont", "Inter", "Segoe UI", "Roboto", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
   --surface: #0b1220;
   --card: #0f172a;
   --text: #e5e7eb;
@@ -37,3 +44,100 @@ html.dark {
 /* Subtle utility when needed */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Glassmorphism utility */
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.35));
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06), inset 0 1px rgba(255,255,255,0.4);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  backdrop-filter: blur(12px) saturate(160%);
+}
+
+.dark .glass {
+  background: linear-gradient(180deg, rgba(11,18,32,0.55), rgba(11,18,32,0.25));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.3), inset 0 1px rgba(255,255,255,0.06);
+}
+
+.site-bg-fixed {
+  background-attachment: fixed !important;
+}
+
+/* Full-page gradient: orange → pink core fading to background (light: white, dark: black) */
+.site-bg {
+  /* Light theme: replicate Lovable-style sunset ellipse with blue halo */
+  background:
+    /* farthest-corner pour atteindre les bords, ajoute une bande rouge avant le rose */
+    radial-gradient(ellipse farthest-corner at 50% 124%,
+      #f27601 0%,            /* orange */
+      #f27601 38%,
+      #ff5a2a 41%,           /* orange-rouge lissant */
+      #ff3d3d 44%,           /* rouge bref */
+      rgba(241,107,123,1) 48%, /* rose réduit */
+      #e187b5 51%,           /* rose réduit */
+      #6b85c8 60%,           /* bleu clair */
+      #5775b6 68%,           /* bleu */
+      #3b4a7f 76%,           /* bleu foncé / indigo */
+      #27314d 84%,           /* navy profond */
+      #1f242e 92%,           /* quasi-noir pour lisser */
+      #1a1b1e 100%
+    ),
+    radial-gradient(70% 55% at 50% -6%, rgba(87,117,182,0.25) 0%, rgba(26,27,30,0.00) 74%),
+    #1a1b1e;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.dark .site-bg {
+  /* Dark theme: identical structure, tuned stops and base to deep navy */
+  background:
+    radial-gradient(ellipse farthest-corner at 50% 124%,
+      #f27601 0%,
+      #f27601 38%,
+      #ff5a2a 41%,
+      #ff3d3d 44%,
+      rgba(241,107,123,1) 48%,
+      #e187b5 51%,
+      #6b85c8 60%,
+      #5775b6 68%,
+      #3b4a7f 76%,
+      #27314d 84%,
+      #1f242e 92%,
+      #1a1b1e 100%
+    ),
+    radial-gradient(70% 55% at 50% -6%, rgba(87,117,182,0.22) 0%, rgba(0,0,0,0.00) 74%),
+    #1a1b1e;
+  background-attachment: fixed;
+}
+
+/* Subtle grain overlay */
+.site-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  /* Grain photographique fin x2 (double couches + tailles réduites) */
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><filter id='g1'><feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23g1)'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><filter id='g2'><feTurbulence type='fractalNoise' baseFrequency='0.4' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23g2)'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><filter id='g3'><feTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23g3)'/></svg>");
+  background-size: 90px 90px, 260px 260px, 520px 520px; /* encore plus petits */
+  opacity: 0.24; /* double le grain perçu mais reste photo-like */
+  mix-blend-mode: overlay;
+}
+
+.dark .site-bg::before {
+  opacity: 0.15;
+}
+
+/* Typography utilities */
+:root,
+html,
+body {
+  font-family: var(--font-sans);
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+}

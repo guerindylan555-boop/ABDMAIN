@@ -30,10 +30,10 @@ export default function Pricing() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {plans.map((p) => (
-            <div key={p.name} className="rounded-xl border border-neutral-200 p-6 bg-white">
+            <div key={p.name} className="rounded-xl p-6 glass">
               <h3 className="font-semibold text-lg">{p.name}</h3>
               <div className="mt-2 text-3xl font-extrabold">{p.price}</div>
-              <p className="mt-2 text-sm text-neutral-600">{p.description}</p>
+              <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">{p.description}</p>
               <ul className="mt-4 space-y-2 text-sm">
                 {p.items.map((i) => (
                   <li key={i} className="flex items-center gap-2">

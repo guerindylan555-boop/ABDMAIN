@@ -22,6 +22,8 @@ export default function ThemeToggle() {
     if (isDark === null) return;
     const root = document.documentElement;
     root.classList.toggle("dark", isDark);
+    // Optional: update color-scheme meta for better UA styles
+    root.style.colorScheme = isDark ? "dark" : "light";
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }, [isDark]);
 

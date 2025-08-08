@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SeoJsonLd from "./components/SeoJsonLd";
 import NoFlashScript from "./components/NoFlashScript";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 export const metadata: Metadata = {
   title: {
@@ -31,8 +33,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
-      <body className="antialiased bg-[--surface] text-[--text]">
+    <html
+      lang="fr"
+      className={`${GeistSans.variable} ${GeistMono.variable} site-bg-fixed`}
+      suppressHydrationWarning
+    >
+      <body className="font-sans antialiased site-bg text-[--text]">
         <NoFlashScript />
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded focus:bg-neutral-900 focus:text-white focus:px-3 focus:py-2">Aller au contenu</a>
         <SmoothScroll />

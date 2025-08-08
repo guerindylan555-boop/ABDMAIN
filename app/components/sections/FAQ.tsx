@@ -23,7 +23,7 @@ export default function FAQ() {
           <p className="mt-3 text-neutral-600">Transparence et simplicité.</p>
         </div>
 
-        <div className="mt-10 divide-y divide-neutral-200 rounded-xl border border-neutral-200 bg-white">
+        <div className="mt-10 divide-y divide-neutral-200/60 dark:divide-neutral-800 rounded-xl glass">
           {faqs.map((item) => (
             <FAQItem key={item.q} q={item.q} a={item.a} />)
           )}
@@ -44,7 +44,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         <span className="font-medium">{q}</span>
         <span className="text-neutral-400">{open ? "−" : "+"}</span>
       </button>
-      {open && <p className="px-6 pb-4 text-sm text-neutral-600">{a}</p>}
+      {open && <p className="px-6 pb-4 text-sm text-neutral-700 dark:text-neutral-300">{a}</p>}
     </div>
   );
 }
