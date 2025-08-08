@@ -21,12 +21,21 @@ export async function submitLead(formData: FormData) {
     return { ok: true } as const;
   }
 
-  await fetch(process.env.LEAD_WEBHOOK_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(parsed.data),
-    cache: "no-store",
-  });
+  try {
+    const response = await fetch(process.env.LEAD_WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(parsed.data),
+      cache: "no-store",
+    });
+    if (!response.ok) {
+      console.error("Lead webhook failed", response.status, await response.text());
+      return { ok: false } as const;
+    }
+  } catch (error) {
+    console.error("Lead webhook error", error);
+    return { ok: false } as const;
+  }
 
   return { ok: true } as const;
 }

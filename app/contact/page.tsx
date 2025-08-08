@@ -16,14 +16,35 @@ export default function ContactPage() {
         }}
         className="mt-6 space-y-4"
       >
-        <input className="w-full border p-3 rounded" name="name" placeholder="Nom" />
-        <input className="w-full border p-3 rounded" name="email" placeholder="Email" />
-        <input className="w-full border p-3 rounded" name="phone" placeholder="Téléphone" />
+        <input
+          className="w-full border p-3 rounded"
+          type="text"
+          name="name"
+          placeholder="Nom"
+          required
+          autoComplete="name"
+        />
+        <input
+          className="w-full border p-3 rounded"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          autoComplete="email"
+        />
+        <input
+          className="w-full border p-3 rounded"
+          type="tel"
+          name="phone"
+          placeholder="Téléphone"
+          autoComplete="tel"
+        />
         <textarea
           className="w-full border p-3 rounded"
           name="message"
           rows={5}
           placeholder="Décrivez vos besoins..."
+          required
         />
         <button className="rounded bg-neutral-900 text-white px-5 py-3">Envoyer</button>
       </form>

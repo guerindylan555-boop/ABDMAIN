@@ -25,7 +25,7 @@ export default function HomePage() {
         </motion.p>
 
         <motion.a
-          href="#contact"
+          href="/contact#contact"
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.98 }}
           className="inline-block mt-8 rounded-lg bg-neutral-900 text-white px-6 py-3 font-medium"

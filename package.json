@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@prismicio/mcp-server": "^0.0.18",
     "@slicemachine/adapter-next": "^0.3.82",
     "@types/node": "^20.19.9",
     "@types/react": "^19",
