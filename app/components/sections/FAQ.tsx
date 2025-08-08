@@ -1,0 +1,52 @@
+"use client";
+
+import { useState } from "react";
+
+const faqs = [
+  {
+    q: "Y a-t-il un engagement ?",
+    a: "Non. Les accompagnements sont mensuels, résiliables à tout moment.",
+  },
+  {
+    q: "Combien de temps pour voir des résultats ?",
+    a: "Généralement sous 4 à 8 semaines sur le trafic et les conversions.",
+  },
+  { q: "Travaillez-vous avec mon secteur ?", a: "Oui, TPE/PME, services, local et e-commerce." },
+];
+
+export default function FAQ() {
+  return (
+    <section id="faq" className="py-24 scroll-mt-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Questions fréquentes</h2>
+          <p className="mt-3 text-neutral-600">Transparence et simplicité.</p>
+        </div>
+
+        <div className="mt-10 divide-y divide-neutral-200 rounded-xl border border-neutral-200 bg-white">
+          {faqs.map((item) => (
+            <FAQItem key={item.q} q={item.q} a={item.a} />)
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FAQItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <button
+        className="w-full text-left px-6 py-4 flex items-center justify-between"
+        onClick={() => setOpen((v) => !v)}
+      >
+        <span className="font-medium">{q}</span>
+        <span className="text-neutral-400">{open ? "−" : "+"}</span>
+      </button>
+      {open && <p className="px-6 pb-4 text-sm text-neutral-600">{a}</p>}
+    </div>
+  );
+}
+
+
