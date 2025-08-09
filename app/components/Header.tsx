@@ -48,7 +48,7 @@ export default function Header() {
   }, [links, isHome]);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-neutral-950/70 border-b border-neutral-800">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="h-16 flex items-center justify-between gap-4">
           <Link href="/" className="font-extrabold tracking-tight text-lg text-neutral-900 dark:text-white">
