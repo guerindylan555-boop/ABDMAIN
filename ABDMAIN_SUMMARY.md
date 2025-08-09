@@ -155,3 +155,4 @@ Inclut Croissance +
 ---
 
 Ce résumé a été compilé à partir du contenu public du site et de la structure du code de l’application. Pour une version auditée automatiquement, lancer un crawl via Firecrawl et agréger les contenus des pages découvertes.
+
