@@ -11,8 +11,8 @@ export default function CTA() {
               </p>
             </div>
             <a
-              href="/contact#contact"
-              className="mt-6 md:mt-0 inline-flex justify-center rounded-lg bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-6 py-3 font-medium"
+              href="/reservation-appel"
+              className="mt-6 md:mt-0 inline-flex justify-center rounded-lg border border-white/20 bg-white/20 text-white px-6 py-3 font-medium backdrop-blur hover:bg-white/30"
             >
               Réserver un créneau
             </a>
