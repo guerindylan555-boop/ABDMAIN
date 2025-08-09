@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionPage from "@/app/components/marketing/SectionPage";
 
 export const metadata: Metadata = {
   title: "Services — AB Digital",
@@ -16,14 +17,17 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
-      <h1 className="text-4xl font-bold tracking-tight">Nos services</h1>
-      <p className="text-neutral-700 dark:text-neutral-300">
-        Nous concevons des sites web rapides, optimisons votre visibilité avec le SEO (dont Google Business) et automatisons vos relances
-        appels/SMS pour convertir plus vite. Chaque mois, nous priorisons les actions à plus fort impact.
-      </p>
-
-      <section className="space-y-3">
+    <SectionPage
+      title="Nos services"
+      description="Sites performants, SEO local, automatisations IA. Focus ROI et accompagnement mensuel."
+      tag="Services"
+      toc={[
+        { id: "web", label: "Création de site web" },
+        { id: "seo", label: "SEO & Google Business" },
+        { id: "auto", label: "Automatisations appels & SMS" },
+      ]}
+    >
+      <section id="web" className="space-y-3">
         <h2 className="text-2xl font-semibold">Création de site web</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>Design responsive & UX</li>
@@ -33,7 +37,7 @@ export default function ServicesPage() {
         </ul>
       </section>
 
-      <section className="space-y-3">
+      <section id="seo" className="space-y-3 mt-8">
         <h2 className="text-2xl font-semibold">SEO & Google Business</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>Audit technique & sémantique</li>
@@ -43,7 +47,7 @@ export default function ServicesPage() {
         </ul>
       </section>
 
-      <section className="space-y-3">
+      <section id="auto" className="space-y-3 mt-8">
         <h2 className="text-2xl font-semibold">Automatisations appels & SMS</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>Rappels, séquences et relances</li>
@@ -52,7 +56,7 @@ export default function ServicesPage() {
           <li>A/B testing et mesure des conversions</li>
         </ul>
       </section>
-    </main>
+    </SectionPage>
   );
 }
 

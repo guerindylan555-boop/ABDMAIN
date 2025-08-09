@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionPage from "@/app/components/marketing/SectionPage";
 
 export const metadata: Metadata = {
   title: "Automatisations appels & SMS — AB Digital",
@@ -16,13 +17,13 @@ export const metadata: Metadata = {
 
 export default function AutomationsPage() {
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
-      <h1 className="text-4xl font-bold tracking-tight">Automatisations appels & SMS</h1>
-      <p className="text-neutral-700 dark:text-neutral-300">
-        Nous mettons en place des séquences efficaces pour relancer vos prospects, diminuer le no‑show et récupérer des paniers.
-      </p>
-
-      <section className="space-y-3">
+    <SectionPage
+      title="Automatisations appels & SMS"
+      description="Relances efficaces, intégrées à votre CRM, pour convertir plus vite."
+      tag="Automations"
+      toc={[{ id: "capacites", label: "Capacités" }]}
+    >
+      <section id="capacites" className="space-y-3">
         <h2 className="text-2xl font-semibold">Capacités</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>Rappels & relances (appels/SMS)</li>
@@ -31,7 +32,7 @@ export default function AutomationsPage() {
           <li>A/B testing et suivi des conversions</li>
         </ul>
       </section>
-    </main>
+    </SectionPage>
   );
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionPage from "@/app/components/marketing/SectionPage";
 
 export const metadata: Metadata = {
   title: "SEO local & Google Business — AB Digital",
@@ -16,13 +17,13 @@ export const metadata: Metadata = {
 
 export default function SeoLocalPage() {
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
-      <h1 className="text-4xl font-bold tracking-tight">SEO local & Google Business</h1>
-      <p className="text-neutral-700 dark:text-neutral-300">
-        Nous optimisons votre présence sur Google (site + fiche) pour remonter sur les requêtes locales et générer plus d’appels et de demandes.
-      </p>
-
-      <section className="space-y-3">
+    <SectionPage
+      title="SEO local & Google Business"
+      description="Remontez sur les requêtes locales et captez la demande qualifiée."
+      tag="SEO"
+      toc={[{ id: "actions", label: "Ce que nous faisons" }]}
+    >
+      <section id="actions" className="space-y-3">
         <h2 className="text-2xl font-semibold">Ce que nous faisons</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>Audit technique & sémantique</li>
@@ -31,7 +32,7 @@ export default function SeoLocalPage() {
           <li>Reporting mensuel et plan d’actions</li>
         </ul>
       </section>
-    </main>
+    </SectionPage>
   );
 }
 

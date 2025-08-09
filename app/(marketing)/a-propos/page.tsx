@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionPage from "@/app/components/marketing/SectionPage";
 
 export const metadata: Metadata = {
   title: "À propos — AB Digital",
@@ -16,13 +17,12 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
-      <h1 className="text-4xl font-bold tracking-tight">À propos</h1>
-      <p className="text-neutral-700 dark:text-neutral-300">
+    <SectionPage title="À propos" description="Agence orientée résultats: sites performants, SEO local et automatisations IA." tag="AB Digital">
+      <p className="text-neutral-300">
         Nous aidons TPE/PME et indépendants à générer plus d’appels, de devis et de ventes via des sites performants, un SEO rigoureux et
         des automatisations IA pragmatiques. Sans engagement, avec un cycle d’itérations mensuel.
       </p>
-    </main>
+    </SectionPage>
   );
 }
 
