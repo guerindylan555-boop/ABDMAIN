@@ -17,7 +17,7 @@ export default function Testimonials() {
   return (
     <section className="py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="rounded-2xl glass p-8 md:p-10">
+        <div className="rounded-2xl glass-panel p-8 md:p-10" data-float data-float-amplitude="8" data-float-depth="0.85" data-snap>
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Témoignages</h2>
             <p className="mt-3 text-neutral-700 dark:text-neutral-300">Des résultats concrets, rapidement.</p>
@@ -25,7 +25,7 @@ export default function Testimonials() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {testimonials.map((t) => (
-              <blockquote key={t.name} className="rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30">
+              <blockquote key={t.name} className="rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 pressable">
                 <p className="text-neutral-900 dark:text-neutral-100">“{t.text}”</p>
                 <footer className="mt-4 text-sm text-neutral-700 dark:text-neutral-300">{t.name}</footer>
               </blockquote>

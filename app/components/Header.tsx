@@ -13,7 +13,7 @@ export default function Header() {
       { href: "#services", label: "Services" },
       { href: "#clients", label: "Clients" },
       { href: "#process", label: "Méthode" },
-      { href: "#pricing", label: "Tarifs" },
+      { href: "#offres", label: "Offres" },
       { href: "#faq", label: "FAQ" },
       { href: "/blog", label: "Blog" },
     ],
@@ -52,11 +52,11 @@ export default function Header() {
     <header className="sticky top-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="h-16 flex items-center justify-between gap-4">
-          <Link href="/" className="font-extrabold tracking-tight text-lg text-neutral-900 dark:text-white">
+          <Link href="/" className="font-extrabold tracking-tight text-[18px] md:text-[20px] text-neutral-900 dark:text-white">
             AB Digital
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
+          <nav className="hidden md:flex items-center gap-6 text-[15px]" aria-label="Navigation principale">
             {links.map((item) => {
               const isAnchor = item.href.startsWith("#");
               const isActive = isHome && isAnchor && active === item.href;
@@ -100,7 +100,8 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <a
               href="/reservation-appel"
-              className="inline-flex items-center rounded-lg border border-white/15 bg-white/10 text-white px-4 py-2 text-sm font-medium backdrop-blur-md hover:bg-white/20 shadow-sm transition-colors"
+              className="inline-flex items-center rounded-lg border border-white/15 bg-white/10 text-white px-4 py-2 text-sm font-medium backdrop-blur-md hover:bg-white/20 shadow-sm transition-colors pressable"
+              data-magnetic
             >
               Audit gratuit
             </a>

@@ -34,13 +34,13 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-24 scroll-mt-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="rounded-2xl glass p-8 md:p-10">
+        <div className="rounded-2xl glass-panel p-8 md:p-10">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Questions fréquentes</h2>
             <p className="mt-3 text-neutral-700 dark:text-neutral-300">Transparence et simplicité.</p>
           </div>
 
-          <div className="mt-10 divide-y divide-neutral-200/60 dark:divide-neutral-800 rounded-xl bg-white/60 dark:bg-neutral-900/30">
+          <div className="mt-10 divide-y divide-neutral-200/60 dark:divide-neutral-800 rounded-xl bg-white/60 dark:bg-neutral-900/30 pressable">
             {faqs.map((item) => (
               <FAQItem key={item.q} q={item.q} a={item.a} />)
             )}

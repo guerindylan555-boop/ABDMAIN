@@ -60,6 +60,30 @@ html.dark {
   box-shadow: 0 14px 40px rgba(0,0,0,0.3), inset 0 1px rgba(255,255,255,0.06);
 }
 
+/* Glass hero special with glare sweep and glint following pointer */
+.glass-hero {
+  position: relative;
+  --sweep: -20%;
+}
+.glass-hero::before,
+.glass-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+/* Diagonal glare sweep */
+.glass-hero::before {
+  background: linear-gradient( 115deg,
+    transparent 0%,
+    rgba(255,255,255,0.00) calc(var(--sweep) - 10%),
+    rgba(255,255,255,0.35) var(--sweep),
+    rgba(255,255,255,0.00) calc(var(--sweep) + 12%),
+    transparent 100% );
+  mix-blend-mode: screen;
+}
+
+
 .site-bg-fixed {
   background-attachment: fixed !important;
 }
@@ -146,3 +170,79 @@ body {
 code, pre, kbd, samp {
   font-family: var(--font-mono);
 }
+
+/* Readability: base body -1px, consistent line-height */
+body {
+  font-size: 0.9375rem; /* 15px if root is 16px */
+  line-height: 1.7;
+}
+
+/* Tone utilities: text color with alpha via color-mix */
+.tone-100 { color: var(--text); }
+.tone-80  { color: color-mix(in srgb, var(--text) 80%, transparent); }
+.tone-60  { color: color-mix(in srgb, var(--text) 60%, transparent); }
+
+/* Glass hierarchy */
+.glass-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.28));
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.06), inset 0 1px rgba(255,255,255,0.35);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  backdrop-filter: blur(10px) saturate(160%);
+}
+.dark .glass-card {
+  background: linear-gradient(180deg, rgba(11,18,32,0.45), rgba(11,18,32,0.22));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 34px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.05);
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.70), rgba(255,255,255,0.40));
+  border: 1px solid rgba(17, 24, 39, 0.10);
+  box-shadow: 0 12px 34px rgba(0,0,0,0.08), inset 0 1px rgba(255,255,255,0.45);
+  -webkit-backdrop-filter: blur(14px) saturate(170%);
+  backdrop-filter: blur(14px) saturate(170%);
+}
+.dark .glass-panel {
+  background: linear-gradient(180deg, rgba(11,18,32,0.60), rgba(11,18,32,0.30));
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 16px 44px rgba(0,0,0,0.32), inset 0 1px rgba(255,255,255,0.07);
+}
+
+.glass-highlight {
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.55));
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.12), inset 0 1px rgba(255,255,255,0.55);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+}
+.dark .glass-highlight {
+  background: linear-gradient(180deg, rgba(11,18,32,0.72), rgba(11,18,32,0.40));
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.44), inset 0 1px rgba(255,255,255,0.09);
+}
+
+/* Unified accessible focus states */
+:where(a, button, input, select, textarea, summary, [role="button"]) {
+  transition: box-shadow .22s ease, transform .18s ease, background-color .18s ease, border-color .18s ease;
+}
+:where(a, button, input, select, textarea, summary, [role="button"]):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring), 0 10px 30px rgba(0,0,0,0.12);
+  transform: translateY(-1px);
+}
+
+.pressable {
+  transition: transform .18s ease, box-shadow .22s ease, background-color .18s ease;
+}
+.pressable:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+.pressable:active { transform: translateY(0); box-shadow: 0 6px 18px rgba(0,0,0,0.10); }
+
+/* Magnetic button hooks */
+[data-magnetic] {
+  position: relative;
+  will-change: transform;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+[data-magnetic].magnetic-active { box-shadow: 0 12px 36px rgba(91, 140, 255, 0.25); }
+

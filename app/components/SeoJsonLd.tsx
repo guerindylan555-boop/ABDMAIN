@@ -51,6 +51,20 @@ export default function SeoJsonLd() {
         provider: { "@type": "Organization", name: "AB Digital" },
         offers: { "@type": "Offer", priceCurrency: "EUR", price: "1290", priceSpecification: { "@type": "UnitPriceSpecification", unitText: "mois" } },
       },
+      {
+        "@type": "Service",
+        name: "Publicité payante (Google & Meta Ads)",
+        serviceType: "Paid Advertising",
+        provider: { "@type": "Organization", name: "AB Digital" },
+        offers: { "@type": "Offer", priceCurrency: "EUR", price: "990", priceSpecification: { "@type": "UnitPriceSpecification", unitText: "mois" } },
+      },
+      {
+        "@type": "Service",
+        name: "Offres IA et personnalisation",
+        serviceType: "Personalization",
+        provider: { "@type": "Organization", name: "AB Digital" },
+        offers: { "@type": "Offer", priceCurrency: "EUR", price: "690", priceSpecification: { "@type": "UnitPriceSpecification", unitText: "mois" } },
+      },
     ],
   } as const;
 

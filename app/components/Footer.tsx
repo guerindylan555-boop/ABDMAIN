@@ -9,7 +9,7 @@ export default function Footer() {
             </p>
             <nav className="flex items-center gap-4">
               <a className="rounded-md px-3 py-1.5 border border-white/10 bg-white/10 hover:bg-white/20" href="#services">Services</a>
-              <a className="rounded-md px-3 py-1.5 border border-white/10 bg-white/10 hover:bg-white/20" href="#pricing">Tarifs</a>
+              <a className="rounded-md px-3 py-1.5 border border-white/10 bg-white/10 hover:bg-white/20" href="#offres">Offres</a>
               <a className="rounded-md px-3 py-1.5 border border-white/10 bg-white/10 hover:bg-white/20" href="/contact#contact">Contact</a>
             </nav>
           </div>

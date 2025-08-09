@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getAllPosts } from "@/lib/blog/posts";
 
 export const metadata: Metadata = {
   title: "Blog — AB Digital",
@@ -7,13 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndexPage() {
-  const posts = Array.from({ length: 6 }).map((_, i) => ({
-    slug: `article-${i + 1}`,
-    title: `Titre d’article ${i + 1}`,
-    excerpt: "Court extrait qui donne envie de cliquer sans tout dévoiler.",
-    date: "2025-01-01",
-    tag: i % 2 === 0 ? "SEO" : "IA",
-  }));
+  const posts = getAllPosts();
 
   return (
     <main className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
@@ -34,7 +29,7 @@ export default function BlogIndexPage() {
               <span>{new Date(p.date).toLocaleDateString("fr-FR")}</span>
             </div>
             <h2 className="mt-2 text-xl font-semibold text-white">{p.title}</h2>
-            <p className="mt-1 text-sm text-neutral-300 flex-1">{p.excerpt}</p>
+            <p className="mt-1 text-sm text-neutral-300 flex-1">{p.description}</p>
             <a className="mt-4 inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20" href={`/blog/${p.slug}`}>
               Lire l’article
             </a>

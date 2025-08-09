@@ -8,17 +8,19 @@ export default function SectionPage({
   tag,
   toc = [],
   children,
+  hideAside = false,
 }: {
   title: string;
   description?: string;
   tag?: string;
   toc?: TocItem[];
   children: ReactNode;
+  hideAside?: boolean;
 }) {
   return (
     <main className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
       {/* En‑tête */}
-      <header className="rounded-2xl glass p-8 md:p-10">
+      <header className="rounded-2xl glass-highlight p-8 md:p-10" data-float data-float-amplitude="8" data-float-depth="0.8">
         <div className="flex items-center gap-2 text-xs text-neutral-400">
           {tag && (
             <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] tracking-wide uppercase">
@@ -26,43 +28,41 @@ export default function SectionPage({
             </span>
           )}
         </div>
-        <h1 className="mt-2 text-3xl md:text-5xl font-extrabold tracking-tight text-white">{title}</h1>
+        <h1 className="mt-2 text-[32px] md:text-[44px] font-extrabold tracking-tight text-white">{title}</h1>
         {description && (
-          <p className="mt-3 text-neutral-300 text-base md:text-lg max-w-3xl">{description}</p>
+          <p className="mt-3 text-neutral-300 text-[15px] md:text-[17px] max-w-3xl">{description}</p>
         )}
       </header>
 
       {/* Corps + Aside */}
-      <div className="mt-8 grid md:grid-cols-[1fr_360px] gap-8">
-        <article className="rounded-2xl glass p-6 md:p-8">
-          {children}
-        </article>
-
-        <aside className="space-y-4">
-          {toc.length > 0 && (
-            <section className="rounded-2xl glass p-5 sticky top-24">
-              <h4 className="font-semibold text-white">Sommaire</h4>
-              <nav className="mt-3 text-sm text-neutral-300 space-y-2">
-                {toc.map((item) => (
-                  <a key={item.id} className="block hover:text-white" href={`#${item.id}`}>
-                    {item.label}
-                  </a>
-                ))}
-              </nav>
+      <div className={hideAside ? "mt-8" : "mt-8 grid md:grid-cols-[1fr_360px] gap-8"}>
+        <article className="rounded-2xl glass-panel p-6 md:p-8" data-float data-float-amplitude="6" data-float-depth="0.95" data-snap>{children}</article>
+        {!hideAside && (
+          <aside className="space-y-4">
+            {toc.length > 0 && (
+              <section className="rounded-2xl glass p-5 sticky top-24">
+                <h4 className="font-semibold text-white">Sommaire</h4>
+                <nav className="mt-3 text-sm text-neutral-300 space-y-2">
+                  {toc.map((item) => (
+                    <a key={item.id} className="block hover:text-white" href={`#${item.id}`}>
+                      {item.label}
+                    </a>
+                  ))}
+                </nav>
+              </section>
+            )}
+            <section className="rounded-2xl glass p-5">
+              <h4 className="font-semibold text-white">Prêt à avancer ?</h4>
+              <p className="mt-2 text-sm text-neutral-300">Réservez un audit gratuit, on priorise les gains rapides.</p>
+              <a
+                href="/reservation-appel"
+                className="mt-3 inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20"
+              >
+                Audit gratuit
+              </a>
             </section>
-          )}
-
-          <section className="rounded-2xl glass p-5">
-            <h4 className="font-semibold text-white">Prêt à avancer ?</h4>
-            <p className="mt-2 text-sm text-neutral-300">Réservez un audit gratuit, on priorise les gains rapides.</p>
-            <a
-              href="/reservation-appel"
-              className="mt-3 inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20"
-            >
-              Audit gratuit
-            </a>
-          </section>
-        </aside>
+          </aside>
+        )}
       </div>
     </main>
   );

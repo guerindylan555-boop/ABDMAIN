@@ -8,7 +8,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/`, changeFrequency: "weekly", priority: 1, lastModified: new Date() },
     { url: `${base}/contact`, changeFrequency: "monthly", priority: 0.8, lastModified: new Date() },
     { url: `${base}/services`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
-    { url: `${base}/tarifs`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
+    { url: `${base}/offres`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
+    // /tarifs redirigé vers /offres
     { url: `${base}/seo-google-business`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
     { url: `${base}/automatisations-appels-sms`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
     { url: `${base}/site-web-sur-mesure`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
@@ -16,9 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/publicite-payante`, changeFrequency: "monthly", priority: 0.6, lastModified: new Date() },
     { url: `${base}/a-propos`, changeFrequency: "yearly", priority: 0.5, lastModified: new Date() },
     { url: `${base}/notre-methode`, changeFrequency: "monthly", priority: 0.6, lastModified: new Date() },
-    { url: `${base}/tarifs/starter`, changeFrequency: "yearly", priority: 0.5, lastModified: new Date() },
-    { url: `${base}/tarifs/croissance`, changeFrequency: "yearly", priority: 0.5, lastModified: new Date() },
-    { url: `${base}/tarifs/performance`, changeFrequency: "yearly", priority: 0.5, lastModified: new Date() },
+    // Anciennes URLs de tarifs retirées du sitemap (redirigées)
     // Blog
     { url: `${base}/blog`, changeFrequency: "weekly", priority: 0.6, lastModified: new Date() },
     { url: `${base}/blog/checklist-google-business-2025`, changeFrequency: "monthly", priority: 0.5, lastModified: new Date() },

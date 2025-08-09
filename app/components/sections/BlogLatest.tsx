@@ -37,7 +37,7 @@ export default function BlogLatest({ posts = mockPosts }: { posts?: Post[] }) {
   return (
     <section id="blog-latest" className="py-24 scroll-mt-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="rounded-2xl glass p-8 md:p-10">
+        <div className="rounded-2xl glass-panel p-8 md:p-10" data-float data-float-amplitude="8" data-float-depth="0.9" data-snap>
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Derniers articles</h2>
             <p className="mt-3 text-neutral-700 dark:text-neutral-300">Insights actionnables pour gagner en trafic et conversions.</p>
@@ -45,7 +45,12 @@ export default function BlogLatest({ posts = mockPosts }: { posts?: Post[] }) {
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((p) => (
-              <article key={p.slug} className="rounded-2xl glass p-5 flex flex-col">
+              <Link
+                key={p.slug}
+                href={`/blog/${p.slug}`}
+                className="rounded-2xl glass-card p-5 flex flex-col transition-transform hover:scale-[1.01] hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-[--ring] pressable"
+                aria-label={`Lire l’article: ${p.title}`}
+              >
                 <div className="aspect-[16/10] rounded-lg bg-white/10 border border-white/10" />
                 <div className="mt-4 text-xs text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
                   {p.tag && (
@@ -55,10 +60,8 @@ export default function BlogLatest({ posts = mockPosts }: { posts?: Post[] }) {
                 </div>
                 <h3 className="mt-2 text-lg font-semibold">{p.title}</h3>
                 <p className="mt-1 text-sm text-neutral-700 dark:text-neutral-300 flex-1">{p.excerpt}</p>
-                <Link className="mt-4 inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm hover:bg-white/20" href={`/blog/${p.slug}`}>
-                  Lire l’article
-                </Link>
-              </article>
+                <span className="mt-4 inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm">Lire l’article →</span>
+              </Link>
             ))}
           </div>
 
