@@ -40,10 +40,10 @@ export default function Hero() {
             </div>
             <div className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-10 flex flex-col justify-center items-stretch md:items-end gap-3 w-full md:w-max">
               <a
-                href="/contact#contact"
+                href="/reservation-appel"
                 className="hero-cta inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm"
               >
-                Demander un devis
+                Audit gratuit
               </a>
               <a
                 href="#services"

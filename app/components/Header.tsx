@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const links: Array<{ href: string; label: string }> = useMemo(
     () => [
       { href: "#services", label: "Services" },
@@ -11,6 +14,7 @@ export default function Header() {
       { href: "#process", label: "Méthode" },
       { href: "#pricing", label: "Tarifs" },
       { href: "#faq", label: "FAQ" },
+      { href: "/blog", label: "Blog" },
     ],
     []
   );
@@ -18,7 +22,11 @@ export default function Header() {
   const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
-    const sectionIds = links.map((l) => l.href.replace("#", ""));
+    if (!isHome) return; // n'activer l'observer que sur la home
+    const sectionIds = links
+      .map((l) => l.href)
+      .filter((h) => h.startsWith("#"))
+      .map((h) => h.replace("#", ""));
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean) as HTMLElement[];
@@ -37,7 +45,7 @@ export default function Header() {
 
     sections.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, [links]);
+  }, [links, isHome]);
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur bg-neutral-950/70 border-b border-neutral-800">
@@ -49,31 +57,51 @@ export default function Header() {
 
           <nav className="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
             {links.map((item) => {
-              const isActive = active === item.href;
+              const isAnchor = item.href.startsWith("#");
+              const isActive = isHome && isAnchor && active === item.href;
+              if (isAnchor) {
+                return isHome ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={
+                      "transition-colors " +
+                      (isActive
+                        ? "font-semibold text-neutral-900 dark:text-white"
+                        : "text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white")
+                    }
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={`/${item.href}`}
+                    className="transition-colors text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                );
+              }
               return (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={
-                    "transition-colors " +
-                    (isActive
-                      ? "font-semibold text-neutral-900 dark:text-white"
-                      : "text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white")
-                  }
+                  className="transition-colors text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
                 >
                   {item.label}
-                </a>
+                </Link>
               );
             })}
           </nav>
 
           <div className="flex items-center gap-3">
             <a
-              href="/contact#contact"
-              className="inline-flex items-center rounded-lg bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-4 py-2 text-sm font-medium transition-transform hover:scale-[1.02] active:scale-[0.98]"
+              href="/reservation-appel"
+              className="inline-flex items-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 text-sm font-medium backdrop-blur hover:bg-white/30 transition-colors"
             >
-              Demander un devis
+              Audit gratuit
             </a>
           </div>
         </div>

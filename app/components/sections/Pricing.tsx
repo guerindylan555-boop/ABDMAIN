@@ -35,9 +35,9 @@ export default function Pricing() {
             <p className="mt-3 text-neutral-700 dark:text-neutral-300">Sans engagement, pilotés par les résultats.</p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-3 items-end">
             {plans.map((p) => (
-              <div key={p.name} className="rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30">
+              <div key={p.name} className="flex flex-col rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30">
                 <h3 className="font-semibold text-lg">{p.name}</h3>
                 <div className="mt-2 text-3xl font-extrabold">{p.price}</div>
                 <p className="text-xs text-neutral-500">Sans engagement</p>
@@ -50,11 +50,12 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-6 pt-1 flex-1" />
                 <a
-                  href="/contact#contact"
-                  className="mt-6 inline-flex w-full justify-center rounded-lg bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-4 py-2 font-medium"
+                  href="/reservation-appel"
+                  className="inline-flex w-full justify-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 font-medium backdrop-blur hover:bg-white/30"
                 >
-                  Choisir ce plan
+                  Audit gratuit
                 </a>
               </div>
             ))}
