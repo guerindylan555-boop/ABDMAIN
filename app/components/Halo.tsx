@@ -20,9 +20,9 @@ export default function Halo({
   disabled,
   durationSec = 24,
   minScale = 0.98,
-  maxScale = 1.06,
-  minOpacity = 0.70,
-  maxOpacity = 0.82,
+  maxScale = 1.07,
+  minOpacity = 0.72,
+  maxOpacity = 0.84,
 }: HaloProps) {
   const haloRef = useRef<HTMLDivElement | null>(null);
 
@@ -79,11 +79,10 @@ export default function Halo({
       className="absolute inset-0 pointer-events-none"
       style={{
         // Composite-only animation target
-        contain: "layout paint size",
         willChange: "transform, opacity",
         // Premium, soft central radial halo (brand-tinted), kept clean (no blend modes)
         background:
-          "radial-gradient(60% 50% at 50% 50%, rgba(255,128,96,0.78) 0%, rgba(255,128,96,0.24) 28%, rgba(255,118,160,0.14) 46%, rgba(255,118,160,0.04) 58%, rgba(255,118,160,0.00) 72%)",
+          "radial-gradient(72% 58% at 50% 50%, rgba(255,160,112,0.82) 0%, rgba(255,140,160,0.26) 36%, rgba(255,140,160,0.08) 54%, rgba(255,140,160,0.00) 72%)",
       }}
     />
   );
