@@ -12,19 +12,21 @@ export default function Process() {
   return (
     <section id="process" className="py-24 scroll-mt-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Notre méthode</h2>
-          <p className="mt-3 text-neutral-600">Un cycle mensuel centré sur la croissance.</p>
-        </div>
+        <div className="rounded-2xl glass p-8 md:p-10">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Notre méthode</h2>
+            <p className="mt-3 text-neutral-700 dark:text-neutral-300">Un cycle mensuel centré sur la croissance.</p>
+          </div>
 
-        <ol className="mt-10 grid gap-6 md:grid-cols-2">
-          {steps.map((s) => (
-            <li key={s.title} className="rounded-xl border border-neutral-200 p-6">
-              <h3 className="font-semibold">{s.title}</h3>
-              <p className="mt-2 text-neutral-600 text-sm">{s.text}</p>
-            </li>
-          ))}
-        </ol>
+          <ol className="mt-10 grid gap-6 md:grid-cols-2">
+            {steps.map((s) => (
+              <li key={s.title} className="rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/50 dark:bg-neutral-900/30">
+                <h3 className="font-semibold">{s.title}</h3>
+                <p className="mt-2 text-neutral-700 dark:text-neutral-300 text-sm">{s.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );

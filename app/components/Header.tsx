@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const links: Array<{ href: string; label: string }> = useMemo(
@@ -41,7 +40,7 @@ export default function Header() {
   }, [links]);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-white/80 supports-[backdrop-filter]:bg-white/70 dark:bg-neutral-950/70 border-b border-neutral-200/60 dark:border-neutral-800">
+    <header className="sticky top-0 z-50 backdrop-blur bg-neutral-950/70 border-b border-neutral-800">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="h-16 flex items-center justify-between gap-4">
           <Link href="/" className="font-extrabold tracking-tight text-lg text-neutral-900 dark:text-white">
@@ -70,7 +69,6 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <ThemeToggle />
             <a
               href="/contact#contact"
               className="inline-flex items-center rounded-lg bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-4 py-2 text-sm font-medium transition-transform hover:scale-[1.02] active:scale-[0.98]"

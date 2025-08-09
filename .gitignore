@@ -1,3 +1,27 @@
+node_modules/
+.next/
+out/
+dist/
+.turbo/
+.cache/
+coverage/
+.vercel/
+.vscode/
+.DS_Store
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build artifacts from external exports
+lovable.dev/
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies

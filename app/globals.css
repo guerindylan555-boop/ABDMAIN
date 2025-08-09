@@ -8,7 +8,7 @@
 }
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
   /* Design tokens */
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "BlinkMacSystemFont", "Inter", "Segoe UI", "Roboto", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
@@ -24,7 +24,7 @@
   --gradient-to: #935bff;
 }
 
-/* Apply dark tokens when <html class="dark"> */
+/* Force dark tokens */
 .dark:root,
 html.dark {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "BlinkMacSystemFont", "Inter", "Segoe UI", "Roboto", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -71,39 +71,39 @@ html.dark {
     /* farthest-corner pour atteindre les bords, ajoute une bande rouge avant le rose */
     radial-gradient(ellipse farthest-corner at 50% 124%,
       #f27601 0%,            /* orange */
-      #f27601 38%,
-      #ff5a2a 41%,           /* orange-rouge lissant */
-      #ff3d3d 44%,           /* rouge bref */
-      rgba(241,107,123,1) 48%, /* rose réduit */
-      #e187b5 51%,           /* rose réduit */
-      #6b85c8 60%,           /* bleu clair */
-      #5775b6 68%,           /* bleu */
-      #3b4a7f 76%,           /* bleu foncé / indigo */
-      #27314d 84%,           /* navy profond */
-      #1f242e 92%,           /* quasi-noir pour lisser */
-      #1a1b1e 100%
+      #f27601 19%,           /* orange ÷2 */
+      #ff5a2a 22%,           /* orange-rouge */
+      #ff3d3d 25%,           /* rouge court */
+      rgba(241,107,123,1) 29%,
+      #e187b5 33%,           /* roses réduits */
+      #6b85c8 45%,           /* bleu clair */
+      #5775b6 58%,           /* bleu */
+      #8fa3da 70%,           /* bleu adouci */
+      #dbe6ff 88%,           /* vers blanc */
+      #ffffff 100%
     ),
-    radial-gradient(70% 55% at 50% -6%, rgba(87,117,182,0.25) 0%, rgba(26,27,30,0.00) 74%),
-    #1a1b1e;
+    radial-gradient(70% 55% at 50% -6%, rgba(87,117,182,0.25) 0%, rgba(255,255,255,0.00) 74%),
+    #ffffff;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .dark .site-bg {
-  /* Dark theme: identical structure, tuned stops and base to deep navy */
+  /* Dark theme: orange ÷2, noir ×2, transitions lissées */
   background:
     radial-gradient(ellipse farthest-corner at 50% 124%,
       #f27601 0%,
-      #f27601 38%,
-      #ff5a2a 41%,
-      #ff3d3d 44%,
-      rgba(241,107,123,1) 48%,
-      #e187b5 51%,
-      #6b85c8 60%,
-      #5775b6 68%,
-      #3b4a7f 76%,
-      #27314d 84%,
-      #1f242e 92%,
+      #f27601 19%,          /* orange ÷2 */
+      #ff5a2a 22%,
+      #ff3d3d 25%,
+      rgba(241,107,123,1) 30%,
+      #e187b5 35%,          /* roses courts */
+      #6b85c8 50%,          /* bleu clair */
+      #5775b6 62%,          /* bleu */
+      #3b4a7f 72%,          /* indigo */
+      #27314d 80%,          /* navy */
+      #1f242e 86%,          /* quasi-noir */
+      #1a1b1e 90%,          /* noir étendu (≈10% plein noir) */
       #1a1b1e 100%
     ),
     radial-gradient(70% 55% at 50% -6%, rgba(87,117,182,0.22) 0%, rgba(0,0,0,0.00) 74%),
@@ -129,6 +129,11 @@ html.dark {
 
 .dark .site-bg::before {
   opacity: 0.15;
+}
+
+/* Hidden when editor overrides grain */
+.grain-override .site-bg::before {
+  display: none !important;
 }
 
 /* Typography utilities */
