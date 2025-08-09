@@ -43,20 +43,28 @@ export default function Halo({
       willChange: "transform, opacity",
     });
 
-    if (disabled || attrDisabled || prefersReduced) {
-      // Respect reduced motion and explicit toggle by keeping halo static
+    if (disabled || attrDisabled) {
       return;
     }
 
-    const total = Math.max(18, Math.min(28, durationSec)); // clamp guidance 18–28s
+    // prefers-reduced-motion: reduce amplitude by 3x and double duration (instead of cutting)
+    const totalBase = Math.max(18, Math.min(28, durationSec));
+    const total = prefersReduced ? totalBase * 2 : totalBase;
     const inDur = total * 0.4; // inhale
     const pauseDur = total * 0.1; // pause
     const outDur = total * 0.4; // exhale
 
+    const scaleMin = prefersReduced ? (1 + (minScale - 1) / 3) : minScale;
+    const scaleMax = prefersReduced ? (1 + (maxScale - 1) / 3) : maxScale;
+    const midOpacity = (minOpacity + maxOpacity) / 2;
+    const halfAmpOpacity = (maxOpacity - minOpacity) / 2;
+    const opacityMin = prefersReduced ? midOpacity - halfAmpOpacity / 3 : minOpacity;
+    const opacityMax = prefersReduced ? midOpacity + halfAmpOpacity / 3 : maxOpacity;
+
     const tl = gsap.timeline({ repeat: -1, defaults: { ease: "sine.inOut" } });
-    tl.to(element, { scale: maxScale, opacity: maxOpacity, duration: inDur })
+    tl.to(element, { scale: scaleMax, opacity: opacityMax, duration: inDur })
       .to({}, { duration: pauseDur })
-      .to(element, { scale: minScale, opacity: minOpacity, duration: outDur })
+      .to(element, { scale: scaleMin, opacity: opacityMin, duration: outDur })
       .to({}, { duration: pauseDur });
 
     return () => {
