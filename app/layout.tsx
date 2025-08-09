@@ -9,6 +9,7 @@ import NoFlashScript from "./components/NoFlashScript";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import MagneticButtons from "./components/magnetic-buttons";
+import Halo from "./components/Halo";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
@@ -74,8 +75,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${GeistSans.variable} ${GeistMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="font-sans antialiased site-bg text-[--text] dark">
-        {/* Lovable background image + grain */}
+      <body className="font-sans antialiased site-bg text-[--text] dark" data-halo-anim="on">
+        {/* Lovable background image + grain + halo */}
         <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
           <div
             className="absolute left-1/2 -translate-x-1/2"
@@ -90,6 +91,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               maskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)",
             }}
           />
+          {/* Halo layer (between PNG ellipse and overlays) */}
+          <Halo />
           {/* dark tint to reduce blue and give more room to black */}
           <div
             className="absolute inset-0"
