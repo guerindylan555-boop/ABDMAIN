@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={rootRef} className="relative overflow-hidden scroll-mt-24 min-h-[65vh]" id="top">
+    <section ref={rootRef} className="relative overflow-hidden scroll-mt-24 min-h-[65vh]" id="accueil">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24 text-left">
         <div className="relative rounded-2xl glass p-8 md:p-12 md:pr-[280px]">
           <div className="md:grid md:grid-cols-[1fr_auto] md:gap-10 md:items-start">

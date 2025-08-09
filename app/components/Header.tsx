@@ -9,6 +9,7 @@ export default function Header() {
   const isHome = pathname === "/";
   const links: Array<{ href: string; label: string }> = useMemo(
     () => [
+      { href: "#accueil", label: "Accueil" },
       { href: "#services", label: "Services" },
       { href: "#clients", label: "Clients" },
       { href: "#process", label: "Méthode" },
