@@ -9,7 +9,6 @@ import NoFlashScript from "./components/NoFlashScript";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import MagneticButtons from "./components/magnetic-buttons";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -120,7 +119,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <SpeedInsights />
       </body>
     </html>
   );
