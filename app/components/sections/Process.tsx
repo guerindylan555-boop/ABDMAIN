@@ -16,7 +16,6 @@ export default function Process() {
         <Link
           href="/notre-methode"
           className="block rounded-2xl glass-panel p-8 md:p-10 transition-transform hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-[--ring] pressable"
-          data-float data-float-amplitude="10" data-float-depth="0.8" data-snap
           aria-label="Découvrir notre méthode en détail"
         >
           <div className="max-w-2xl">

@@ -86,7 +86,7 @@ export default function Hero() {
   return (
     <section ref={rootRef} className="relative overflow-hidden scroll-mt-24 min-h-[65vh]" id="accueil">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24 text-left">
-        <div ref={glassRef} className="relative rounded-2xl glass glass-hero p-8 md:p-12 md:pr-[280px] will-change-transform">
+        <div ref={glassRef} className="relative rounded-2xl glass glass-hero p-8 md:p-12 md:pr-[280px]">
           <div className="md:grid md:grid-cols-[1fr_auto] md:gap-10 md:items-start">
             <div>
               <h1 className="hero-title text-[44px] md:text-[64px] font-extrabold tracking-tight text-neutral-900 dark:text-white max-w-4xl">

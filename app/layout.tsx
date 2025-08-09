@@ -9,7 +9,6 @@ import NoFlashScript from "./components/NoFlashScript";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import MagneticButtons from "./components/magnetic-buttons";
-import FloatScroll from "./components/float-scroll";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -116,7 +115,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded focus:bg-neutral-900 focus:text-white focus:px-3 focus:py-2">Aller au contenu</a>
         <SmoothScroll />
         <MagneticButtons />
-        <FloatScroll />
         <SeoJsonLd />
         <Header />
         <main id="main">{children}</main>

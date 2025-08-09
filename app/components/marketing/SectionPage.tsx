@@ -20,7 +20,7 @@ export default function SectionPage({
   return (
     <main className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
       {/* En‑tête */}
-      <header className="rounded-2xl glass-highlight p-8 md:p-10" data-float data-float-amplitude="8" data-float-depth="0.8">
+      <header className="rounded-2xl glass-highlight p-8 md:p-10">
         <div className="flex items-center gap-2 text-xs text-neutral-400">
           {tag && (
             <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] tracking-wide uppercase">
@@ -36,7 +36,7 @@ export default function SectionPage({
 
       {/* Corps + Aside */}
       <div className={hideAside ? "mt-8" : "mt-8 grid md:grid-cols-[1fr_360px] gap-8"}>
-        <article className="rounded-2xl glass-panel p-6 md:p-8" data-float data-float-amplitude="6" data-float-depth="0.95" data-snap>{children}</article>
+        <article className="rounded-2xl glass-panel p-6 md:p-8">{children}</article>
         {!hideAside && (
           <aside className="space-y-4">
             {toc.length > 0 && (
