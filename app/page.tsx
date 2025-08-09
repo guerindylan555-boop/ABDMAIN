@@ -4,6 +4,7 @@ import Services from "./components/sections/Services";
 import Process from "./components/sections/Process";
 import Testimonials from "./components/sections/Testimonials";
 import Pricing from "./components/sections/Pricing";
+import BlogLatest from "./components/sections/BlogLatest";
 import FAQ from "./components/sections/FAQ";
 import CTA from "./components/sections/CTA";
 import { SliceZone } from "@prismicio/react";
@@ -31,6 +32,7 @@ export default async function HomePage() {
         <Process />
         <Testimonials />
         <Pricing />
+        <BlogLatest />
         <FAQ />
         <CTA />
       </main>
