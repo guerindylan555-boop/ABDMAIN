@@ -99,7 +99,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <a
               href="/reservation-appel"
-              className="inline-flex items-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 text-sm font-medium backdrop-blur hover:bg-white/30 transition-colors"
+              className="inline-flex items-center rounded-lg border border-white/15 bg-white/10 text-white px-4 py-2 text-sm font-medium backdrop-blur-md hover:bg-white/20 shadow-sm transition-colors"
             >
               Audit gratuit
             </a>
