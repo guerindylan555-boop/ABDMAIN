@@ -4,7 +4,7 @@ export default function Offers() {
       badge: "DFY",
       title: "Nous concevons et implémentons pour vous",
       desc:
-        "Site/funnel, SEO local, agents IA et automatisations d’appels/SMS — livrés vite, orientés résultats.",
+        "Conseil + exécution clé en main: site/funnel, SEO local, agents IA et automations d’appels/SMS. Délai moyen: 2–6 semaines.",
       href: "/solutions/dfy",
       cta: "Découvrir le DFY",
     },
@@ -12,7 +12,7 @@ export default function Offers() {
       badge: "DWY",
       title: "Plateforme + coaching pour avancer ensemble",
       desc:
-        "Votre sous‑compte (CRM, tunnels, calendriers, facturation) + templates + accompagnement hebdomadaire.",
+        "Sous‑compte tout‑en‑un (CRM, tunnels, calendriers, facturation) + templates + coaching hebdo. Sprints d’implémentation en direct.",
       href: "/solutions/dwy",
       cta: "Découvrir le DWY",
     },
@@ -20,7 +20,7 @@ export default function Offers() {
       badge: "DIY",
       title: "Templates & snapshots prêts à déployer",
       desc:
-        "Modèles de sites, funnels, agents IA et workflows d’automatisation pour démarrer en quelques jours.",
+        "Modèles de sites, funnels, agents IA et workflows prêts à l’emploi. Guides pas‑à‑pas et vidéos inclus.",
       href: "/solutions/diy",
       cta: "Découvrir le DIY",
     },

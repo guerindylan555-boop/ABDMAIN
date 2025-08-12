@@ -6,34 +6,46 @@ const services: Array<{
   features: string[];
 }> = [
   {
-    title: "Site web sur-mesure",
+    title: "Sites & Funnels",
     description:
-      "Vitrine moderne, rapide et pensée conversion (UX). Optimisée Core Web Vitals et SEO dès le départ.",
+      "Vitrines et tunnels rapides, pensés pour convertir. Performances (LCP/CLS/INP) et SEO intégrés dès le départ.",
     features: [
-      "Design responsive & UX",
-      "Vitesse 95+ Lighthouse",
-      "Core Web Vitals",
+      "Design responsive & UX claire",
+      "95+ Lighthouse (selon contenu)",
+      "Core Web Vitals maîtrisés",
       "CMS headless (Prismic)",
-      "Formulaires & RGPD",
+      "Formulaires & conformité RGPD",
     ],
   },
   {
-    title: "SEO & Google Business",
+    title: "SEO local & Google Business",
     description:
-      "Optimisations techniques, contenus et fiche Google pour capter la demande locale. Accompagnement mensuel orienté résultats.",
-    features: ["Audit & plan d\'action", "On-page & contenus", "Suivi mensuel & KPI"],
+      "Capter la demande locale: on‑page, maillage interne, pages locales, fiche Google Business active (posts/avis).",
+    features: [
+      "Audit initial & feuille de route 90 jours",
+      "Optimisations on‑page & maillage",
+      "Posts & stratégie d’avis",
+    ],
   },
   {
-    title: "Automatisations & IA",
+    title: "Agents IA & Automations",
     description:
-      "Réactivation de votre base clients (CRM): offres personnalisées par email/SMS/appels et prise de RDV automatique.",
-    features: ["Réactivation base CRM", "Emails/SMS personnalisés", "Workflows & intégrations"],
+      "Relances intelligentes multi‑canales (appels/SMS/emails), prise de RDV et qualification. Intégrations CRM.",
+    features: [
+      "Réactivation base CRM",
+      "Missed‑call text back & voice drops",
+      "Workflows & intégrations (Zapier/Make)",
+    ],
   },
   {
-    title: "Publicité payante",
+    title: "Publicité payante (Ads)",
     description:
-      "Google Ads & Meta Ads pour un trafic qualifié rapide. Tracking fiable et optimisation hebdo.",
-    features: ["Google & Meta Ads", "Suivi des conversions", "Optimisation ROAS"],
+      "Acquisition rapide et mesurable: Google Ads & Meta Ads. Structure de comptes, créas, suivi conversions et optimisation.",
+    features: [
+      "Google & Meta Ads",
+      "Suivi des conversions (GA4)",
+      "Optimisation ROAS hebdo",
+    ],
   },
 ];
 
@@ -45,7 +57,7 @@ export default function Services() {
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Nos services</h2>
             <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-              Accompagnements mensuels pour créer un site performant, attirer via le SEO (dont Google Business) et convertir grâce à l’automatisation, y compris la réactivation de votre base clients (CRM).
+              Construisez un socle performant (sites & funnels), gagnez en visibilité (SEO local & Google Business) et convertissez sans pertes (agents IA & automations), avec un levier d’acquisition maîtrisé (Ads).
             </p>
           </div>
 
@@ -54,13 +66,13 @@ export default function Services() {
               <a
                 key={s.title}
                 href={
-                  s.title === "Site web sur-mesure"
+                  s.title === "Sites & Funnels"
                     ? "/site-web-sur-mesure"
-                    : s.title === "SEO & Google Business"
+                    : s.title === "SEO local & Google Business"
                     ? "/seo-google-business"
-                  : s.title === "Automatisations & IA"
+                    : s.title === "Agents IA & Automations"
                     ? "/automatisations-appels-sms"
-                    : s.title === "Publicité payante"
+                    : s.title === "Publicité payante (Ads)"
                     ? "/publicite-payante"
                     : "/services"
                 }

@@ -1,41 +1,38 @@
 const plans = [
   {
-    name: "Starter",
-    price: "300€",
-    note: "Maintenance: 69€/mois",
-    description: "Site 5 pages sur‑mesure + SEO Basic",
+    name: "DFY",
+    price: "à partir de 1 500€",
+    note: "Projets 2–6 semaines",
+    description: "Consulting + builds clé en main: site/funnel, SEO local, agents IA, automations.",
     items: [
-      "Site sur‑mesure (5 pages) optimisé",
-      "Suivi SEO mensuel Basic",
-      "5 modifications/mois incluses",
-      "Formulaires & conformité RGPD",
-      "Tracking de base (GA4/GSC)",
+      "Diagnostic 90 min offert (déduit)",
+      "Site/Funnel + tracking propre",
+      "SEO local & Google Business",
+      "Automatisations appels/SMS/IA",
     ],
   },
   {
-    name: "Croissance",
-    price: "Sur devis",
-    note: "Abonnement minimum: 3 mois",
-    description: "Inclut Starter + modifs illimitées, SEO complet, Google Business, automations (début)",
+    name: "DWY",
+    price: "249–797€/mois",
+    note: "Plateforme + coaching",
+    description: "Sous‑compte tout‑en‑un (CRM, tunnels, calendriers, facturation) + sprints d’implémentation.",
     items: [
-      "Inclut Starter",
-      "Modifications illimitées (fair use)",
-      "SEO complet (technique, contenus, maillage)",
-      "Gestion Google Business (posts/avis/NAP)",
-      "Automatisation de base (emails/SMS)",
+      "Templates & snapshots inclus",
+      "Coaching hebdo + office hours",
+      "Setup rapide (2 à 4 sessions)",
+      "Support & amélioration continue",
     ],
   },
   {
-    name: "Performance",
-    price: "Sur devis",
-    note: "Abonnement minimum: 6 mois",
-    description: "Inclut Croissance + SEO avancé, automations complètes, publicités (Ads)",
+    name: "DIY",
+    price: "49–99€/mois",
+    note: "Bibliothèque + updates",
+    description: "Templates & snapshots de sites, funnels, agents IA et workflows. Guides pas‑à‑pas.",
     items: [
-      "Inclut Croissance",
-      "SEO avancé + Netlinking",
-      "Automatisations complètes (appels/SMS/IA)",
-      "Publicité payante (Google/Meta)",
-      "A/B testing & dashboard",
+      "Modèles prêts à l’emploi",
+      "Vidéos & checklists",
+      "Mises à jour régulières",
+      "Accès à la communauté (option)",
     ],
   },
 ];
@@ -52,7 +49,7 @@ export default function Pricing() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3 items-stretch">
             {plans.map((p) => (
-              <a key={p.name} href={p.name === "Starter" ? "/offres#starter" : p.name === "Croissance" ? "/offres#croissance" : "/offres#performance"} className="flex flex-col rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 min-h-[360px] transition-transform hover:scale-[1.01] hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-[--ring] pressable">
+              <a key={p.name} href={p.name === "DFY" ? "/solutions/dfy" : p.name === "DWY" ? "/solutions/dwy" : "/solutions/diy"} className="flex flex-col rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 min-h-[360px] transition-transform hover:scale-[1.01] hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-[--ring] pressable">
                 <h3 className="font-semibold text-lg">{p.name}</h3>
                 <div className="mt-2 text-3xl font-extrabold whitespace-nowrap">{p.price}</div>
                 {p.note && (
@@ -68,7 +65,7 @@ export default function Pricing() {
                   ))}
                 </ul>
                 <div className="mt-6 pt-1" />
-                <span className="inline-flex w-full justify-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 font-medium backdrop-blur">Voir le détail →</span>
+                <span className="inline-flex w-full justify-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 font-medium backdrop-blur">Voir l’offre →</span>
               </a>
             ))}
           </div>

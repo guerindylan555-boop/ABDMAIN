@@ -4,7 +4,7 @@ import Offers from "./components/sections/Offers";
 import FeaturesGrid from "./components/sections/FeaturesGrid";
 import Logos from "./components/sections/Logos";
 import Services from "./components/sections/Services";
-import Process from "./components/sections/Process";
+// Process supprimé de la home (section "Notre méthode")
 import Testimonials from "./components/sections/Testimonials";
 import Pricing from "./components/sections/Pricing";
 import BlogLatest from "./components/sections/BlogLatest";
@@ -35,7 +35,6 @@ export default async function HomePage() {
         <FeaturesGrid />
         <Logos />
         <Services />
-        <Process />
         <Testimonials />
         <Pricing />
         <BlogLatest />
