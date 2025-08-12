@@ -203,40 +203,42 @@ export default function SimplePricing() {
                   <CardDescription className="mt-3 space-y-2">
                     <p className="text-sm">{plan.description}</p>
                     <div className="pt-2">
-                      {typeof plan.price[
-                        frequency as keyof typeof plan.price
-                      ] === 'number' ? (
-                        <div className="flex items-baseline">
-                          <NumberFlow
+                      {(() => {
+                        const priceAny = plan.price[
+                          frequency as keyof typeof plan.price
+                        ] as unknown;
+                        if (typeof priceAny === 'number') {
+                          return (
+                            <div className="flex items-baseline">
+                              <NumberFlow
+                                className={cn(
+                                  'text-3xl font-bold',
+                                  plan.popular ? 'text-primary' : 'text-foreground',
+                                )}
+                                format={{
+                                  style: 'currency',
+                                  currency: 'EUR',
+                                  maximumFractionDigits: 0,
+                                }}
+                                value={priceAny as number}
+                              />
+                              <span className="text-muted-foreground ml-1 text-sm">
+                                /mois, facturation {frequency === 'monthly' ? 'mensuelle' : 'annuelle'}
+                              </span>
+                            </div>
+                          );
+                        }
+                        return (
+                          <span
                             className={cn(
-                              'text-3xl font-bold',
+                              'text-2xl font-bold',
                               plan.popular ? 'text-primary' : 'text-foreground',
                             )}
-                            format={{
-                              style: 'currency',
-                              currency: 'EUR',
-                              maximumFractionDigits: 0,
-                            }}
-                            value={
-                              plan.price[
-                                frequency as keyof typeof plan.price
-                              ] as number
-                            }
-                          />
-                          <span className="text-muted-foreground ml-1 text-sm">
-                            /mois, facturation {frequency === 'monthly' ? 'mensuelle' : 'annuelle'}
+                          >
+                            {priceAny as string}
                           </span>
-                        </div>
-                      ) : (
-                        <span
-                          className={cn(
-                            'text-2xl font-bold',
-                            plan.popular ? 'text-primary' : 'text-foreground',
-                          )}
-                        >
-                          {plan.price[frequency as keyof typeof plan.price]}
-                        </span>
-                      )}
+                        );
+                      })()}
                     </div>
                   </CardDescription>
                 </CardHeader>
