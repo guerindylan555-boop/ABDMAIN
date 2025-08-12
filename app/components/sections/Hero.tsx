@@ -118,7 +118,7 @@ export default function Hero() {
               </ul>
             </div>
             <div className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-10 flex flex-col justify-center items-stretch md:items-end gap-3 w-full md:w-max">
-              <div className="glow-wrap w-full md:w-auto">
+              <div className="glow-wrap w-full max-w-sm">
                 <div className="glow" />
                 <a
                   href="/reservation-appel"
@@ -128,7 +128,7 @@ export default function Hero() {
                   Réserver un diagnostic 90 min
                 </a>
               </div>
-              <div className="glow-wrap w-full md:w-auto">
+              <div className="glow-wrap w-full max-w-sm">
                 <div className="glow" />
                 <a
                   href="#services"
