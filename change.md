@@ -54,3 +54,19 @@
 
 - **CTA**: francisation complète des textes du composant `CTA3` (titres, paragraphes, puces).
   - **Fichier modifié**: `components/mvpblocks/cta-3.tsx`
+
+- **Build**: correction d’une erreur de compilation TypeScript.
+  - **Fichier modifié**: `components/ui/navigation-menu.tsx`
+    - Suppression de la directive `@ts-expect-error` inutile devant `Link` dans `NavigationMenuLink` (le typage `forwardRef` est suffisant).
+  - **Résultat**: `next build` passe avec succès.
+
+- **Chore**: nettoyage des lockfiles en double.
+  - **Action**: suppression du `package-lock.json` situé au dossier parent pour éliminer l’avertissement « Found multiple lockfiles » et éviter des incohérences.
+
+- **Lint**: suppression d’imports non utilisés signalés par ESLint.
+  - **Fichiers modifiés**:
+    - `app/(marketing)/solutions/diy/page.tsx` — retrait de `Card`, `CardHeader`, `CardTitle`, `CardContent` non utilisés.
+    - `app/(marketing)/solutions/dwy/page.tsx` — retrait de `Card`, `CardHeader`, `CardTitle`, `CardContent` non utilisés.
+    - `app/(marketing)/solutions/dfy/page.tsx` — retrait de `Card`, `CardHeader`, `CardTitle`, `CardContent` non utilisés.
+    - `app/components/sections/Services.tsx` — retrait de `Link` non utilisé.
+    - `app/components/ThemeToggle.tsx` — retrait de `useEffect` et `useState` non utilisés.
