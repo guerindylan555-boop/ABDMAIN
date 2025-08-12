@@ -9,13 +9,13 @@ export default function Header() {
   const isHome = pathname === "/";
   const links: Array<{ href: string; label: string }> = useMemo(
     () => [
-      { href: "#accueil", label: "Accueil" },
-      { href: "#services", label: "Services" },
-      { href: "#clients", label: "Clients" },
-      { href: "#process", label: "Méthode" },
-      { href: "#offres", label: "Offres" },
-      { href: "#faq", label: "FAQ" },
-      { href: "/blog", label: "Blog" },
+      { href: "/", label: "Accueil" },
+      { href: "/solutions/dfy", label: "Solutions: DFY" },
+      { href: "/solutions/dwy", label: "Solutions: DWY" },
+      { href: "/solutions/diy", label: "Solutions: DIY" },
+      { href: "/offres", label: "Tarifs" },
+      { href: "/blog", label: "Ressources" },
+      { href: "/a-propos", label: "À propos" },
     ],
     []
   );
@@ -103,7 +103,7 @@ export default function Header() {
               className="inline-flex items-center rounded-lg border border-white/15 bg-white/10 text-white px-4 py-2 text-sm font-medium backdrop-blur-md hover:bg-white/20 shadow-sm transition-colors pressable"
               data-magnetic
             >
-              Audit gratuit
+              Diagnostic 90 min
             </a>
           </div>
         </div>

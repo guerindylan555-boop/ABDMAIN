@@ -6,6 +6,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteUrl.replace(/\/$/, "");
   return [
     { url: `${base}/`, changeFrequency: "weekly", priority: 1, lastModified: new Date() },
+    // Solutions
+    { url: `${base}/solutions/dfy`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
+    { url: `${base}/solutions/dwy`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
+    { url: `${base}/solutions/diy`, changeFrequency: "monthly", priority: 0.6, lastModified: new Date() },
     { url: `${base}/contact`, changeFrequency: "monthly", priority: 0.8, lastModified: new Date() },
     { url: `${base}/services`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
     { url: `${base}/offres`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },

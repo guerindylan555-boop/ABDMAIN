@@ -1,0 +1,56 @@
+import type { Metadata } from "next";
+import SectionPage from "@/app/components/marketing/SectionPage";
+
+export const metadata: Metadata = {
+  title: "DWY — Plateforme + Coaching",
+  description:
+    "Sous‑compte tout‑en‑un (CRM, tunnels, sites, calendriers, facturation) + coaching hebdomadaire + sprints d’implémentation.",
+  alternates: { canonical: "/solutions/dwy" },
+  openGraph: {
+    title: "DWY — Plateforme + Coaching",
+    description:
+      "Votre stack prête à l’emploi + accompagnement hebdo. Fast Start (2 sessions) ou Pro Setup (4 sessions).",
+    type: "website",
+    url: "/solutions/dwy",
+  },
+};
+
+export default function DWYPage() {
+  return (
+    <SectionPage
+      title="DWY — Plateforme + Coaching"
+      description="Votre sous‑compte (CRM, tunnels, sites, pipelines, calendriers, facturation) + templates/snapshots + coaching chaque semaine."
+      tag="Solutions"
+      toc={[
+        { id: "contenu", label: "Ce que vous obtenez" },
+        { id: "setup", label: "Options de setup" },
+        { id: "cta", label: "Démarrer" },
+      ]}
+    >
+      <section id="contenu" className="space-y-3">
+        <h2 className="text-2xl font-semibold">Ce que vous obtenez</h2>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Sous‑compte: CRM, tunnels, sites, pipelines, calendriers, facturation, formulaires</li>
+          <li>Templates & snapshots: review engine, nurture, booking, GMB</li>
+          <li>Coaching hebdomadaire + office hours</li>
+          <li>Sprints d’implémentation en live</li>
+        </ul>
+      </section>
+
+      <section id="setup" className="space-y-3 mt-8">
+        <h2 className="text-2xl font-semibold">Options de setup</h2>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>Fast Start (2 sessions)</strong>: domaines, calendriers, messagerie, 1er funnel</li>
+          <li><strong>Pro Setup (4 sessions)</strong>: + agents IA, SEO workflows, analytics, GMB</li>
+        </ul>
+      </section>
+
+      <section id="cta" className="space-y-3 mt-8">
+        <h2 className="text-2xl font-semibold">Démarrer</h2>
+        <a href="/reservation-appel" className="inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">Réserver le diagnostic 90 min</a>
+      </section>
+    </SectionPage>
+  );
+}
+
+
