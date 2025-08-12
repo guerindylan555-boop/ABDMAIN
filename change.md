@@ -107,6 +107,22 @@
     - Conteneurs accordéon passés en `glass`/`glass-panel`/`glass-highlight` et couleurs basées sur les tokens (`--brand`).
 
 - **CTA global**: alignement avec le thème glass et la palette de marque.
+- **Glow**: amincissement du halo autour des boutons.
+  - **Fichier modifié**: `app/globals.css`
+    - Réduction des variables par défaut dans `.glow-wrap` (`--glow-border: 0.35em`, `--glow-inset: -0.4em`, `--glow-blur: 0.28em`).
+
+- **Offres & Tarifs**: lisibilité renforcée.
+  - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
+    - Opacité des cartes augmentée (`bg-secondary/30`) et texte description en `text-foreground/90`.
+
+- **Navigation**: Accueil priorisé et unification des solutions.
+  - **Fichiers modifiés**:
+    - `app/components/Header.tsx` — mise à jour des liens nav ("Accueil", "Solutions", "Tarifs", …) et suppression du dropdown Solutions.
+    - `app/(marketing)/solutions/page.tsx` — nouvelle page index Solutions (regroupe DIY/DWY/DFY).
+
+- **Offres (refonte)**: cartes empilées à droite, bouton collé en bas, sans glow.
+  - **Fichier modifié**: `app/components/sections/Offers.tsx`
+    - Grille `md:grid-cols-[1fr_420px]`, suppression du glow, CTA fixé en bas via `mt-auto`.
  - **Accentuation**: ajout de touches de couleur cohérentes via `--brand` sur des mots clés
    - **Fichiers modifiés**:
     - `app/components/sections/Offers.tsx` — titre de section accentué (mot « travailler ») via style inline `var(--brand)`.

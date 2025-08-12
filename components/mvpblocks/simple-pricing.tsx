@@ -164,7 +164,7 @@ export default function SimplePricing() {
                 <div className="glow" />
                 <Card
                   className={cn(
-                    'bg-secondary/20 relative h-full w-full text-left transition-all duration-300 hover:shadow-lg',
+                    'bg-secondary/30 relative h-full w-full text-left transition-all duration-300 hover:shadow-lg',
                     plan.popular
                       ? 'ring-primary/50 dark:shadow-primary/10 shadow-md ring-2'
                       : 'hover:border-primary/30',
@@ -202,7 +202,7 @@ export default function SimplePricing() {
                     </CardTitle>
                   </div>
                   <CardDescription className="mt-3 space-y-2">
-                    <p className="text-sm">{plan.description}</p>
+                    <p className="text-sm text-foreground/90">{plan.description}</p>
                     <div className="pt-2">
                       {(() => {
                         const priceAny = plan.price[
