@@ -25,6 +25,7 @@ export default function DIYPage() {
         { id: "categories", label: "Catégories" },
         { id: "usage", label: "Comment ça marche" },
         { id: "cta", label: "Accéder" },
+        { id: "pricing", label: "Tarifs" },
       ]}
     >
       <section id="categories" className="space-y-3">
@@ -44,6 +45,17 @@ export default function DIYPage() {
       <section id="cta" className="space-y-3 mt-8">
         <h2 className="text-2xl font-semibold">Accéder</h2>
         <a href="/offres" className="inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">Voir les offres</a>
+      </section>
+
+      <section id="pricing" className="space-y-3 mt-8">
+        <h2 className="text-2xl font-semibold">Tarifs</h2>
+        <div className="rounded-2xl glass p-5">
+          <ul className="list-disc pl-5 space-y-1 text-sm">
+            <li>Snapshots individuels: 97–497€</li>
+            <li>Abonnement bibliothèque: 49–99€/mois</li>
+          </ul>
+          <p className="mt-2 text-xs text-neutral-400">Accès aux mises à jour des templates et guides inclus pendant l’abonnement.</p>
+        </div>
       </section>
     </SectionPage>
   );

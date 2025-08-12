@@ -26,6 +26,7 @@ export default function DFYPage() {
         { id: "process", label: "Process en 3 étapes" },
         { id: "packages", label: "Packages" },
         { id: "cta", label: "Passer au diagnostic" },
+        { id: "pricing", label: "Tarifs" },
       ]}
     >
       <section id="pour-qui" className="space-y-3">
@@ -72,6 +73,18 @@ export default function DFYPage() {
       <section id="cta" className="space-y-3 mt-8">
         <h2 className="text-2xl font-semibold">Prêt à démarrer ?</h2>
         <a href="/reservation-appel" className="inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">Réserver le diagnostic 90 min</a>
+      </section>
+
+      <section id="pricing" className="space-y-3 mt-8">
+        <h2 className="text-2xl font-semibold">Tarifs</h2>
+        <div className="rounded-2xl glass p-5">
+          <ul className="list-disc pl-5 space-y-1 text-sm">
+            <li>DFY Launch: à partir de 1 500€ (2–3 semaines)</li>
+            <li>DFY Scale: à partir de 4 000€ (4–6 semaines)</li>
+            <li>DFY Pro: sur‑mesure</li>
+          </ul>
+          <p className="mt-2 text-xs text-neutral-400">Prix indicatifs, hors budget média. Le diagnostic 90 min peut être offert puis déduit du projet.</p>
+        </div>
       </section>
     </SectionPage>
   );

@@ -25,6 +25,7 @@ export default function DWYPage() {
         { id: "contenu", label: "Ce que vous obtenez" },
         { id: "setup", label: "Options de setup" },
         { id: "cta", label: "Démarrer" },
+        { id: "pricing", label: "Tarifs" },
       ]}
     >
       <section id="contenu" className="space-y-3">
@@ -48,6 +49,18 @@ export default function DWYPage() {
       <section id="cta" className="space-y-3 mt-8">
         <h2 className="text-2xl font-semibold">Démarrer</h2>
         <a href="/reservation-appel" className="inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">Réserver le diagnostic 90 min</a>
+      </section>
+
+      <section id="pricing" className="space-y-3 mt-8">
+        <h2 className="text-2xl font-semibold">Tarifs</h2>
+        <div className="rounded-2xl glass p-5">
+          <ul className="list-disc pl-5 space-y-1 text-sm">
+            <li>DWY Core: 249–497€/mois</li>
+            <li>DWY Pro: 497–797€/mois</li>
+            <li>Options: Fast Start (2 sessions), Pro Setup (4 sessions)</li>
+          </ul>
+          <p className="mt-2 text-xs text-neutral-400">Facturation mensuelle. Coaching hebdomadaire et mises à jour inclus selon plan.</p>
+        </div>
       </section>
     </SectionPage>
   );
