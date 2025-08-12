@@ -36,13 +36,17 @@
 
 - **Hero**: ajout du même glow sur le bouton « Réserver un diagnostic 90 min » sous les chips “Sites & Funnels / SEO local & Google Business / CRM & Suivi / Agents IA & Automations”.
   - **Fichier modifié**: `app/components/sections/Hero.tsx`
-    - Conteneur `glow-wrap` autour du bouton + style styled‑jsx (conic-gradient) aligné avec l’effet des cartes.
+    - Conteneur `glow-wrap` autour des deux boutons (incluant « Explorer les solutions ») + style styled‑jsx (conic-gradient) aligné avec l’effet des cartes.
   - Synchronisation animations: chips et CTA apparaissent en même temps avec une timeline GSAP déclenchée au scroll (et non au mount), états initiaux fixés par GSAP pour éviter les décalages avec le hover.
 
 - **CTA**: ajout d’un call-to-action global juste au-dessus du footer.
   - **Nouveau fichier**: `components/mvpblocks/cta-3.tsx`
   - **Fichier modifié**: `app/layout.tsx`
     - Insertion de `<CTA3 />` juste avant `<Footer />` pour affichage sur toutes les pages.
+
+- **Homepage**: suppression des sections "Nos services" et "Témoignages" demandées.
+  - **Fichier modifié**: `app/page.tsx`
+    - Retrait de `<Services />` et `<Testimonials />` de la home.
 
 - **CTA**: intégration manuelle du composant fourni `CTA3` et ajout juste au-dessus du footer.
   - **Nouveau fichier**: `components/mvpblocks/cta-3.tsx`

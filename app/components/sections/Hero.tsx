@@ -111,10 +111,10 @@ export default function Hero() {
                 Centralisez votre CRM, Google Business, appels et tunnels dans un même écosystème. Convertissez plus grâce à des agents IA qui suivent et relancent pendant que vous dormez.
               </p>
               <ul className="mt-6 flex flex-wrap gap-2">
-                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">Sites & Funnels</li>
-                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">SEO local & Google Business</li>
-                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">CRM & Suivi</li>
-                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">Agents IA & Automations</li>
+                <li className="hero-chip opacity-0 translate-y-2 rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">Sites & Funnels</li>
+                <li className="hero-chip opacity-0 translate-y-2 rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">SEO local & Google Business</li>
+                <li className="hero-chip opacity-0 translate-y-2 rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">CRM & Suivi</li>
+                <li className="hero-chip opacity-0 translate-y-2 rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">Agents IA & Automations</li>
               </ul>
             </div>
             <div className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-10 flex flex-col justify-center items-stretch md:items-end gap-3 w-full md:w-max">
@@ -122,19 +122,22 @@ export default function Hero() {
                 <div className="glow" />
                 <a
                   href="/reservation-appel"
-                  className="hero-cta inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
+                  className="hero-cta opacity-0 translate-y-2 inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
                   data-magnetic
                 >
                   Réserver un diagnostic 90 min
                 </a>
               </div>
-              <a
-                href="#services"
-                className="hero-cta inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
-                data-magnetic
-              >
-                Explorer les solutions
-              </a>
+              <div className="glow-wrap w-full md:w-auto">
+                <div className="glow" />
+                <a
+                  href="#services"
+                  className="hero-cta opacity-0 translate-y-2 inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
+                  data-magnetic
+                >
+                  Explorer les solutions
+                </a>
+              </div>
             </div>
           </div>
         </div>
