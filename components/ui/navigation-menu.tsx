@@ -45,7 +45,6 @@ export const NavigationMenuLink = React.forwardRef<
   React.ComponentProps<typeof Link> & { className?: string }
 >(function NavigationMenuLink({ className, ...props }, ref) {
   return (
-    // @ts-expect-error next/link with forwardRef typing nuance
     <Link ref={ref} className={cn("block rounded-lg px-3 py-2 text-sm", className)} {...props} />
   );
 });
