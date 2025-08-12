@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
+import Badge from "@/app/components/ui/badge";
+import { ButtonLink } from "@/app/components/ui/button";
 
 export const metadata: Metadata = {
   title: "DFY — Conseil & Réalisations clés en main",
@@ -31,6 +33,11 @@ export default function DFYPage() {
     >
       <section id="pour-qui" className="space-y-3">
         <h2 className="text-2xl font-semibold">Pour qui ?</h2>
+        <p className="flex flex-wrap gap-2">
+          <Badge>Local / Services</Badge>
+          <Badge variant="secondary">PME</Badge>
+          <Badge variant="outline">Coachs</Badge>
+        </p>
         <p>Dirigeants qui veulent des résultats rapides sans construire eux‑mêmes, et qui valorisent la clarté et la mesure.</p>
       </section>
 
@@ -72,7 +79,7 @@ export default function DFYPage() {
 
       <section id="cta" className="space-y-3 mt-8">
         <h2 className="text-2xl font-semibold">Prêt à démarrer ?</h2>
-        <a href="/reservation-appel" className="inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">Réserver le diagnostic 90 min</a>
+        <ButtonLink href="/reservation-appel">Réserver le diagnostic 90 min</ButtonLink>
       </section>
 
       <section id="pricing" className="space-y-3 mt-8">

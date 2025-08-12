@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
+import { ButtonLink } from "@/app/components/ui/button";
 
 export const metadata: Metadata = {
   title: "DIY — Templates & Snapshots",
@@ -44,7 +45,7 @@ export default function DIYPage() {
 
       <section id="cta" className="space-y-3 mt-8">
         <h2 className="text-2xl font-semibold">Accéder</h2>
-        <a href="/offres" className="inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">Voir les offres</a>
+        <ButtonLink href="/offres">Voir les offres</ButtonLink>
       </section>
 
       <section id="pricing" className="space-y-3 mt-8">

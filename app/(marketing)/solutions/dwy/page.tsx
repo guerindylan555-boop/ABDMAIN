@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
+import { ButtonLink } from "@/app/components/ui/button";
 
 export const metadata: Metadata = {
   title: "DWY — Plateforme + Coaching",
@@ -48,7 +49,7 @@ export default function DWYPage() {
 
       <section id="cta" className="space-y-3 mt-8">
         <h2 className="text-2xl font-semibold">Démarrer</h2>
-        <a href="/reservation-appel" className="inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">Réserver le diagnostic 90 min</a>
+        <ButtonLink href="/reservation-appel">Réserver le diagnostic 90 min</ButtonLink>
       </section>
 
       <section id="pricing" className="space-y-3 mt-8">
