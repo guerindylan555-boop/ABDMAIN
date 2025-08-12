@@ -1,3 +1,5 @@
+import { ButtonLink } from "@/app/components/ui/button";
+
 export default function CTA() {
   return (
     <section className="py-24">
@@ -8,13 +10,15 @@ export default function CTA() {
               <h3 className="text-2xl md:text-3xl font-bold tracking-tight">Diagnostic croissance — 90 minutes</h3>
               <p className="mt-2 text-neutral-700 dark:text-neutral-300">Repartez avec une feuille de route priorisée pour gagner des leads et automatiser le suivi.</p>
             </div>
-            <a
+            <ButtonLink
               href="/reservation-appel"
-              className="mt-6 md:mt-0 inline-flex justify-center rounded-lg border border-white/20 bg-white/20 text-white px-6 py-3 font-medium backdrop-blur hover:bg-white/30 pressable"
+              variant="glow"
+              size="lg"
+              className="mt-6 md:mt-0"
               data-magnetic
             >
               Réserver le diagnostic
-            </a>
+            </ButtonLink>
           </div>
         </div>
       </div>

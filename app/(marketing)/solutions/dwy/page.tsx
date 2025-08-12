@@ -32,7 +32,7 @@ export default function DWYPage() {
       ]}
     >
       <section id="contenu" className="space-y-3">
-        <h2 className="text-2xl font-semibold">Ce que vous obtenez</h2>
+        <h2 className="text-h2">Ce que vous obtenez</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>Sous‑compte: CRM, tunnels, sites, pipelines, calendriers, facturation, formulaires</li>
           <li>Templates & snapshots: review engine, nurture, booking, GMB</li>
@@ -42,7 +42,7 @@ export default function DWYPage() {
       </section>
 
       <section id="setup" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Options de setup</h2>
+        <h2 className="text-h2">Options de setup</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li><strong>Fast Start (2 sessions)</strong>: domaines, calendriers, messagerie, 1er funnel</li>
           <li><strong>Pro Setup (4 sessions)</strong>: + agents IA, SEO workflows, analytics, GMB</li>
@@ -50,12 +50,12 @@ export default function DWYPage() {
       </section>
 
       <section id="cta" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Démarrer</h2>
+        <h2 className="text-h2">Démarrer</h2>
         <ButtonLink href="/reservation-appel">Réserver le diagnostic 90 min</ButtonLink>
       </section>
 
       <section id="pricing" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Tarifs</h2>
+        <h2 className="text-h2">Tarifs</h2>
         <p className="text-neutral-300">Consultez les détails et comparatifs sur la page Offres.</p>
         <a href="/offres" className="inline-flex rounded-lg border border-white/20 bg-white/20 text-white px-3 py-2 hover:bg-white/30">Voir les offres →</a>
       </section>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { ButtonLink } from "@/app/components/ui/button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -119,28 +120,26 @@ export default function Hero() {
             </div>
             <div className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-10 flex flex-col justify-center items-stretch md:items-end gap-3 w-full md:w-max">
               <div className="w-full max-w-sm">
-                <a
+                <ButtonLink
                   href="/reservation-appel"
-                  className="hero-cta opacity-0 translate-y-2"
+                  variant="glow"
+                  size="lg"
+                  className="hero-cta opacity-0 translate-y-2 w-full justify-center rounded-xl px-7 py-3.5 text-neutral-900 dark:text-white"
                   data-magnetic
                 >
-                  <span className="glow-wrap w-full inline-block">
-                    <span className="glow" />
-                    <span className="inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable">Réserver un diagnostic 90 min</span>
-                  </span>
-                </a>
+                  Réserver un diagnostic 90 min
+                </ButtonLink>
               </div>
               <div className="w-full max-w-sm">
-                <a
+                <ButtonLink
                   href="#services"
-                  className="hero-cta opacity-0 translate-y-2"
+                  variant="glow"
+                  size="lg"
+                  className="hero-cta opacity-0 translate-y-2 w-full justify-center rounded-xl px-7 py-3.5 text-neutral-900 dark:text-white"
                   data-magnetic
                 >
-                  <span className="glow-wrap w-full inline-block">
-                    <span className="glow" />
-                    <span className="inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable">Explorer les solutions</span>
-                  </span>
-                </a>
+                  Explorer les solutions
+                </ButtonLink>
               </div>
             </div>
           </div>

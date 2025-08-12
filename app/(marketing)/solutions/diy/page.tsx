@@ -32,7 +32,7 @@ export default function DIYPage() {
       ]}
     >
       <section id="categories" className="space-y-3">
-        <h2 className="text-2xl font-semibold">Catégories</h2>
+        <h2 className="text-h2">Catégories</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>Websites & Funnels: homepage local service, landing lead‑gen</li>
           <li>Agents IA: SEO content, lead nurture, GMB messages, call agent</li>
@@ -41,17 +41,17 @@ export default function DIYPage() {
       </section>
 
       <section id="usage" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Comment ça marche</h2>
+        <h2 className="text-h2">Comment ça marche</h2>
         <p>Installez le snapshot, suivez la vidéo étape‑par‑étape, puis adaptez le contenu. Support disponible selon l’abonnement.</p>
       </section>
 
       <section id="cta" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Accéder</h2>
+        <h2 className="text-h2">Accéder</h2>
         <ButtonLink href="/offres">Voir les offres</ButtonLink>
       </section>
 
       <section id="pricing" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Tarifs</h2>
+        <h2 className="text-h2">Tarifs</h2>
         <p className="text-neutral-300">Consultez les détails et comparatifs sur la page Offres.</p>
         <a href="/offres" className="inline-flex rounded-lg border border-white/20 bg-white/20 text-white px-3 py-2 hover:bg-white/30">Voir les offres →</a>
       </section>

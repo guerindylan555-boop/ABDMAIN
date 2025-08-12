@@ -83,4 +83,8 @@
 - **Design tokens**: unification typographique et classes utilitaires.
   - **Fichier modifié**: `app/globals.css`
     - Ajout d’une échelle typographique: `.text-display`, `.text-h1`, `.text-h2`, `.text-h3`, `.text-h4`, `.text-lead`, `.text-body`, `.text-small`, `.text-caption` via variables CSS.
-  - **À faire ensuite**: remplacer progressivement les tailles ad‑hoc par ces classes dans les sections.
+  - **Remplacements initiaux**:
+    - `app/components/sections/Hero.tsx` — titre en `.text-h1`, lead en `.text-lead`; CTA migrés vers `ButtonLink` variant `glow`.
+    - `app/components/marketing/SectionPage.tsx` — titre en `.text-h1`, description en `.text-lead`.
+    - `app/(marketing)/solutions/{diy,dwy,dfy}/page.tsx` — titres de sections en `.text-h2`.
+  - **À faire ensuite**: remplacer progressivement les tailles ad‑hoc sur le reste des sections.

@@ -28,9 +28,9 @@ export default function SectionPage({
             </span>
           )}
         </div>
-        <h1 className="mt-2 text-[32px] md:text-[44px] font-extrabold tracking-tight text-white">{title}</h1>
+        <h1 className="mt-2 text-h1 font-extrabold tracking-tight text-white">{title}</h1>
         {description && (
-          <p className="mt-3 text-neutral-300 text-[15px] md:text-[17px] max-w-3xl">{description}</p>
+          <p className="mt-3 text-neutral-300 text-lead max-w-3xl">{description}</p>
         )}
       </header>
 

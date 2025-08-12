@@ -35,7 +35,7 @@ export default function DFYPage() {
       ]}
     >
       <section id="pour-qui" className="space-y-3">
-        <h2 className="text-2xl font-semibold">Pour qui ?</h2>
+        <h2 className="text-h2">Pour qui ?</h2>
         <p className="flex flex-wrap gap-2">
           <Badge>Local / Services</Badge>
           <Badge variant="secondary">PME</Badge>
@@ -45,7 +45,7 @@ export default function DFYPage() {
       </section>
 
       <section id="process" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Process en 3 étapes</h2>
+        <h2 className="text-h2">Process en 3 étapes</h2>
         <ol className="list-decimal pl-5 space-y-1">
           <li><strong>Diagnostic 90 min</strong> — audit funnel/SEO/GB/appels/CRM/tracking → feuille de route priorisée.</li>
           <li><strong>Build & Implémentation</strong> — site/funnel, agents IA, automations, tracking, GB.</li>
@@ -54,7 +54,7 @@ export default function DFYPage() {
       </section>
 
       <section id="packages" className="space-y-4 mt-8">
-        <h2 className="text-2xl font-semibold">Packages</h2>
+        <h2 className="text-h2">Packages</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-xl p-6 border border-white/10 bg-white/10">
             <h3 className="font-semibold">DFY Launch (2–3 semaines)</h3>
@@ -81,13 +81,13 @@ export default function DFYPage() {
       </section>
 
       <section id="cta" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Prêt à démarrer ?</h2>
+        <h2 className="text-h2">Prêt à démarrer ?</h2>
         <ButtonLink href="/reservation-appel">Réserver le diagnostic 90 min</ButtonLink>
       </section>
 
       {/* Section tarifs simplifiée ou renvoyant vers /offres */}
       <section id="pricing" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Tarifs</h2>
+        <h2 className="text-h2">Tarifs</h2>
         <p className="text-neutral-300">Consultez les détails et comparatifs sur la page Offres.</p>
         <a href="/offres" className="inline-flex rounded-lg border border-white/20 bg-white/20 text-white px-3 py-2 hover:bg-white/30">Voir les offres →</a>
       </section>

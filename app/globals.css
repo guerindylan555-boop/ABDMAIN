@@ -379,10 +379,10 @@ body {
   --glow-speed: 4s;
 }
 
-.glow-wrap, .glow-card { position: relative; }
+.glow-wrap, .glow-card { position: relative; isolation: isolate; }
 .glow-wrap .glow, .glow-card .glow {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   inset: var(--glow-inset);
   border: solid var(--glow-border);
   border-image: conic-gradient(
@@ -401,6 +401,12 @@ body {
 
 /* Cards have a slightly larger default radius */
 .glow-card .glow { border-radius: var(--glow-radius, 1rem); }
+
+/* Ensure content stays above the glow */
+.glow-wrap > :not(.glow), .glow-card > :not(.glow) {
+  position: relative;
+  z-index: 1;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .glow-wrap .glow, .glow-card .glow { animation: none; }

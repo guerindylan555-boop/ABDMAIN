@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
 import Link from "next/link";
+import { ButtonLink } from "@/app/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Offres — AB Digital",
@@ -118,7 +119,7 @@ export default function OffresPage() {
             <div className="mt-3 flex flex-wrap gap-2"></div>
           </div>
         </div>
-        <a href="/solutions/diy" className="inline-flex mt-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 text-white hover:bg-white/20">Choisir DIY</a>
+        <ButtonLink href="/solutions/diy" variant="glow" className="inline-flex mt-2">Choisir DIY</ButtonLink>
       </section>
 
       <section id="dwy" className="space-y-4 mt-12">
@@ -150,7 +151,7 @@ export default function OffresPage() {
             <div className="mt-3"><span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] tracking-wide uppercase">Abonnement minimum: 3 mois</span></div>
           </div>
         </div>
-        <a href="/solutions/dwy" className="inline-flex mt-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 text-white hover:bg-white/20">Choisir DWY</a>
+        <ButtonLink href="/solutions/dwy" variant="glow" className="inline-flex mt-2">Choisir DWY</ButtonLink>
         <p className="text-[12px] text-neutral-400">Fair use: modifications illimitées = contenus/visuels et ajustements UX courants; refontes majeures et développements spécifiques devisés.</p>
       </section>
 
@@ -183,7 +184,7 @@ export default function OffresPage() {
             <div className="mt-3"><span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] tracking-wide uppercase">Abonnement minimum: 6 mois</span></div>
           </div>
         </div>
-        <a href="/solutions/dfy" className="inline-flex mt-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 text-white hover:bg-white/20">Choisir DFY</a>
+        <ButtonLink href="/solutions/dfy" variant="glow" className="inline-flex mt-2">Choisir DFY</ButtonLink>
         <p className="text-[12px] text-neutral-400">Ads: budgets/créations publicitaires soumis à validation. Automations: respect strict RGPD (opt‑in/STOP, preuves de consentement).</p>
       </section>
 
@@ -222,12 +223,7 @@ export default function OffresPage() {
           ))}
         </div>
         <div className="pt-2">
-          <Link
-            href="/reservation-appel"
-            className="inline-flex items-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 backdrop-blur hover:bg-white/30"
-          >
-            Réserver un audit gratuit
-          </Link>
+          <ButtonLink href="/reservation-appel" variant="glow">Réserver un audit gratuit</ButtonLink>
         </div>
       </section>
     </SectionPage>
