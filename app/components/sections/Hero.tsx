@@ -103,13 +103,16 @@ export default function Hero() {
               </ul>
             </div>
             <div className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-10 flex flex-col justify-center items-stretch md:items-end gap-3 w-full md:w-max">
-              <a
-                href="/reservation-appel"
-                className="hero-cta inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
-                data-magnetic
-              >
-                Réserver un diagnostic 90 min
-              </a>
+              <div className="glow-wrap w-full md:w-auto">
+                <div className="glow" />
+                <a
+                  href="/reservation-appel"
+                  className="hero-cta inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
+                  data-magnetic
+                >
+                  Réserver un diagnostic 90 min
+                </a>
+              </div>
               <a
                 href="#services"
                 className="hero-cta inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
@@ -122,6 +125,39 @@ export default function Hero() {
         </div>
       </div>
       <div className="pointer-events-none absolute inset-0 -z-10" />
+      <style jsx>{`
+        @property --a {
+          syntax: '<angle>';
+          initial-value: 0deg;
+          inherits: false;
+        }
+        @keyframes a { to { --a: 1turn; } }
+        .glow-wrap { position: relative; display: inline-block; }
+        .glow-wrap .glow {
+          position: absolute;
+          z-index: -1;
+          inset: -0.5em;
+          border: solid 0.5em;
+          border-image: conic-gradient(
+            from var(--a),
+            #669900,
+            #99cc33,
+            #ccee66,
+            #006699,
+            #3399cc,
+            #990066,
+            #cc3399,
+            #ff6600,
+            #ff9900,
+            #ffcc00,
+            #669900
+          ) 1;
+          filter: blur(0.35em);
+          animation: a 4s linear infinite;
+          pointer-events: none;
+          border-radius: 0.75rem; /* match rounded-xl */
+        }
+      `}</style>
     </section>
   );
 }

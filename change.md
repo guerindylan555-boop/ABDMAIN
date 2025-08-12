@@ -32,6 +32,11 @@
 - **Offres & Tarifs**: ajout d’un effet « glowing » autour des 3 cartes d’offres.
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
     - Enrobage de chaque `Card` dans un conteneur `glow-card` + calque `.glow` animé (conic-gradient) via styled‑jsx.
+  - Ajustement: réduction de l’intensité (blur et épaisseur) du glow pour un rendu plus subtil.
+
+- **Hero**: ajout du même glow sur le bouton « Réserver un diagnostic 90 min » sous les chips “Sites & Funnels / SEO local & Google Business / CRM & Suivi / Agents IA & Automations”.
+  - **Fichier modifié**: `app/components/sections/Hero.tsx`
+    - Conteneur `glow-wrap` autour du bouton + style styled‑jsx (conic-gradient) aligné avec l’effet des cartes.
 
 - **CTA**: ajout d’un call-to-action global juste au-dessus du footer.
   - **Nouveau fichier**: `components/mvpblocks/cta-3.tsx`

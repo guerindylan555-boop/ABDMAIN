@@ -318,8 +318,8 @@ export default function SimplePricing() {
           .glow-card .glow {
             position: absolute;
             z-index: -1;
-            inset: -1em;
-            border: solid 1.25em;
+            inset: -0.5em;
+            border: solid 0.5em;
             border-image: conic-gradient(
               from var(--a),
               #669900,
@@ -334,7 +334,7 @@ export default function SimplePricing() {
               #ffcc00,
               #669900
             ) 1;
-            filter: blur(0.75em);
+            filter: blur(0.35em);
             animation: a 4s linear infinite;
             pointer-events: none;
             border-radius: 1rem;
