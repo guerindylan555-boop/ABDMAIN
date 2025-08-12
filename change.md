@@ -20,3 +20,7 @@
   - **Fichier modifié**: `app/page.tsx`
     - Retrait de l’import `./components/sections/Logos`
     - Suppression de `<Logos />` (la nouvelle section marquee vient désormais juste après `<FeaturesGrid />`).
+
+- **UI**: suppression du dégradé/filtre sombre en bas de la section de témoignages marquee.
+  - **Fichier modifié**: `components/mvpblocks/testimonials-marquee.tsx`
+    - Retrait du div gradient inférieur.

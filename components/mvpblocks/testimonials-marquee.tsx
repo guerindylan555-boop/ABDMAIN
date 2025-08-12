@@ -269,7 +269,6 @@ export default function Testimonials() {
               </Marquee>
             ))}
         </div>
-        <div className="from-background pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-20%"></div>
       </div>
     </section>
   );
