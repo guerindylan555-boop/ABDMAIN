@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Accordion } from "@/app/components/ui/accordion";
 
 const faqs = [
   {
@@ -40,30 +40,14 @@ export default function FAQ() {
             <p className="mt-3 text-neutral-700 dark:text-neutral-300">Transparence et simplicité.</p>
           </div>
 
-          <div className="mt-10 divide-y divide-neutral-200/60 dark:divide-neutral-800 rounded-xl bg-white/60 dark:bg-neutral-900/30 pressable">
-            {faqs.map((item) => (
-              <FAQItem key={item.q} q={item.q} a={item.a} />)
-            )}
+          <div className="mt-10">
+            <Accordion
+              items={faqs.map((f) => ({ id: f.q, title: f.q, content: <p>{f.a}</p> }))}
+            />
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function FAQItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div>
-      <button
-        className="w-full text-left px-6 py-4 flex items-center justify-between"
-        onClick={() => setOpen((v) => !v)}
-      >
-        <span className="font-medium">{q}</span>
-        <span className="text-neutral-400">{open ? "−" : "+"}</span>
-      </button>
-      {open && <p className="px-6 pb-4 text-sm text-neutral-700 dark:text-neutral-300">{a}</p>}
-    </div>
   );
 }
 
