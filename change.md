@@ -24,3 +24,7 @@
 - **UI**: suppression du dégradé/filtre sombre en bas de la section de témoignages marquee.
   - **Fichier modifié**: `components/mvpblocks/testimonials-marquee.tsx`
     - Retrait du div gradient inférieur.
+
+- **UI**: retrait de l’effet visuel au-dessus de la section Offres & Tarifs (blob flou supérieur).
+  - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
+    - Suppression du cercle flou positionné en haut (-top) derrière le titre.
