@@ -37,3 +37,6 @@
 - **CTA**: intégration manuelle du composant fourni `CTA3` et ajout juste au-dessus du footer.
   - **Nouveau fichier**: `components/mvpblocks/cta-3.tsx`
   - **Fichier modifié**: `app/layout.tsx` (insertion de `<CTA3 />` avant `<Footer />`).
+
+- **CTA**: francisation complète des textes du composant `CTA3` (titres, paragraphes, puces).
+  - **Fichier modifié**: `components/mvpblocks/cta-3.tsx`
