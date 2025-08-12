@@ -160,16 +160,18 @@ export default function SimplePricing() {
               whileHover={{ y: -5 }}
               className="flex"
             >
-              <Card
-                className={cn(
-                  'bg-secondary/20 relative h-full w-full text-left transition-all duration-300 hover:shadow-lg',
-                  plan.popular
-                    ? 'ring-primary/50 dark:shadow-primary/10 shadow-md ring-2'
-                    : 'hover:border-primary/30',
-                  plan.popular &&
-                    'from-primary/[0.03] bg-gradient-to-b to-transparent',
-                )}
-              >
+              <div className="glow-card w-full">
+                <div className="glow" />
+                <Card
+                  className={cn(
+                    'bg-secondary/20 relative h-full w-full text-left transition-all duration-300 hover:shadow-lg',
+                    plan.popular
+                      ? 'ring-primary/50 dark:shadow-primary/10 shadow-md ring-2'
+                      : 'hover:border-primary/30',
+                    plan.popular &&
+                      'from-primary/[0.03] bg-gradient-to-b to-transparent',
+                  )}
+                >
                 {plan.popular && (
                   <div className="absolute -top-3 right-0 left-0 mx-auto w-fit">
                     <Badge className="bg-primary text-primary-foreground rounded-full px-4 py-1 shadow-sm">
@@ -296,10 +298,48 @@ export default function SimplePricing() {
                 ) : (
                   <div className="hover:border-primary/10 pointer-events-none absolute inset-0 rounded-lg border border-transparent opacity-0 transition-opacity duration-300 hover:opacity-100" />
                 )}
-              </Card>
+                </Card>
+              </div>
             </motion.div>
           ))}
         </div>
+        <style jsx>{`
+          @property --a {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+          }
+
+          @keyframes a {
+            to { --a: 1turn; }
+          }
+
+          .glow-card { position: relative; overflow: visible; }
+          .glow-card .glow {
+            position: absolute;
+            z-index: -1;
+            inset: -1em;
+            border: solid 1.25em;
+            border-image: conic-gradient(
+              from var(--a),
+              #669900,
+              #99cc33,
+              #ccee66,
+              #006699,
+              #3399cc,
+              #990066,
+              #cc3399,
+              #ff6600,
+              #ff9900,
+              #ffcc00,
+              #669900
+            ) 1;
+            filter: blur(0.75em);
+            animation: a 4s linear infinite;
+            pointer-events: none;
+            border-radius: 1rem;
+          }
+        `}</style>
       </div>
     </div>
   );

@@ -29,6 +29,10 @@
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
     - Suppression du cercle flou positionné en haut (-top) derrière le titre.
 
+- **Offres & Tarifs**: ajout d’un effet « glowing » autour des 3 cartes d’offres.
+  - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
+    - Enrobage de chaque `Card` dans un conteneur `glow-card` + calque `.glow` animé (conic-gradient) via styled‑jsx.
+
 - **CTA**: ajout d’un call-to-action global juste au-dessus du footer.
   - **Nouveau fichier**: `components/mvpblocks/cta-3.tsx`
   - **Fichier modifié**: `app/layout.tsx`
