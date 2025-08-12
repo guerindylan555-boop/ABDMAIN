@@ -88,3 +88,11 @@
     - `app/components/marketing/SectionPage.tsx` — titre en `.text-h1`, description en `.text-lead`.
     - `app/(marketing)/solutions/{diy,dwy,dfy}/page.tsx` — titres de sections en `.text-h2`.
   - **À faire ensuite**: remplacer progressivement les tailles ad‑hoc sur le reste des sections.
+
+- **Homepage**: suppression de la section CTA locale "Diagnostic croissance — 90 minutes".
+  - **Fichiers modifiés**:
+    - `app/page.tsx` — retrait de l’import et du rendu de `CTA` (le CTA global `CTA3` reste au niveau layout).
+
+- **Fix Glow**: correction de l’empilement du glow sur les CTA Hero.
+  - **Fichier modifié**: `app/globals.css`
+    - Ajout `display:inline-block` et `overflow:hidden` sur `.glow-wrap` pour contraindre le calque glow au périmètre de chaque bouton et éviter le chevauchement entre plusieurs boutons.

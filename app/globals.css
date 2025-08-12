@@ -380,6 +380,7 @@ body {
 }
 
 .glow-wrap, .glow-card { position: relative; isolation: isolate; }
+.glow-wrap { display: inline-block; overflow: hidden; }
 .glow-wrap .glow, .glow-card .glow {
   position: absolute;
   z-index: 0;

@@ -6,7 +6,6 @@ import FeaturesGrid from "./components/sections/FeaturesGrid";
 import Pricing from "./components/sections/Pricing";
 import BlogLatest from "./components/sections/BlogLatest";
 import FAQ from "./components/sections/FAQ";
-import CTA from "./components/sections/CTA";
 import ScrollProgress from "./components/ScrollProgress";
 import TestimonialsMarquee from "@/components/mvpblocks/testimonials-marquee";
 
@@ -22,7 +21,7 @@ export default async function HomePage() {
       <Pricing />
       <BlogLatest />
       <FAQ />
-      <CTA />
+      {/* CTA global supprimé de la home (présent en layout global) */}
     </main>
   );
 }
