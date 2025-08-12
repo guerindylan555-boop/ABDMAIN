@@ -25,9 +25,9 @@ export default function Essentiels() {
         <div className="glass-highlight rounded-none border-y border-white/10">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12 md:py-16">
             <div className="max-w-2xl">
-              <h2 className="text-h2 font-bold tracking-tight">Les essentiels <span className="text-[--brand]">sur‑mesure</span></h2>
+              <h2 className="text-h2 font-bold tracking-tight">Les essentiels <span className="text-brand">sur‑mesure</span></h2>
               <p className="mt-3 text-lead text-neutral-700 dark:text-neutral-300">
-                Un socle clair pour grandir: exécution <span className="text-[--brand]">sur‑mesure</span>, automations pragmatiques et mesure fiable.
+                Un socle clair pour grandir: exécution <span className="text-brand">sur‑mesure</span>, automations pragmatiques et mesure fiable.
               </p>
             </div>
 

@@ -32,7 +32,7 @@ export default function Offers() {
         <div className="rounded-2xl glass-panel p-8 md:p-10">
           <div className="max-w-2xl">
             <h2 className="text-h2 font-bold tracking-tight">
-              Trois façons de <span className="text-[--brand]">travailler</span> avec nous
+              Trois façons de <span className="text-brand">travailler</span> avec nous
             </h2>
             <p className="mt-3 text-lead text-neutral-700 dark:text-neutral-300">
               Couverts tous les niveaux de budget et de maturité, avec la même qualité d’exécution.

@@ -30,7 +30,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="rounded-2xl glass-panel p-8 md:p-10">
           <div className="max-w-2xl">
-            <h2 className="text-h2 font-bold tracking-tight"><span className="text-[--brand]">Témoignages</span> clients</h2>
+            <h2 className="text-h2 font-bold tracking-tight"><span className="text-brand">Témoignages</span> clients</h2>
             <p className="mt-3 text-lead text-neutral-700 dark:text-neutral-300">Des résultats concrets rapportés par nos clients.</p>
           </div>
 

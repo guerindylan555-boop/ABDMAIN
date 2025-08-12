@@ -20,6 +20,7 @@
   --border: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --brand: #5b8cff;
+  --brand-rgb: 91 140 255; /* for alpha utilities */
   --brand-600: #3f6fe8;
   --gradient-from: #5b8cff;
   --gradient-to: #935bff;
@@ -446,4 +447,12 @@ body {
 .text-body { font-size: var(--fs-body); line-height: var(--lh-body); }
 .text-small { font-size: var(--fs-small); line-height: var(--lh-small); }
 .text-caption { font-size: var(--fs-caption); line-height: var(--lh-caption); }
+
+/* Brand color utilities (robust across Tailwind transforms) */
+.text-brand { color: var(--brand) !important; }
+.fill-brand { fill: var(--brand) !important; }
+.bg-brand { background-color: var(--brand) !important; }
+.bg-brand-5 { background-color: rgb(var(--brand-rgb) / 0.05) !important; }
+.bg-brand-10 { background-color: rgb(var(--brand-rgb) / 0.10) !important; }
+.ring-brand-20 { --tw-ring-color: rgb(var(--brand-rgb) / 0.20) !important; }
 

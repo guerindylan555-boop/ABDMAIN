@@ -49,7 +49,7 @@ export default function Faq1() {
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-10 text-center">
           <h2 className="mb-3 text-h2 font-bold tracking-tight">
-            Questions <span className="text-[--brand]">fréquentes</span>
+            Questions <span className="text-brand">fréquentes</span>
           </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lead">
             Réponses aux questions les plus courantes sur nos offres et notre façon de travailler.
