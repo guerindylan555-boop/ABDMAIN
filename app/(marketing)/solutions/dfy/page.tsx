@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
 import { Card, CardHeader, CardTitle, CardContent } from "@/app/components/ui/card";
-import SimplePricing from "@/components/mvpblocks/simple-pricing";
+// import SimplePricing from "@/components/mvpblocks/simple-pricing";
 import Faq1 from "@/components/mvpblocks/faq-1";
 import Badge from "@/app/components/ui/badge";
 import { ButtonLink } from "@/app/components/ui/button";
@@ -86,8 +86,11 @@ export default function DFYPage() {
         <ButtonLink href="/reservation-appel">Réserver le diagnostic 90 min</ButtonLink>
       </section>
 
+      {/* Section tarifs simplifiée ou renvoyant vers /offres */}
       <section id="pricing" className="space-y-3 mt-8">
-        <SimplePricing />
+        <h2 className="text-2xl font-semibold">Tarifs</h2>
+        <p className="text-neutral-300">Consultez les détails et comparatifs sur la page Offres.</p>
+        <a href="/offres" className="inline-flex rounded-lg border border-white/20 bg-white/20 text-white px-3 py-2 hover:bg-white/30">Voir les offres →</a>
       </section>
       <section id="faq" className="space-y-3 mt-8">
         <Faq1 />
