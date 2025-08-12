@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
 import { Card, CardHeader, CardTitle, CardContent } from "@/app/components/ui/card";
+import SimplePricing from "@/components/mvpblocks/simple-pricing";
 import { ButtonLink } from "@/app/components/ui/button";
 
 export const metadata: Metadata = {
@@ -55,6 +56,9 @@ export default function DWYPage() {
 
       <section id="pricing" className="space-y-3 mt-8">
         <h2 className="text-2xl font-semibold">Tarifs</h2>
+        <div className="mt-2">
+          <SimplePricing />
+        </div>
         <div className="grid sm:grid-cols-3 gap-4">
           <Card>
             <CardHeader>

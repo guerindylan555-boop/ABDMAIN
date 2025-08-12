@@ -37,6 +37,11 @@ export default function Offers() {
             </p>
           </div>
 
+          {/* Bloc pricing shadcn intégré pour renforcer la comparaison rapide */}
+          <div className="mt-8">
+            {/* On peut injecter une version condensée du bloc de pricing ici plus tard si souhaité */}
+          </div>
+
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {offers.map((o) => (
               <a
