@@ -380,10 +380,10 @@ body {
 }
 
 .glow-wrap, .glow-card { position: relative; isolation: isolate; }
-.glow-wrap { display: inline-block; overflow: hidden; }
+.glow-wrap { display: inline-block; }
 .glow-wrap .glow, .glow-card .glow {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   inset: var(--glow-inset);
   border: solid var(--glow-border);
   border-image: conic-gradient(
@@ -398,6 +398,8 @@ body {
   animation: glow-rotate var(--glow-speed) linear infinite;
   pointer-events: none;
   border-radius: var(--glow-radius, 0.75rem);
+  /* push outward beyond button bounds */
+  transform: translateZ(0);
 }
 
 /* Cards have a slightly larger default radius */
