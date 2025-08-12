@@ -15,7 +15,7 @@ export function Highlight({
   return (
     <span
       className={cn(
-        'bg-blue-500/10 p-1 py-0.5 font-bold text-blue-500',
+        'bg-[--brand]/10 p-1 py-0.5 font-bold text-[--brand]',
         className,
       )}
     >
@@ -56,11 +56,11 @@ export function TestimonialCard({
       <div className="text-muted-foreground text-sm font-normal select-none">
         {description}
         <div className="flex flex-row py-1">
-          <Star className="size-4 fill-blue-500 text-blue-500" />
-          <Star className="size-4 fill-blue-500 text-blue-500" />
-          <Star className="size-4 fill-blue-500 text-blue-500" />
-          <Star className="size-4 fill-blue-500 text-blue-500" />
-          <Star className="size-4 fill-blue-500 text-blue-500" />
+          <Star className="size-4 fill-[--brand] text-[--brand]" />
+          <Star className="size-4 fill-[--brand] text-[--brand]" />
+          <Star className="size-4 fill-[--brand] text-[--brand]" />
+          <Star className="size-4 fill-[--brand] text-[--brand]" />
+          <Star className="size-4 fill-[--brand] text-[--brand]" />
         </div>
       </div>
 
@@ -70,7 +70,7 @@ export function TestimonialCard({
           height={40}
           src={img || ''}
           alt={name}
-          className="size-10 rounded-full ring-1 ring-blue-500/20 ring-offset-2"
+          className="size-10 rounded-full ring-1 ring-[--brand]/20 ring-offset-2"
         />
 
         <div>
@@ -235,8 +235,8 @@ export default function Testimonials() {
   return (
     <section className="relative container py-10">
       {/* Decorative elements */}
-      <div className="absolute top-20 -left-20 z-10 h-64 w-64 rounded-full bg-blue-500/5 blur-3xl" />
-      <div className="absolute -right-20 bottom-20 z-10 h-64 w-64 rounded-full bg-blue-500/5 blur-3xl" />
+      <div className="absolute top-20 -left-20 z-10 h-64 w-64 rounded-full bg-[--brand]/5 blur-3xl" />
+      <div className="absolute -right-20 bottom-20 z-10 h-64 w-64 rounded-full bg-[--brand]/5 blur-3xl" />
 
       <div>
         <h2 className="text-foreground mb-4 text-center text-4xl leading-[1.2] font-bold tracking-tighter md:text-5xl">

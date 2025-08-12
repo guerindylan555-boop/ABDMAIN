@@ -1,16 +1,18 @@
+import { ButtonLink } from "@/app/components/ui/button";
+
 export default function CTA3() {
   return (
     <section className="relative px-4 py-24 md:px-6">
       <div className="mx-auto max-w-7xl">
-        <div className="relative overflow-hidden rounded-2xl border border-[#1A3C6C]/30 bg-[#1A2649]/80 shadow-2xl transition-all duration-500 hover:border-[#2E9BFF]/30 hover:shadow-[0_0_30px_rgba(88,192,255,0.2)]">
+        <div className="relative overflow-hidden rounded-2xl glass-highlight border border-white/10">
           <div className="relative z-10 grid gap-0 lg:grid-cols-2">
             <div className="p-8 md:p-12 lg:p-16">
-              <div className="mb-6 inline-block rounded-full border border-[#1A3C6C]/30 bg-[#0A0F2C] px-4 py-1 text-[#2E9BFF]">
+              <div className="mb-6 inline-block rounded-full border border-white/15 bg-white/10 px-4 py-1 text-[--brand]">
                 Passez à l’action
               </div>
               <h2 className="mb-6 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
                 Prêts à{' '}
-                <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">
+                <span className="text-[--brand]">
                   transformer
                 </span>{' '}
                 votre marketing ?
@@ -23,7 +25,7 @@ export default function CTA3() {
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="mt-1 mr-4 rounded-full bg-[#0A0F2C] p-2 text-[#2E9BFF]">
+                  <div className="mt-1 mr-4 rounded-full bg-white/10 p-2 text-[--brand]">
                     <svg
                       width="20"
                       height="20"
@@ -56,7 +58,7 @@ export default function CTA3() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="mt-1 mr-4 rounded-full bg-[#0A0F2C] p-2 text-[#2E9BFF]">
+                  <div className="mt-1 mr-4 rounded-full bg-white/10 p-2 text-[--brand]">
                     <svg
                       width="20"
                       height="20"
@@ -89,7 +91,7 @@ export default function CTA3() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="mt-1 mr-4 rounded-full bg-[#0A0F2C] p-2 text-[#2E9BFF]">
+                  <div className="mt-1 mr-4 rounded-full bg-white/10 p-2 text-[--brand]">
                     <svg
                       width="20"
                       height="20"
@@ -123,7 +125,7 @@ export default function CTA3() {
               </div>
             </div>
 
-            <div className="relative flex flex-col justify-center overflow-hidden bg-gradient-to-br from-blue-500 to-blue-700 p-8 text-white md:p-12 lg:p-16">
+            <div className="relative flex flex-col justify-center overflow-hidden glass p-8 text-white md:p-12 lg:p-16">
               <div className="absolute top-0 right-0 h-full w-full opacity-10"></div>
               <div className="relative z-10">
                 <h3 className="mb-6 text-2xl font-bold tracking-tight md:text-3xl">
@@ -156,7 +158,7 @@ export default function CTA3() {
                   </div>
                 </div>
 
-                <div className="mt-10 rounded-xl bg-white/10 p-6 backdrop-blur">
+                <div className="mt-10 rounded-xl glass p-6">
                   <p className="text-lg font-medium">
                     « Nous avons fait passer notre taux de conversion de 1,7% à 6,3% en 31 jours
                     après la mise en place du système. »

@@ -14,7 +14,7 @@ function baseClasses(variant: Variant, size: Size) {
     outline:
       "border border-white/30 text-white hover:bg-white/10",
     glow:
-      "relative border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm",
+      "relative border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm whitespace-nowrap",
   };
   const s: Record<Size, string> = {
     sm: "px-3 py-1.5 text-sm rounded-lg",
@@ -32,8 +32,9 @@ export function Button({
   ...props
 }: ButtonHTMLAttributes<HTMLButtonElement> & { variant?: Variant; size?: Size; withGlow?: boolean }) {
   if (withGlow || variant === "glow") {
+    const wrapFull = className?.includes("w-full") ? "block w-full" : "";
     return (
-      <span className="glow-wrap">
+      <span className={`glow-wrap ${wrapFull}`}>
         <span className="glow" />
         <button className={`${baseClasses("glow", size)} ${className}`} {...props} />
       </span>
@@ -51,8 +52,9 @@ export function ButtonLink({
   ...props
 }: AnchorHTMLAttributes<HTMLAnchorElement> & { href: string; variant?: Variant; size?: Size; withGlow?: boolean }) {
   if (withGlow || variant === "glow") {
+    const wrapFull = className?.includes("w-full") ? "block w-full" : "";
     return (
-      <span className="glow-wrap">
+      <span className={`glow-wrap ${wrapFull}`}>
         <span className="glow" />
         <a href={href} className={`${baseClasses("glow", size)} ${className}`} {...props} />
       </span>

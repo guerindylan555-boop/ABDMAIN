@@ -96,3 +96,16 @@
 - **Fix Glow**: correction de l’empilement du glow sur les CTA Hero.
   - **Fichier modifié**: `app/globals.css`
     - Ajout `display:inline-block` et `overflow:hidden` sur `.glow-wrap` pour contraindre le calque glow au périmètre de chaque bouton et éviter le chevauchement entre plusieurs boutons.
+
+- **UI**: harmonisation des couleurs bleues des témoignages avec la palette.
+  - **Fichier modifié**: `components/mvpblocks/testimonials-marquee.tsx`
+    - Remplacement des bleus hardcodés (`text-blue-500`, `fill-blue-500`, `bg-blue-500/5`) par les tokens `--brand` (`text-[--brand]`, `fill-[--brand]`, `bg-[--brand]/5`).
+
+- **FAQ**: uniformisation de la mise en forme et thème glass.
+  - **Fichier modifié**: `components/mvpblocks/faq-1.tsx`
+    - Titre unifié (`text-h2` + `text-[--brand]` sur le mot “fréquentes”), description en `text-lead`.
+    - Conteneurs accordéon passés en `glass`/`glass-panel`/`glass-highlight` et couleurs basées sur les tokens (`--brand`).
+
+- **CTA global**: alignement avec le thème glass et la palette de marque.
+  - **Fichier modifié**: `components/mvpblocks/cta-3.tsx`
+    - Remplacement des couleurs hex par tokens (`--brand`) et utilitaires `glass`/`glass-highlight`.

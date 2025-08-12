@@ -48,26 +48,23 @@ export default function Faq1() {
     <section className="py-12 md:py-16">
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-10 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-            Questions{' '}
-            <span className="from-primary bg-gradient-to-r to-rose-400 bg-clip-text text-transparent">
-              fréquentes
-            </span>
+          <h2 className="mb-3 text-h2 font-bold tracking-tight">
+            Questions <span className="text-[--brand]">fréquentes</span>
           </h2>
-          <p className="text-muted-foreground mx-auto max-w-2xl">
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lead">
             Réponses aux questions les plus courantes sur nos offres et notre façon de travailler.
           </p>
         </div>
 
         <div className="relative mx-auto max-w-3xl">
-          {/* Decorative gradient */}
-          <div className="bg-primary/10 absolute -top-4 -left-4 -z-10 h-72 w-72 rounded-full blur-3xl" />
-          <div className="bg-primary/10 absolute -right-4 -bottom-4 -z-10 h-72 w-72 rounded-full blur-3xl" />
+          {/* Decorative gradient (glass theme aligned) */}
+          <div className="absolute -top-4 -left-4 -z-10 h-72 w-72 rounded-full bg-[--brand]/10 blur-3xl" />
+          <div className="absolute -right-4 -bottom-4 -z-10 h-72 w-72 rounded-full bg-[--brand]/10 blur-3xl" />
 
           <Accordion
             type="single"
             collapsible
-            className="border-border/40 bg-card/30 w-full rounded-xl border p-2 backdrop-blur-sm"
+            className="glass-panel w-full rounded-xl p-2"
             defaultValue="1"
           >
             {items.map((item) => (
@@ -75,24 +72,24 @@ export default function Faq1() {
                 <AccordionItem
                   value={item.id}
                   className={cn(
-                    'bg-card/50 my-1 overflow-hidden rounded-lg border-none px-2 shadow-sm transition-all',
-                    'data-[state=open]:bg-card/80 data-[state=open]:shadow-md',
+                    'glass my-1 overflow-hidden rounded-lg px-2 transition-all',
+                    'data-[state=open]:glass-highlight',
                   )}
                 >
                   <AccordionPrimitive.Header className="flex">
                     <AccordionPrimitive.Trigger
                       className={cn(
                         'group flex flex-1 items-center justify-between gap-4 py-4 text-left text-base font-medium',
-                        'hover:text-primary transition-all duration-300 outline-none',
-                        'focus-visible:ring-primary/50 focus-visible:ring-2',
-                        'data-[state=open]:text-primary',
+                        'hover:text-[--brand] transition-all duration-300 outline-none',
+                        'focus-visible:ring-[--brand]/50 focus-visible:ring-2',
+                        'data-[state=open]:text-[--brand]',
                       )}
                     >
                       {item.title}
                       <PlusIcon
                         size={18}
                         className={cn(
-                          'text-primary/70 shrink-0 transition-transform duration-300 ease-out',
+                          'text-[--brand]/70 shrink-0 transition-transform duration-300 ease-out',
                           'group-data-[state=open]:rotate-45',
                         )}
                         aria-hidden="true"
@@ -106,7 +103,7 @@ export default function Faq1() {
                       'data-[state=closed]:animate-accordion-up',
                     )}
                   >
-                    <div className="border-border/30 border-t pt-3">
+                    <div className="border-white/10 border-t pt-3">
                       {item.content}
                     </div>
                   </AccordionContent>
