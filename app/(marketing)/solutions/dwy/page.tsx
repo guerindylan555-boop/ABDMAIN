@@ -55,49 +55,7 @@ export default function DWYPage() {
       </section>
 
       <section id="pricing" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Tarifs</h2>
-        <div className="mt-2">
-          <SimplePricing />
-        </div>
-        <div className="grid sm:grid-cols-3 gap-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>DWY Core</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-extrabold">249–497€/mois</div>
-              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-                <li>Sous‑compte + templates</li>
-                <li>Coaching hebdomadaire</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>DWY Pro</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-extrabold">497–797€/mois</div>
-              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-                <li>Agents IA + workflows avancés</li>
-                <li>Support prioritaire</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Setup</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-extrabold">Options</div>
-              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-                <li>Fast Start (2 sessions)</li>
-                <li>Pro Setup (4 sessions)</li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-        <p className="mt-2 text-xs text-neutral-400">Facturation mensuelle. Coaching hebdomadaire et mises à jour inclus selon plan.</p>
+        <SimplePricing />
       </section>
     </SectionPage>
   );

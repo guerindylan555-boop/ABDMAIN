@@ -51,37 +51,7 @@ export default function DIYPage() {
       </section>
 
       <section id="pricing" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Tarifs</h2>
-        <div className="mt-2">
-          <SimplePricing />
-        </div>
-        <div className="grid sm:grid-cols-2 gap-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>Snapshots</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-extrabold">97–497€</div>
-              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-                <li>Sites/Funnels, Agents IA, Automations</li>
-                <li>Guides et checklists inclus</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Abonnement</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-extrabold">49–99€/mois</div>
-              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-                <li>Bibliothèque + mises à jour régulières</li>
-                <li>Support selon plan</li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-        <p className="mt-2 text-xs text-neutral-400">Accès aux mises à jour des templates et guides inclus pendant l’abonnement.</p>
+        <SimplePricing />
       </section>
     </SectionPage>
   );

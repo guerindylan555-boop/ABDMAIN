@@ -85,52 +85,7 @@ export default function DFYPage() {
       </section>
 
       <section id="pricing" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">Tarifs</h2>
-        <div className="mt-2">
-          <SimplePricing />
-        </div>
-        <div className="grid sm:grid-cols-3 gap-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>Launch</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-extrabold">1 500€ +</div>
-              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-                <li>2–3 semaines</li>
-                <li>Site/Funnel + tracking</li>
-                <li>GB: profil, posts, avis</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Scale</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-extrabold">4 000€ +</div>
-              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-                <li>4–6 semaines</li>
-                <li>Agents IA SEO & Nurture</li>
-                <li>A/B tests + tracking avancé</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Pro</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-extrabold">Sur‑mesure</div>
-              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-                <li>Multi‑site / multi‑localisation</li>
-                <li>Paid media, intégrations</li>
-                <li>Data layer & reporting</li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-        <p className="mt-2 text-xs text-neutral-400">Prix indicatifs, hors budget média. Le diagnostic 90 min peut être offert puis déduit du projet.</p>
+        <SimplePricing />
       </section>
     </SectionPage>
   );
