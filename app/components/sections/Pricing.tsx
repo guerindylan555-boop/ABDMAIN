@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/app/components/ui/card";
+import SimplePricing from "@/components/mvpblocks/simple-pricing";
 
 const plans = [
   {
@@ -49,6 +50,9 @@ export default function Pricing() {
             <p className="mt-3 text-neutral-700 dark:text-neutral-300">Sans engagement, pilotés par les résultats.</p>
           </div>
 
+          <div className="mt-10">
+            <SimplePricing />
+          </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3 items-stretch">
             {plans.map((p) => (
               <Card key={p.name} className="min-h-[360px] pressable">
