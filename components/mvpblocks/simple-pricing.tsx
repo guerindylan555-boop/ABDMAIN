@@ -291,13 +291,8 @@ export default function SimplePricing() {
 
                 {/* Subtle gradient effects */}
                 {plan.popular ? (
-                  <>
-                    <div className="from-primary/[0.05] pointer-events-none absolute right-0 bottom-0 left-0 h-1/2 rounded-b-lg bg-gradient-to-t to-transparent" />
-                    <div className="border-primary/20 pointer-events-none absolute inset-0 rounded-lg border" />
-                  </>
-                ) : (
-                  <div className="hover:border-primary/10 pointer-events-none absolute inset-0 rounded-lg border border-transparent opacity-0 transition-opacity duration-300 hover:opacity-100" />
-                )}
+                  <div className="pointer-events-none absolute inset-0 rounded-lg border border-white/10" />
+                ) : null}
                 </Card>
               </div>
             </motion.div>

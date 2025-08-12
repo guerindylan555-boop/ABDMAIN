@@ -1,5 +1,17 @@
+import { ButtonLink } from "@/app/components/ui/button";
+import { Sparkles, Zap, Shield } from "lucide-react";
+
+type Offer = {
+  badge: string;
+  title: string;
+  desc: string;
+  href: string;
+  cta: string;
+  icon: React.ComponentType<{ className?: string }>;
+};
+
 export default function Offers() {
-  const offers = [
+  const offers: Offer[] = [
     {
       badge: "DIY",
       title: "Templates & snapshots prêts à déployer",
@@ -7,6 +19,7 @@ export default function Offers() {
         "Modèles de sites, funnels, agents IA et workflows prêts à l’emploi. Guides pas‑à‑pas et vidéos inclus.",
       href: "/solutions/diy",
       cta: "Découvrir le DIY",
+      icon: Sparkles,
     },
     {
       badge: "DWY",
@@ -15,6 +28,7 @@ export default function Offers() {
         "Sous‑compte tout‑en‑un (CRM, tunnels, calendriers, facturation) + templates + coaching hebdo. Sprints d’implémentation en direct.",
       href: "/solutions/dwy",
       cta: "Découvrir le DWY",
+      icon: Zap,
     },
     {
       badge: "DFY",
@@ -23,8 +37,9 @@ export default function Offers() {
         "Conseil + exécution clé en main: site/funnel, SEO local, agents IA et automations d’appels/SMS. Délai moyen: 2–6 semaines.",
       href: "/solutions/dfy",
       cta: "Découvrir le DFY",
+      icon: Shield,
     },
-  ] as const;
+  ];
 
   return (
     <section id="offres-modes" className="py-16 md:py-20 scroll-mt-24">
@@ -32,31 +47,49 @@ export default function Offers() {
         <div className="rounded-2xl glass-panel p-8 md:p-10">
           <div className="max-w-2xl">
             <h2 className="text-h2 font-bold tracking-tight">
-              Trois façons de <span style={{ color: 'var(--brand)' }}>travailler</span> avec nous
+              Trois façons de <span style={{ color: "var(--brand)" }}>travailler</span> avec nous
             </h2>
             <p className="mt-3 text-lead text-neutral-700 dark:text-neutral-300">
               Couverts tous les niveaux de budget et de maturité, avec la même qualité d’exécution.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {offers.map((o) => (
-              <a
-                key={o.badge}
-                href={o.href}
-                className="rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 h-full pressable transition-transform hover:scale-[1.01]"
-                aria-label={o.title}
-              >
-                <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] uppercase tracking-wide">
-                  {o.badge}
-                </span>
-                <h3 className="mt-3 font-semibold text-lg">
-                  {o.title}
-                </h3>
-                <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">{o.desc}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm text-[--brand]">{o.cta} →</span>
-              </a>
-            ))}
+          <div className="relative mt-8">
+            {/* Subtle brand-toned backdrop to tie with the gradient/glass theme */}
+            <div className="pointer-events-none absolute -top-12 -left-12 h-56 w-56 rounded-full bg-brand-10 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-10 -right-8 h-48 w-48 rounded-full bg-brand-10 blur-3xl" />
+
+            <div className="grid gap-6 md:grid-cols-3">
+              {offers.map((o) => {
+                const Icon = o.icon;
+                return (
+                  <div key={o.badge} className="glow-card group h-full">
+                    <div className="glow" />
+                    <div className="glass-card relative h-full rounded-xl border border-white/10 p-6 transition-all duration-300 group-hover:shadow-lg">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <div className="grid h-9 w-9 place-items-center rounded-full bg-white/10 text-brand">
+                            <Icon className="h-4 w-4" />
+                          </div>
+                          <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] uppercase tracking-wide">
+                            {o.badge}
+                          </span>
+                        </div>
+                      </div>
+                      <h3 className="mt-4 text-lg font-semibold text-foreground">{o.title}</h3>
+                      <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300 flex-1">
+                        {o.desc}
+                      </p>
+                      <div className="mt-4">
+                        <ButtonLink href={o.href} variant="glow" size="md" className="w-full justify-center">
+                          {o.cta}
+                        </ButtonLink>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
