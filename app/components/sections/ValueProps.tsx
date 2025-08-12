@@ -28,7 +28,7 @@ export default function ValueProps() {
         <div className="rounded-2xl glass-panel p-8 md:p-10">
           <div className="max-w-2xl">
             <h2 className="text-h2 font-bold tracking-tight">
-              Les essentiels pour <span className="text-[--brand]">accélérer</span> avec AB Digital
+              Les essentiels pour <span style={{ color: 'var(--brand)' }}>accélérer</span> avec AB Digital
             </h2>
             <p className="mt-3 text-lead text-neutral-700 dark:text-neutral-300">
               Un socle clair, des automations pragmatiques et une mesure qui guide les décisions.

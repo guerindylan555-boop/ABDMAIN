@@ -56,11 +56,11 @@ export function TestimonialCard({
       <div className="text-muted-foreground text-sm font-normal select-none">
         {description}
         <div className="flex flex-row py-1">
-          <Star className="size-4 fill-brand text-brand" />
-          <Star className="size-4 fill-brand text-brand" />
-          <Star className="size-4 fill-brand text-brand" />
-          <Star className="size-4 fill-brand text-brand" />
-          <Star className="size-4 fill-brand text-brand" />
+          <Star className="size-4 text-brand" fill="currentColor" stroke="currentColor" />
+          <Star className="size-4 text-brand" fill="currentColor" stroke="currentColor" />
+          <Star className="size-4 text-brand" fill="currentColor" stroke="currentColor" />
+          <Star className="size-4 text-brand" fill="currentColor" stroke="currentColor" />
+          <Star className="size-4 text-brand" fill="currentColor" stroke="currentColor" />
         </div>
       </div>
 

@@ -109,10 +109,10 @@
 - **CTA global**: alignement avec le thème glass et la palette de marque.
  - **Accentuation**: ajout de touches de couleur cohérentes via `--brand` sur des mots clés
    - **Fichiers modifiés**:
-     - `app/components/sections/Offers.tsx` — titre de section accentué (mot « travailler »).
-     - `app/components/sections/Essentiels.tsx` — titre et description accentuent « sur‑mesure ».
-     - `app/components/sections/FeaturesGrid.tsx` — accent sur « tout‑en‑un ».
-     - `app/components/sections/Testimonials.tsx` — titres harmonisés et accent couleur.
-     - `app/components/sections/ValueProps.tsx` — accent sur « accélérer » dans le titre.
+    - `app/components/sections/Offers.tsx` — titre de section accentué (mot « travailler ») via style inline `var(--brand)`.
+    - `app/components/sections/Essentiels.tsx` — titre et description accentuent « sur‑mesure » via style inline `var(--brand)`.
+    - `app/components/sections/FeaturesGrid.tsx` — accent sur « tout‑en‑un » via style inline `var(--brand)`.
+    - `app/components/sections/Testimonials.tsx` — titres harmonisés et accent couleur via style inline `var(--brand)`.
+    - `app/components/sections/ValueProps.tsx` — accent sur « accélérer » via style inline `var(--brand)`.
   - **Fichier modifié**: `components/mvpblocks/cta-3.tsx`
     - Remplacement des couleurs hex par tokens (`--brand`) et utilitaires `glass`/`glass-highlight`.
