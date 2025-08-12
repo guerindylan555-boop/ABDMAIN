@@ -10,9 +10,6 @@ export default function Header() {
   const links: Array<{ href: string; label: string }> = useMemo(
     () => [
       { href: "/", label: "Accueil" },
-      { href: "/solutions/dfy", label: "Solutions: DFY" },
-      { href: "/solutions/dwy", label: "Solutions: DWY" },
-      { href: "/solutions/diy", label: "Solutions: DIY" },
       { href: "/hubs", label: "Hubs" },
       { href: "/offres", label: "Tarifs" },
       { href: "/blog", label: "Ressources" },
@@ -22,6 +19,7 @@ export default function Header() {
   );
 
   const [active, setActive] = useState<string | null>(null);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
 
   useEffect(() => {
     if (!isHome) return; // n'activer l'observer que sur la home
@@ -58,44 +56,60 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-6 text-[15px]" aria-label="Navigation principale">
-            {links.map((item) => {
-              const isAnchor = item.href.startsWith("#");
-              const isActive = isHome && isAnchor && active === item.href;
-              if (isAnchor) {
-                return isHome ? (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    aria-current={isActive ? "page" : undefined}
-                    className={
-                      "transition-colors " +
-                      (isActive
-                        ? "font-semibold text-neutral-900 dark:text-white"
-                        : "text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white")
-                    }
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.href}
-                    href={`/${item.href}`}
-                    className="transition-colors text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
-                  >
-                    {item.label}
-                  </Link>
-                );
-              }
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="transition-colors text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
+            {/* Solutions dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setSolutionsOpen(true)}
+              onMouseLeave={() => setSolutionsOpen(false)}
+            >
+              <button
+                type="button"
+                className="transition-colors text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
+                aria-haspopup="menu"
+                aria-expanded={solutionsOpen}
+                onClick={() => setSolutionsOpen((v) => !v)}
+              >
+                Solutions
+              </button>
+              {solutionsOpen && (
+                <div
+                  role="menu"
+                  className="absolute left-0 top-full mt-2 min-w-[260px] rounded-xl glass border border-white/10 p-2 shadow-xl"
                 >
-                  {item.label}
-                </Link>
-              );
-            })}
+                  <Link
+                    href="/solutions/dfy"
+                    className="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/10"
+                    role="menuitem"
+                  >
+                    DFY — Conseil & Builds
+                  </Link>
+                  <Link
+                    href="/solutions/dwy"
+                    className="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/10"
+                    role="menuitem"
+                  >
+                    DWY — Plateforme + Coaching
+                  </Link>
+                  <Link
+                    href="/solutions/diy"
+                    className="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/10"
+                    role="menuitem"
+                  >
+                    DIY — Templates & Snapshots
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {links.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="transition-colors text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           <div className="flex items-center gap-3">
