@@ -1,4 +1,7 @@
 import Hero from "./components/sections/Hero";
+import ValueProps from "./components/sections/ValueProps";
+import Offers from "./components/sections/Offers";
+import FeaturesGrid from "./components/sections/FeaturesGrid";
 import Logos from "./components/sections/Logos";
 import Services from "./components/sections/Services";
 import Process from "./components/sections/Process";
@@ -27,6 +30,9 @@ export default async function HomePage() {
       <main>
         <ScrollProgress />
         <Hero />
+        <ValueProps />
+        <Offers />
+        <FeaturesGrid />
         <Logos />
         <Services />
         <Process />

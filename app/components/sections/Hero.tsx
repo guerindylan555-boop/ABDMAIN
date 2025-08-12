@@ -90,18 +90,16 @@ export default function Hero() {
           <div className="md:grid md:grid-cols-[1fr_auto] md:gap-10 md:items-start">
             <div>
               <h1 className="hero-title text-[44px] md:text-[64px] font-extrabold tracking-tight text-neutral-900 dark:text-white max-w-4xl">
-                Générez plus d’appels, de devis et de ventes.
+                Accélérez votre croissance avec des sites IA, SEO local et automatisations.
               </h1>
               <p className="hero-lead mt-5 text-[18px] md:text-[22px] leading-relaxed text-neutral-700 dark:text-neutral-300 max-w-4xl">
-                Des sites rapides, un SEO maîtrisé (dont Google Business) et des automatisations appels/SMS pilotées par l’IA.
-                Sans engagement, accompagnement mensuel.
+                Centralisez votre CRM, Google Business, appels et tunnels dans un même écosystème. Convertissez plus grâce à des agents IA qui suivent et relancent pendant que vous dormez.
               </p>
               <ul className="mt-6 flex flex-wrap gap-2">
-                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">Sites rapides</li>
-                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">SEO maîtrisé</li>
-                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">Google Business</li>
-                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">Automatisations appels/SMS</li>
-                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">IA</li>
+                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">Sites & Funnels</li>
+                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">SEO local & Google Business</li>
+                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">CRM & Suivi</li>
+                <li className="hero-chip rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">Agents IA & Automations</li>
               </ul>
             </div>
             <div className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-10 flex flex-col justify-center items-stretch md:items-end gap-3 w-full md:w-max">
@@ -110,14 +108,14 @@ export default function Hero() {
                 className="hero-cta inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
                 data-magnetic
               >
-                Audit gratuit
+                Réserver un diagnostic 90 min
               </a>
               <a
                 href="#services"
                 className="hero-cta inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
                 data-magnetic
               >
-                Découvrir nos services
+                Explorer les solutions
               </a>
             </div>
           </div>
