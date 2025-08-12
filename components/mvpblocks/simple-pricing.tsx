@@ -18,60 +18,58 @@ import { motion } from 'framer-motion';
 
 const plans = [
   {
-    id: 'hobby',
-    name: 'Hobby',
+    id: 'diy',
+    name: 'DIY',
     icon: Star,
     price: {
-      monthly: 'Free forever',
-      yearly: 'Free forever',
+      monthly: '49–99€ / mois',
+      yearly: '49–99€ / mois',
     },
     description:
-      'The perfect starting place for your web app or personal project.',
+      'Templates & snapshots (sites, funnels, agents IA, automations) avec vidéos et checklists.',
     features: [
-      '50 API calls / month',
-      '60 second checks',
-      'Single-user account',
-      '5 monitors',
-      'Basic email support',
+      "Modèles prêts à l’emploi",
+      'Guides vidéo & checklists',
+      'Mises à jour régulières',
     ],
-    cta: 'Get started for free',
+    cta: 'Choisir DIY',
   },
   {
-    id: 'pro',
-    name: 'Pro',
+    id: 'dwy',
+    name: 'DWY',
     icon: Zap,
     price: {
-      monthly: 90,
-      yearly: 75,
+      monthly: '249–797€ / mois',
+      yearly: '249–797€ / mois',
     },
-    description: 'Everything you need to build and scale your business.',
+    description:
+      'Sous‑compte tout‑en‑un (CRM, tunnels, calendriers, facturation) + templates + coaching hebdo.',
     features: [
-      'Unlimited API calls',
-      '30 second checks',
-      'Multi-user account',
-      '10 monitors',
-      'Priority email support',
+      'Templates & snapshots inclus',
+      'Coaching hebdomadaire',
+      'Sprints d’implémentation',
+      'Support prioritaire',
     ],
-    cta: 'Subscribe to Pro',
+    cta: 'Choisir DWY',
     popular: true,
   },
   {
-    id: 'enterprise',
-    name: 'Enterprise',
+    id: 'dfy',
+    name: 'DFY',
     icon: Shield,
     price: {
-      monthly: 'Get in touch for pricing',
-      yearly: 'Get in touch for pricing',
+      monthly: 'à partir de 1 500€',
+      yearly: 'à partir de 1 500€',
     },
-    description: 'Critical security, performance, observability and support.',
+    description:
+      'Conseil + réalisation clé en main (site/funnel, SEO local, agents IA, automations).',
     features: [
-      'You can DDOS our API.',
-      'Nano-second checks.',
-      'Invite your extended family.',
-      'Unlimited monitors.',
-      "We'll sit on your desk.",
+      'Diagnostic 90 min offert (déduit)',
+      'Site/Funnel + tracking propre',
+      'SEO local & Google Business',
+      'Automatisations appels/SMS/IA',
     ],
-    cta: 'Contact us',
+    cta: 'Nous contacter',
   },
 ];
 
@@ -100,7 +98,7 @@ export default function SimplePricing() {
             className="border-primary/20 bg-primary/5 mb-4 rounded-full px-4 py-1 text-sm font-medium"
           >
             <Sparkles className="text-primary mr-1 h-3.5 w-3.5 animate-pulse" />
-            Pricing Plans
+            Offres & Tarifs
           </Badge>
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
@@ -108,7 +106,7 @@ export default function SimplePricing() {
             transition={{ duration: 0.5 }}
             className="from-foreground to-foreground/30 bg-gradient-to-b bg-clip-text text-4xl font-bold text-transparent sm:text-5xl"
           >
-            Pick the perfect plan for your needs
+            Choisissez la meilleure offre pour vos besoins
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -116,8 +114,7 @@ export default function SimplePricing() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-muted-foreground max-w-md pt-2 text-lg"
           >
-            Simple, transparent pricing that scales with your business. No
-            hidden fees, no surprises.
+            Des tarifs simples et transparents qui évoluent avec votre entreprise. Aucun frais caché, aucune surprise.
           </motion.p>
         </div>
 
@@ -131,26 +128,26 @@ export default function SimplePricing() {
             onValueChange={setFrequency}
             className="bg-muted/30 inline-block rounded-full p-1 shadow-sm"
           >
-            <TabsList className="bg-transparent">
-              <TabsTrigger
-                value="monthly"
-                className="data-[state=active]:bg-background rounded-full transition-all duration-300 data-[state=active]:shadow-sm"
-              >
-                Monthly
-              </TabsTrigger>
-              <TabsTrigger
-                value="yearly"
-                className="data-[state=active]:bg-background rounded-full transition-all duration-300 data-[state=active]:shadow-sm"
-              >
-                Yearly
-                <Badge
-                  variant="secondary"
-                  className="bg-primary/10 text-primary hover:bg-primary/15 ml-2"
+              <TabsList className="bg-transparent">
+                <TabsTrigger
+                  value="monthly"
+                  className="data-[state=active]:bg-background rounded-full transition-all duration-300 data-[state=active]:shadow-sm"
                 >
-                  20% off
-                </Badge>
-              </TabsTrigger>
-            </TabsList>
+                  Mensuel
+                </TabsTrigger>
+                <TabsTrigger
+                  value="yearly"
+                  className="data-[state=active]:bg-background rounded-full transition-all duration-300 data-[state=active]:shadow-sm"
+                >
+                  Annuel
+                  <Badge
+                    variant="secondary"
+                    className="bg-primary/10 text-primary hover:bg-primary/15 ml-2"
+                  >
+                    –20%
+                  </Badge>
+                </TabsTrigger>
+              </TabsList>
           </Tabs>
         </motion.div>
 
@@ -217,7 +214,7 @@ export default function SimplePricing() {
                             )}
                             format={{
                               style: 'currency',
-                              currency: 'USD',
+                              currency: 'EUR',
                               maximumFractionDigits: 0,
                             }}
                             value={
@@ -227,7 +224,7 @@ export default function SimplePricing() {
                             }
                           />
                           <span className="text-muted-foreground ml-1 text-sm">
-                            /month, billed {frequency}
+                            /mois, facturation {frequency === 'monthly' ? 'mensuelle' : 'annuelle'}
                           </span>
                         </div>
                       ) : (
