@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
 import { Card, CardHeader, CardTitle, CardContent } from "@/app/components/ui/card";
 import SimplePricing from "@/components/mvpblocks/simple-pricing";
+import Faq1 from "@/components/mvpblocks/faq-1";
 import Badge from "@/app/components/ui/badge";
 import { ButtonLink } from "@/app/components/ui/button";
 
@@ -31,6 +32,7 @@ export default function DFYPage() {
         { id: "packages", label: "Packages" },
         { id: "cta", label: "Passer au diagnostic" },
         { id: "pricing", label: "Tarifs" },
+        { id: "faq", label: "FAQ" },
       ]}
     >
       <section id="pour-qui" className="space-y-3">
@@ -86,6 +88,9 @@ export default function DFYPage() {
 
       <section id="pricing" className="space-y-3 mt-8">
         <SimplePricing />
+      </section>
+      <section id="faq" className="space-y-3 mt-8">
+        <Faq1 />
       </section>
     </SectionPage>
   );
