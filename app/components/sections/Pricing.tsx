@@ -2,15 +2,15 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/app/components/ui/ca
 
 const plans = [
   {
-    name: "DFY",
-    price: "à partir de 1 500€",
-    note: "Projets 2–6 semaines",
-    description: "Consulting + builds clé en main: site/funnel, SEO local, agents IA, automations.",
+    name: "DIY",
+    price: "49–99€/mois",
+    note: "Bibliothèque + updates",
+    description: "Templates & snapshots de sites, funnels, agents IA et workflows. Guides pas‑à‑pas.",
     items: [
-      "Diagnostic 90 min offert (déduit)",
-      "Site/Funnel + tracking propre",
-      "SEO local & Google Business",
-      "Automatisations appels/SMS/IA",
+      "Modèles prêts à l’emploi",
+      "Vidéos & checklists",
+      "Mises à jour régulières",
+      "Accès à la communauté (option)",
     ],
   },
   {
@@ -26,15 +26,15 @@ const plans = [
     ],
   },
   {
-    name: "DIY",
-    price: "49–99€/mois",
-    note: "Bibliothèque + updates",
-    description: "Templates & snapshots de sites, funnels, agents IA et workflows. Guides pas‑à‑pas.",
+    name: "DFY",
+    price: "à partir de 1 500€",
+    note: "Projets 2–6 semaines",
+    description: "Consulting + builds clé en main: site/funnel, SEO local, agents IA, automations.",
     items: [
-      "Modèles prêts à l’emploi",
-      "Vidéos & checklists",
-      "Mises à jour régulières",
-      "Accès à la communauté (option)",
+      "Diagnostic 90 min offert (déduit)",
+      "Site/Funnel + tracking propre",
+      "SEO local & Google Business",
+      "Automatisations appels/SMS/IA",
     ],
   },
 ];

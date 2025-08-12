@@ -1,12 +1,12 @@
 export default function Offers() {
   const offers = [
     {
-      badge: "DFY",
-      title: "Nous concevons et implémentons pour vous",
+      badge: "DIY",
+      title: "Templates & snapshots prêts à déployer",
       desc:
-        "Conseil + exécution clé en main: site/funnel, SEO local, agents IA et automations d’appels/SMS. Délai moyen: 2–6 semaines.",
-      href: "/solutions/dfy",
-      cta: "Découvrir le DFY",
+        "Modèles de sites, funnels, agents IA et workflows prêts à l’emploi. Guides pas‑à‑pas et vidéos inclus.",
+      href: "/solutions/diy",
+      cta: "Découvrir le DIY",
     },
     {
       badge: "DWY",
@@ -17,12 +17,12 @@ export default function Offers() {
       cta: "Découvrir le DWY",
     },
     {
-      badge: "DIY",
-      title: "Templates & snapshots prêts à déployer",
+      badge: "DFY",
+      title: "Nous concevons et implémentons pour vous",
       desc:
-        "Modèles de sites, funnels, agents IA et workflows prêts à l’emploi. Guides pas‑à‑pas et vidéos inclus.",
-      href: "/solutions/diy",
-      cta: "Découvrir le DIY",
+        "Conseil + exécution clé en main: site/funnel, SEO local, agents IA et automations d’appels/SMS. Délai moyen: 2–6 semaines.",
+      href: "/solutions/dfy",
+      cta: "Découvrir le DFY",
     },
   ] as const;
 

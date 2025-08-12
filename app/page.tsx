@@ -1,5 +1,5 @@
 import Hero from "./components/sections/Hero";
-import ValueProps from "./components/sections/ValueProps";
+import Essentiels from "./components/sections/Essentiels";
 import Offers from "./components/sections/Offers";
 import FeaturesGrid from "./components/sections/FeaturesGrid";
 import Logos from "./components/sections/Logos";
@@ -30,7 +30,7 @@ export default async function HomePage() {
       <main>
         <ScrollProgress />
         <Hero />
-        <ValueProps />
+        <Essentiels />
         <Offers />
         <FeaturesGrid />
         <Logos />

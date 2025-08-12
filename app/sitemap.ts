@@ -18,7 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/hubs/call-messaging`, changeFrequency: "monthly", priority: 0.5, lastModified: new Date() },
     { url: `${base}/hubs/lead-gen`, changeFrequency: "monthly", priority: 0.5, lastModified: new Date() },
     { url: `${base}/contact`, changeFrequency: "monthly", priority: 0.8, lastModified: new Date() },
-    { url: `${base}/services`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
+    // { url: `${base}/services`, ... } supprimé
     { url: `${base}/offres`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },
     // /tarifs redirigé vers /offres
     { url: `${base}/seo-google-business`, changeFrequency: "monthly", priority: 0.7, lastModified: new Date() },

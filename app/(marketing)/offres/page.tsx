@@ -34,27 +34,23 @@ export default function OffresPage() {
             <thead>
               <tr className="text-left">
                 <th className="px-4 py-3 font-semibold text-white">Fonctionnalités</th>
-                <th className="px-4 py-3 font-semibold text-white">Starter</th>
-                <th className="px-4 py-3 font-semibold text-white">Croissance</th>
-                <th className="px-4 py-3 font-semibold text-white">Performance</th>
+                <th className="px-4 py-3 font-semibold text-white">DIY</th>
+                <th className="px-4 py-3 font-semibold text-white">DWY</th>
+                <th className="px-4 py-3 font-semibold text-white">DFY</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/10">
               {[
-                { label: "Site sur‑mesure rapide (5+ pages)", s: true, c: true, p: true },
-                { label: "Modifications illimitées (fair use)", s: false, c: true, p: true },
-                { label: "SEO Basic", s: true, c: false, p: false },
-                { label: "SEO complet (technique, contenus, maillage)", s: false, c: true, p: true },
-                { label: "SEO avancé + Netlinking", s: false, c: false, p: true },
-                { label: "Google Business (posts, avis, NAP)", s: false, c: true, p: true },
-                { label: "Automatisations de base (emails/SMS)", s: false, c: true, p: false },
-                { label: "Automatisations complètes (appels/SMS/IA, RDV)", s: false, c: false, p: true },
-                { label: "Publicité payante (Google/Meta)", s: false, c: false, p: true },
-                { label: "A/B testing & dashboard", s: false, c: false, p: true },
+                { label: "Site/Funnel haute conversion", diy: false, dwy: false, dfy: true },
+                { label: "Sous‑compte (CRM, tunnels, calendriers)", diy: false, dwy: true, dfy: true },
+                { label: "Templates & snapshots", diy: true, dwy: true, dfy: false },
+                { label: "SEO local & Google Business", diy: false, dwy: true, dfy: true },
+                { label: "Automations (appels/SMS/IA)", diy: false, dwy: true, dfy: true },
+                { label: "A/B testing & dashboard", diy: false, dwy: false, dfy: true },
               ].map((row) => (
                 <tr key={row.label}>
                   <td className="px-4 py-3 text-neutral-300">{row.label}</td>
-                  {[row.s, row.c, row.p].map((v, i) => (
+                  {[row.diy, row.dwy, row.dfy].map((v, i) => (
                     <td key={i} className="px-4 py-3 text-center">
                       {v ? (
                         <span
@@ -75,67 +71,59 @@ export default function OffresPage() {
         </div>
         <div className="flex flex-wrap gap-2">
           <Link
-            href="#starter"
+            href="#diy"
             className="inline-flex items-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 backdrop-blur hover:bg-white/30"
           >
-            Détail Starter →
+            Détail DIY →
           </Link>
           <Link
-            href="#croissance"
+            href="#dwy"
             className="inline-flex items-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 backdrop-blur hover:bg-white/30"
           >
-            Détail Croissance →
+            Détail DWY →
           </Link>
           <Link
-            href="#performance"
+            href="#dfy"
             className="inline-flex items-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 backdrop-blur hover:bg-white/30"
           >
-            Détail Performance →
+            Détail DFY →
           </Link>
         </div>
       </section>
 
       {/* Détails par offre (ex-"Tarifs") */}
-      <section id="starter" className="space-y-4 mt-12">
+      <section id="diy" className="space-y-4 mt-12">
         <div className="flex items-baseline gap-3">
-          <h2 className="text-2xl font-semibold">Starter</h2>
-          <span className="text-neutral-400 text-base">300€</span>
+          <h2 className="text-2xl font-semibold">DIY</h2>
+          <span className="text-neutral-400 text-base">49–99€/mois</span>
         </div>
         <p className="text-neutral-300 max-w-3xl">
-          Démarrez vite et bien: un site vitrine 5 pages, rapide, clair et optimisé, avec le nécessaire pour être visible et
-          convertir vos premiers prospects.
+          Lancer vite: templates & snapshots (sites, funnels, agents IA, automations) avec guides et vidéos.
         </p>
         <div className="grid sm:grid-cols-2 gap-6">
           <div>
             <h3 className="font-semibold">Ce qui est inclus</h3>
             <ul className="mt-2 space-y-2 text-sm">
-              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Site sur‑mesure (5 pages) optimisé</li>
-              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Suivi SEO mensuel Basic</li>
-              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>5 modifications/mois incluses</li>
-              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Formulaires & conformité RGPD</li>
-              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Tracking de base (GA4/GSC)</li>
+              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Templates & snapshots</li>
+              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Vidéos & checklists</li>
+              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Mises à jour régulières</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold">Résultats attendus</h3>
             <ul className="mt-2 space-y-2 text-sm">
-              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Core Web Vitals maîtrisés (LCP/CLS/INP)</li>
-              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Indexation et premières impressions/clics</li>
-              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Formulaires et appels tracés</li>
+              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Mise en ligne en jours (pas semaines)</li>
+              <li className="flex items-start gap-2"><span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]"/>Funnel/agent IA opérationnels</li>
             </ul>
-            <div className="mt-3 flex flex-wrap gap-2">
-              <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] tracking-wide uppercase">Délai moyen: 2–3 semaines</span>
-              <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] tracking-wide uppercase">Maintenance: 69€/mois</span>
-            </div>
+            <div className="mt-3 flex flex-wrap gap-2"></div>
           </div>
         </div>
-        <a href="/contact#contact" className="inline-flex mt-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 text-white hover:bg-white/20">Choisir Starter</a>
-        <p className="text-[12px] text-neutral-400">Les 5 modifications/mois couvrent textes, images et petites sections (hors refonte structurelle).</p>
+        <a href="/solutions/diy" className="inline-flex mt-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 text-white hover:bg-white/20">Choisir DIY</a>
       </section>
 
-      <section id="croissance" className="space-y-4 mt-12">
+      <section id="dwy" className="space-y-4 mt-12">
         <div className="flex items-baseline gap-3">
-          <h2 className="text-2xl font-semibold">Croissance</h2>
+          <h2 className="text-2xl font-semibold">DWY</h2>
           <span className="text-neutral-400 text-base">Sur devis</span>
           <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/15 px-2 py-1 text-[10px] uppercase tracking-wide text-white">Populaire</span>
         </div>
@@ -162,13 +150,13 @@ export default function OffresPage() {
             <div className="mt-3"><span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] tracking-wide uppercase">Abonnement minimum: 3 mois</span></div>
           </div>
         </div>
-        <a href="/contact#contact" className="inline-flex mt-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 text-white hover:bg-white/20">Parler de Croissance</a>
+        <a href="/solutions/dwy" className="inline-flex mt-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 text-white hover:bg-white/20">Choisir DWY</a>
         <p className="text-[12px] text-neutral-400">Fair use: modifications illimitées = contenus/visuels et ajustements UX courants; refontes majeures et développements spécifiques devisés.</p>
       </section>
 
-      <section id="performance" className="space-y-4 mt-12">
+      <section id="dfy" className="space-y-4 mt-12">
         <div className="flex items-baseline gap-3">
-          <h2 className="text-2xl font-semibold">Performance</h2>
+          <h2 className="text-2xl font-semibold">DFY</h2>
           <span className="text-neutral-400 text-base">Sur devis</span>
         </div>
         <p className="text-neutral-300 max-w-3xl">
@@ -195,7 +183,7 @@ export default function OffresPage() {
             <div className="mt-3"><span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] tracking-wide uppercase">Abonnement minimum: 6 mois</span></div>
           </div>
         </div>
-        <a href="/contact#contact" className="inline-flex mt-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 text-white hover:bg-white/20">Passer en Performance</a>
+        <a href="/solutions/dfy" className="inline-flex mt-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 text-white hover:bg-white/20">Choisir DFY</a>
         <p className="text-[12px] text-neutral-400">Ads: budgets/créations publicitaires soumis à validation. Automations: respect strict RGPD (opt‑in/STOP, preuves de consentement).</p>
       </section>
 

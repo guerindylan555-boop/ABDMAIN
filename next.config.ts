@@ -24,6 +24,11 @@ const nextConfig: NextConfig = {
         destination: "/offres#:slug",
         permanent: true,
       },
+      {
+        source: "/services",
+        destination: "/hubs",
+        permanent: true,
+      },
     ];
   },
 };
