@@ -11,6 +11,7 @@ import BlogLatest from "./components/sections/BlogLatest";
 import FAQ from "./components/sections/FAQ";
 import CTA from "./components/sections/CTA";
 import ScrollProgress from "./components/ScrollProgress";
+import TestimonialsMarquee from "@/components/mvpblocks/testimonials-marquee";
 
 export default async function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default async function HomePage() {
       <Offers />
       <FeaturesGrid />
       <Logos />
+      <TestimonialsMarquee />
       <Services />
       <Testimonials />
       <Pricing />
