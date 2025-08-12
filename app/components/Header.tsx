@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ButtonLink } from "@/app/components/ui/button";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -51,7 +52,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="h-16 flex items-center justify-between gap-4">
-          <Link href="/" className="font-extrabold tracking-tight text-[18px] md:text-[20px] text-neutral-900 dark:text-white">
+          <Link href="/" className="font-extrabold tracking-tight text-h4 text-neutral-900 dark:text-white">
             AB Digital
           </Link>
 
@@ -113,13 +114,9 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a
-              href="/diagnostic-90-min"
-              className="inline-flex items-center rounded-lg border border-white/15 bg-white/10 text-white px-4 py-2 text-sm font-medium backdrop-blur-md hover:bg-white/20 shadow-sm transition-colors pressable"
-              data-magnetic
-            >
+            <ButtonLink href="/diagnostic-90-min" variant="glow" size="md" className="text-sm" data-magnetic>
               Diagnostic 90 min
-            </a>
+            </ButtonLink>
           </div>
         </div>
       </div>

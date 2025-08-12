@@ -367,3 +367,74 @@ body {
   }
 }
 
+/* Glow utilities (unified for CTA buttons and cards) */
+@property --a { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+@keyframes glow-rotate { to { --a: 1turn; } }
+
+/* Defaults can be overridden per element */
+:root {
+  --glow-inset: -0.5em;
+  --glow-border: 0.5em;
+  --glow-blur: 0.35em;
+  --glow-speed: 4s;
+}
+
+.glow-wrap, .glow-card { position: relative; }
+.glow-wrap .glow, .glow-card .glow {
+  position: absolute;
+  z-index: -1;
+  inset: var(--glow-inset);
+  border: solid var(--glow-border);
+  border-image: conic-gradient(
+    from var(--a),
+    #669900, #99cc33, #ccee66,
+    #006699, #3399cc,
+    #990066, #cc3399,
+    #ff6600, #ff9900, #ffcc00,
+    #669900
+  ) 1;
+  filter: blur(var(--glow-blur));
+  animation: glow-rotate var(--glow-speed) linear infinite;
+  pointer-events: none;
+  border-radius: var(--glow-radius, 0.75rem);
+}
+
+/* Cards have a slightly larger default radius */
+.glow-card .glow { border-radius: var(--glow-radius, 1rem); }
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-wrap .glow, .glow-card .glow { animation: none; }
+}
+
+/* Typography scale (unified) */
+:root {
+  --fs-display: clamp(3rem, 6vw, 4.5rem);   /* 48 → 72 */
+  --lh-display: 1.05;
+  --fs-h1: clamp(2.25rem, 5vw, 3.5rem);     /* 36 → 56 */
+  --lh-h1: 1.1;
+  --fs-h2: clamp(1.75rem, 3.5vw, 2.5rem);   /* 28 → 40 */
+  --lh-h2: 1.15;
+  --fs-h3: clamp(1.375rem, 2.5vw, 1.75rem); /* 22 → 28 */
+  --lh-h3: 1.2;
+  --fs-h4: 1.25rem;                          /* 20 */
+  --lh-h4: 1.25;
+  --fs-lead: clamp(1.125rem, 2.2vw, 1.375rem); /* 18 → 22 */
+  --lh-lead: 1.6;
+  --fs-body: 0.9375rem; /* 15 */
+  --lh-body: 1.7;
+  --fs-small: 0.8125rem; /* 13 */
+  --lh-small: 1.5;
+  --fs-caption: 0.75rem; /* 12 */
+  --lh-caption: 1.45;
+}
+
+.text-display { font-size: var(--fs-display); line-height: var(--lh-display); font-weight: 800; letter-spacing: -0.02em; }
+.text-h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); font-weight: 800; letter-spacing: -0.02em; }
+.text-h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 700; letter-spacing: -0.01em; }
+.text-h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: 600; }
+.text-h4 { font-size: var(--fs-h4); line-height: var(--lh-h4); font-weight: 600; }
+.text-lead { font-size: var(--fs-lead); line-height: var(--lh-lead); font-weight: 400; }
+.text-body { font-size: var(--fs-body); line-height: var(--lh-body); }
+.text-small { font-size: var(--fs-small); line-height: var(--lh-small); }
+.text-caption { font-size: var(--fs-caption); line-height: var(--lh-caption); }
+

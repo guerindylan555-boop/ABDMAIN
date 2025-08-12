@@ -70,3 +70,17 @@
     - `app/(marketing)/solutions/dfy/page.tsx` — retrait de `Card`, `CardHeader`, `CardTitle`, `CardContent` non utilisés.
     - `app/components/sections/Services.tsx` — retrait de `Link` non utilisé.
     - `app/components/ThemeToggle.tsx` — retrait de `useEffect` et `useState` non utilisés.
+
+- **UI**: unification de l’effet « glow » pour les CTA et les cartes.
+  - **Fichiers modifiés**:
+    - `app/globals.css` — ajout d’utilitaires globaux `.glow-wrap` / `.glow-card` et variables (`--glow-inset`, `--glow-border`, `--glow-blur`, `--glow-speed`, `--glow-radius`).
+    - `app/components/ui/button.tsx` — ajout du variant `glow` et de l’option `withGlow` pour envelopper automatiquement le bouton dans le wrapper glow.
+    - `app/components/Header.tsx` — application du glow sur le CTA « Diagnostic 90 min » dans la navbar.
+    - `app/components/sections/Hero.tsx` — suppression des styles inline de glow et migration vers les utilitaires globaux.
+    - `components/mvpblocks/simple-pricing.tsx` — suppression des styles inline de glow et usage des utilitaires globaux.
+  - **Notes**: paramètres glow harmonisés (conic‑gradient, blur, épaisseur) entre Hero, Navbar et Pricing. Respect de `prefers-reduced-motion` (timeline existante conservée pour le reveal, glow purement décoratif).
+
+- **Design tokens**: unification typographique et classes utilitaires.
+  - **Fichier modifié**: `app/globals.css`
+    - Ajout d’une échelle typographique: `.text-display`, `.text-h1`, `.text-h2`, `.text-h3`, `.text-h4`, `.text-lead`, `.text-body`, `.text-small`, `.text-caption` via variables CSS.
+  - **À faire ensuite**: remplacer progressivement les tailles ad‑hoc par ces classes dans les sections.

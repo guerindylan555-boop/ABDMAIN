@@ -303,43 +303,7 @@ export default function SimplePricing() {
             </motion.div>
           ))}
         </div>
-        <style jsx>{`
-          @property --a {
-            syntax: '<angle>';
-            initial-value: 0deg;
-            inherits: false;
-          }
-
-          @keyframes a {
-            to { --a: 1turn; }
-          }
-
-          .glow-card { position: relative; overflow: visible; }
-          .glow-card .glow {
-            position: absolute;
-            z-index: -1;
-            inset: -0.5em;
-            border: solid 0.5em;
-            border-image: conic-gradient(
-              from var(--a),
-              #669900,
-              #99cc33,
-              #ccee66,
-              #006699,
-              #3399cc,
-              #990066,
-              #cc3399,
-              #ff6600,
-              #ff9900,
-              #ffcc00,
-              #669900
-            ) 1;
-            filter: blur(0.35em);
-            animation: a 4s linear infinite;
-            pointer-events: none;
-            border-radius: 1rem;
-          }
-        `}</style>
+        <style jsx>{``}</style>
       </div>
     </div>
   );

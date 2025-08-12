@@ -104,10 +104,10 @@ export default function Hero() {
         <div ref={glassRef} className="relative rounded-2xl glass glass-hero p-8 md:p-12 md:pr-[280px]">
           <div className="md:grid md:grid-cols-[1fr_auto] md:gap-10 md:items-start">
             <div>
-              <h1 className="hero-title text-[44px] md:text-[64px] font-extrabold tracking-tight text-neutral-900 dark:text-white max-w-4xl">
+              <h1 className="hero-title text-h1 font-extrabold tracking-tight text-neutral-900 dark:text-white max-w-4xl">
                 Accélérez votre croissance avec des sites IA, SEO local et automatisations.
               </h1>
-              <p className="hero-lead mt-5 text-[18px] md:text-[22px] leading-relaxed text-neutral-700 dark:text-neutral-300 max-w-4xl">
+              <p className="hero-lead mt-5 text-lead text-neutral-700 dark:text-neutral-300 max-w-4xl">
                 Centralisez votre CRM, Google Business, appels et tunnels dans un même écosystème. Convertissez plus grâce à des agents IA qui suivent et relancent pendant que vous dormez.
               </p>
               <ul className="mt-6 flex flex-wrap gap-2">
@@ -118,24 +118,28 @@ export default function Hero() {
               </ul>
             </div>
             <div className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-10 flex flex-col justify-center items-stretch md:items-end gap-3 w-full md:w-max">
-              <div className="glow-wrap w-full max-w-sm">
-                <div className="glow" />
+              <div className="w-full max-w-sm">
                 <a
                   href="/reservation-appel"
-                  className="hero-cta opacity-0 translate-y-2 inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
+                  className="hero-cta opacity-0 translate-y-2"
                   data-magnetic
                 >
-                  Réserver un diagnostic 90 min
+                  <span className="glow-wrap w-full inline-block">
+                    <span className="glow" />
+                    <span className="inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable">Réserver un diagnostic 90 min</span>
+                  </span>
                 </a>
               </div>
-              <div className="glow-wrap w-full max-w-sm">
-                <div className="glow" />
+              <div className="w-full max-w-sm">
                 <a
                   href="#services"
-                  className="hero-cta opacity-0 translate-y-2 inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable"
+                  className="hero-cta opacity-0 translate-y-2"
                   data-magnetic
                 >
-                  Explorer les solutions
+                  <span className="glow-wrap w-full inline-block">
+                    <span className="glow" />
+                    <span className="inline-flex w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/10 bg-white/30 dark:bg-neutral-900/20 px-7 py-3.5 font-medium text-neutral-900 dark:text-white hover:bg-white/40 dark:hover:bg-neutral-900/30 backdrop-blur-md shadow-sm pressable">Explorer les solutions</span>
+                  </span>
                 </a>
               </div>
             </div>
@@ -143,39 +147,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="pointer-events-none absolute inset-0 -z-10" />
-      <style jsx>{`
-        @property --a {
-          syntax: '<angle>';
-          initial-value: 0deg;
-          inherits: false;
-        }
-        @keyframes a { to { --a: 1turn; } }
-        .glow-wrap { position: relative; display: inline-block; }
-        .glow-wrap .glow {
-          position: absolute;
-          z-index: -1;
-          inset: -0.5em;
-          border: solid 0.5em;
-          border-image: conic-gradient(
-            from var(--a),
-            #669900,
-            #99cc33,
-            #ccee66,
-            #006699,
-            #3399cc,
-            #990066,
-            #cc3399,
-            #ff6600,
-            #ff9900,
-            #ffcc00,
-            #669900
-          ) 1;
-          filter: blur(0.35em);
-          animation: a 4s linear infinite;
-          pointer-events: none;
-          border-radius: 0.75rem; /* match rounded-xl */
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </section>
   );
 }
