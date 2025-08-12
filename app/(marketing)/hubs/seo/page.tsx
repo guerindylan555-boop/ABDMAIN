@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
-import { Accordion } from "@/app/components/ui/accordion";
+import Faq1 from "@/components/mvpblocks/faq-1";
 
 export const metadata: Metadata = {
   title: "SEO Hub (Local + IA)",
@@ -40,13 +40,7 @@ export default function SEOHubPage() {
       </section>
 
       <section id="faq" className="space-y-3 mt-8">
-        <h2 className="text-2xl font-semibold">FAQ</h2>
-        <Accordion
-          items={[
-            { id: "delai", title: "Délais de mise en place ?", content: <p>2–4 semaines selon le périmètre.</p> },
-            { id: "contenu", title: "Qui produit les contenus ?", content: <p>Nous pouvons produire ou co‑écrire avec vous.</p> },
-          ]}
-        />
+        <Faq1 />
       </section>
     </SectionPage>
   );
