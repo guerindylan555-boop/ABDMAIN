@@ -382,9 +382,9 @@ body {
 
 .glow-wrap, .glow-card { position: relative; isolation: isolate; }
 .glow-wrap { display: inline-block; /* thinner glow for buttons */
-  --glow-border: 0.35em;
-  --glow-inset: -0.4em;
-  --glow-blur: 0.28em;
+  --glow-border: 0.25em;
+  --glow-inset: -0.3em;
+  --glow-blur: 0.22em;
 }
 .glow-wrap .glow, .glow-card .glow {
   position: absolute;

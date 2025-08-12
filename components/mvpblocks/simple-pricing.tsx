@@ -94,9 +94,9 @@ export default function SimplePricing() {
         <div className="flex flex-col items-center space-y-2">
           <Badge
             variant="outline"
-            className="border-primary/20 bg-primary/5 mb-4 rounded-full px-4 py-1 text-sm font-medium"
+            className="border-[--brand]/20 bg-brand-10 text-brand mb-4 rounded-full px-4 py-1 text-sm font-medium"
           >
-            <Sparkles className="text-primary mr-1 h-3.5 w-3.5 animate-pulse" />
+            <Sparkles className="text-brand mr-1 h-3.5 w-3.5 animate-pulse" />
             Offres & Tarifs
           </Badge>
           <motion.h1
@@ -141,7 +141,7 @@ export default function SimplePricing() {
                   Annuel
                   <Badge
                     variant="secondary"
-                    className="bg-primary/10 text-primary hover:bg-primary/15 ml-2"
+                    className="bg-brand-10 text-brand hover:bg-brand-10 ml-2"
                   >
                     –20%
                   </Badge>
@@ -164,7 +164,7 @@ export default function SimplePricing() {
                 <div className="glow" />
                 <Card
                   className={cn(
-                    'bg-secondary/30 relative h-full w-full text-left transition-all duration-300 hover:shadow-lg',
+                    'bg-secondary/30 relative h-full w-full text-left transition-all duration-300 hover:shadow-lg flex flex-col',
                     plan.popular
                       ? 'ring-primary/50 dark:shadow-primary/10 shadow-md ring-2'
                       : 'hover:border-primary/30',
@@ -186,7 +186,7 @@ export default function SimplePricing() {
                       className={cn(
                         'flex h-8 w-8 items-center justify-center rounded-full',
                         plan.popular
-                          ? 'bg-primary/10 text-primary'
+                          ? 'bg-brand-10 text-brand'
                           : 'bg-secondary text-foreground',
                       )}
                     >
@@ -195,7 +195,7 @@ export default function SimplePricing() {
                     <CardTitle
                       className={cn(
                         'text-xl font-bold',
-                        plan.popular && 'text-primary',
+                        plan.popular && 'text-brand',
                       )}
                     >
                       {plan.name}
@@ -230,12 +230,7 @@ export default function SimplePricing() {
                           );
                         }
                         return (
-                          <span
-                            className={cn(
-                              'text-2xl font-bold',
-                              plan.popular ? 'text-primary' : 'text-foreground',
-                            )}
-                          >
+                          <span className={cn('text-2xl font-bold', plan.popular ? 'text-brand' : 'text-foreground')}>
                             {priceAny as string}
                           </span>
                         );
@@ -255,18 +250,14 @@ export default function SimplePricing() {
                       <div
                         className={cn(
                           'flex h-5 w-5 items-center justify-center rounded-full',
-                          plan.popular
-                            ? 'bg-primary/10 text-primary'
-                            : 'bg-secondary text-secondary-foreground',
+                          plan.popular ? 'bg-brand-10 text-brand' : 'bg-secondary text-secondary-foreground',
                         )}
                       >
                         <Check className="h-3.5 w-3.5" />
                       </div>
                       <span
                         className={
-                          plan.popular
-                            ? 'text-foreground'
-                            : 'text-muted-foreground'
+                          plan.popular ? 'text-foreground' : 'text-muted-foreground'
                         }
                       >
                         {feature}
@@ -274,14 +265,14 @@ export default function SimplePricing() {
                     </motion.div>
                   ))}
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="mt-auto">
                   <Button
                     variant={plan.popular ? 'default' : 'outline'}
                     className={cn(
                       'w-full font-medium transition-all duration-300',
                       plan.popular
-                        ? 'bg-primary hover:bg-primary/90 hover:shadow-primary/20 hover:shadow-md'
-                        : 'hover:border-primary/30 hover:bg-primary/5 hover:text-primary',
+                        ? 'bg-brand hover:bg-brand/90 text-white hover:shadow-md'
+                        : 'hover:border-[--brand]/30 hover:bg-brand-10 hover:text-brand',
                     )}
                   >
                     {plan.cta}
