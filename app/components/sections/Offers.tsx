@@ -31,9 +31,11 @@ export default function Offers() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="rounded-2xl glass-panel p-8 md:p-10">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Trois façons de travailler avec nous</h2>
-            <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-              Couvrez tous les niveaux de budget et de maturité, en gardant la même qualité d’exécution.
+            <h2 className="text-h2 font-bold tracking-tight">
+              Trois façons de <span className="text-[--brand]">travailler</span> avec nous
+            </h2>
+            <p className="mt-3 text-lead text-neutral-700 dark:text-neutral-300">
+              Couverts tous les niveaux de budget et de maturité, avec la même qualité d’exécution.
             </p>
           </div>
 
@@ -48,7 +50,9 @@ export default function Offers() {
                 <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] uppercase tracking-wide">
                   {o.badge}
                 </span>
-                <h3 className="mt-3 font-semibold text-lg">{o.title}</h3>
+                <h3 className="mt-3 font-semibold text-lg">
+                  {o.title}
+                </h3>
                 <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">{o.desc}</p>
                 <span className="mt-4 inline-flex items-center gap-1 text-sm text-[--brand]">{o.cta} →</span>
               </a>

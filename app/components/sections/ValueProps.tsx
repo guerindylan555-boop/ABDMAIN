@@ -27,10 +27,10 @@ export default function ValueProps() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="rounded-2xl glass-panel p-8 md:p-10">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              Les essentiels pour accélérer avec AB Digital
+            <h2 className="text-h2 font-bold tracking-tight">
+              Les essentiels pour <span className="text-[--brand]">accélérer</span> avec AB Digital
             </h2>
-            <p className="mt-3 text-neutral-700 dark:text-neutral-300">
+            <p className="mt-3 text-lead text-neutral-700 dark:text-neutral-300">
               Un socle clair, des automations pragmatiques et une mesure qui guide les décisions.
             </p>
           </div>

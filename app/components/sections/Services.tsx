@@ -54,7 +54,7 @@ export default function Services() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="rounded-2xl glass p-8 md:p-10">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Nos services</h2>
+            <h2 className="text-h2 font-bold tracking-tight">Nos <span className="text-[--brand]">services</span></h2>
             <p className="mt-3 text-neutral-700 dark:text-neutral-300">
               Construisez un socle performant (sites & funnels), gagnez en visibilité (SEO local & Google Business) et convertissez sans pertes (agents IA & automations), avec un levier d’acquisition maîtrisé (Ads).
             </p>

@@ -13,7 +13,7 @@ export default function FeaturesGrid() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="rounded-2xl glass-panel p-8 md:p-10">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Un stack tout‑en‑un, sans complexité</h2>
+            <h2 className="text-h2 font-bold tracking-tight">Un stack <span className="text-[--brand]">tout‑en‑un</span>, sans complexité</h2>
             <p className="mt-3 text-neutral-700 dark:text-neutral-300">
               Inspiré des meilleures plateformes (type sub‑compte GHL), adapté à votre réalité.
             </p>
