@@ -28,3 +28,8 @@
 - **UI**: retrait de l’effet visuel au-dessus de la section Offres & Tarifs (blob flou supérieur).
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
     - Suppression du cercle flou positionné en haut (-top) derrière le titre.
+
+- **CTA**: ajout d’un call-to-action global juste au-dessus du footer.
+  - **Nouveau fichier**: `components/mvpblocks/cta-3.tsx`
+  - **Fichier modifié**: `app/layout.tsx`
+    - Insertion de `<CTA3 />` juste avant `<Footer />` pour affichage sur toutes les pages.
