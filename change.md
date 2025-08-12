@@ -11,3 +11,12 @@
     - Les animations nécessaires au marquee sont déjà présentes dans `app/globals.css`.
     - La section existante `Testimonials` est conservée plus bas sur la page.
     - Pas de build exécuté ici (vous le lancerez si nécessaire).
+
+- **UI**: suppression du dégradé/filtre sombre (overlay) positionné en haut de la section de témoignages marquee.
+  - **Fichier modifié**: `components/mvpblocks/testimonials-marquee.tsx`
+    - Retrait du div gradient supérieur pour éliminer l'assombrissement.
+
+- **Homepage**: suppression de la section "Ils nous font confiance" sur la page d’accueil.
+  - **Fichier modifié**: `app/page.tsx`
+    - Retrait de l’import `./components/sections/Logos`
+    - Suppression de `<Logos />` (la nouvelle section marquee vient désormais juste après `<FeaturesGrid />`).

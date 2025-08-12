@@ -2,7 +2,6 @@ import Hero from "./components/sections/Hero";
 import Essentiels from "./components/sections/Essentiels";
 import Offers from "./components/sections/Offers";
 import FeaturesGrid from "./components/sections/FeaturesGrid";
-import Logos from "./components/sections/Logos";
 import Services from "./components/sections/Services";
 // Process supprimé de la home (section "Notre méthode")
 import Testimonials from "./components/sections/Testimonials";
@@ -21,7 +20,6 @@ export default async function HomePage() {
       <Essentiels />
       <Offers />
       <FeaturesGrid />
-      <Logos />
       <TestimonialsMarquee />
       <Services />
       <Testimonials />
