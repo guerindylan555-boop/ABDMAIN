@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { motion } from 'framer-motion';
+// framer-motion retiré pour compatibilité RSC/Next build
 import { Star } from 'lucide-react';
 import { Marquee } from '@/components/ui/marquee';
 
@@ -30,7 +30,7 @@ export interface TestimonialCardProps {
   img?: string;
   description: React.ReactNode;
   className?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export function TestimonialCard({
@@ -238,23 +238,14 @@ export default function Testimonials() {
       <div className="absolute top-20 -left-20 z-10 h-64 w-64 rounded-full bg-blue-500/5 blur-3xl" />
       <div className="absolute -right-20 bottom-20 z-10 h-64 w-64 rounded-full bg-blue-500/5 blur-3xl" />
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div>
         <h2 className="text-foreground mb-4 text-center text-4xl leading-[1.2] font-bold tracking-tighter md:text-5xl">
-          What Our Users Are Saying
+          Témoignages clients
         </h2>
         <h3 className="text-muted-foreground mx-auto mb-8 max-w-lg text-center text-lg font-medium tracking-tight text-balance">
-          Don&apos;t just take our word for it. Here&apos;s what{' '}
-          <span className="bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent">
-            real developers
-          </span>{' '}
-          are saying about{' '}
-          <span className="font-semibold text-blue-500">NexaUI</span>
+          Des résultats concrets rapportés par nos clients.
         </h3>
-      </motion.div>
+      </div>
 
       <div className="relative mt-6 max-h-screen overflow-hidden">
         <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
@@ -271,18 +262,9 @@ export default function Testimonials() {
                 })}
               >
                 {testimonials.slice(i * 3, (i + 1) * 3).map((card, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      delay: Math.random() * 0.8,
-                      duration: 1.2,
-                    }}
-                  >
+                  <div key={idx}>
                     <TestimonialCard {...card} />
-                  </motion.div>
+                  </div>
                 ))}
               </Marquee>
             ))}

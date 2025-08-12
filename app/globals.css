@@ -274,6 +274,18 @@ body {
 }
 [data-magnetic].magnetic-active { box-shadow: 0 12px 36px rgba(91, 140, 255, 0.25); }
 
+/* Marquee animations (used by testimonials marquee) */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - var(--gap))); }
+}
+@keyframes marquee-vertical {
+  from { transform: translateY(0); }
+  to { transform: translateY(calc(-100% - var(--gap))); }
+}
+.animate-marquee { animation: marquee var(--duration, 40s) linear infinite; }
+.animate-marquee-vertical { animation: marquee-vertical var(--duration, 40s) linear infinite; }
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
