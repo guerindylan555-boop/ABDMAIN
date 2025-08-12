@@ -13,6 +13,7 @@ export default function Header() {
       { href: "/solutions/dfy", label: "Solutions: DFY" },
       { href: "/solutions/dwy", label: "Solutions: DWY" },
       { href: "/solutions/diy", label: "Solutions: DIY" },
+      { href: "/hubs", label: "Hubs" },
       { href: "/offres", label: "Tarifs" },
       { href: "/blog", label: "Ressources" },
       { href: "/a-propos", label: "À propos" },
@@ -99,7 +100,7 @@ export default function Header() {
 
           <div className="flex items-center gap-3">
             <a
-              href="/reservation-appel"
+              href="/diagnostic-90-min"
               className="inline-flex items-center rounded-lg border border-white/15 bg-white/10 text-white px-4 py-2 text-sm font-medium backdrop-blur-md hover:bg-white/20 shadow-sm transition-colors pressable"
               data-magnetic
             >
