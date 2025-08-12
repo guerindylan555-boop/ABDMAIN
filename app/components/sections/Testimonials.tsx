@@ -1,3 +1,5 @@
+import { Card, CardContent } from "@/app/components/ui/card";
+
 const testimonials = [
   {
     name: "Les Halles Beauté",
@@ -34,21 +36,20 @@ export default function Testimonials() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {testimonials.map((t) => (
-              <a
-                key={t.name}
-                href={t.href}
-                className="rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 transition-transform hover:scale-[1.01] hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-[--ring] pressable"
-                aria-label={`Lire l’étude de cas ${t.name}`}
-              >
-                <blockquote>
-                  <p className="text-neutral-900 dark:text-neutral-100">“{t.text}”</p>
-                  <footer className="mt-4 text-sm text-neutral-700 dark:text-neutral-300">
-                    <span className="font-medium">{t.name}</span>
-                    <span className="block text-xs text-neutral-500 dark:text-neutral-400">{t.sector}</span>
-                  </footer>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm text-[--brand]">Lire l’étude de cas →</span>
-                </blockquote>
-              </a>
+              <Card key={t.name} className="pressable">
+                <CardContent>
+                  <a href={t.href} aria-label={`Lire l’étude de cas ${t.name}`}>
+                    <blockquote>
+                      <p className="text-neutral-900 dark:text-neutral-100">“{t.text}”</p>
+                      <footer className="mt-4 text-sm text-neutral-700 dark:text-neutral-300">
+                        <span className="font-medium">{t.name}</span>
+                        <span className="block text-xs text-neutral-500 dark:text-neutral-400">{t.sector}</span>
+                      </footer>
+                      <span className="mt-4 inline-flex items-center gap-1 text-sm text-[--brand]">Lire l’étude de cas →</span>
+                    </blockquote>
+                  </a>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

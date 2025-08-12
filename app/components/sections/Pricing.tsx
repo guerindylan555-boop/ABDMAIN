@@ -1,3 +1,5 @@
+import { Card, CardHeader, CardTitle, CardContent } from "@/app/components/ui/card";
+
 const plans = [
   {
     name: "DFY",
@@ -49,24 +51,25 @@ export default function Pricing() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3 items-stretch">
             {plans.map((p) => (
-              <a key={p.name} href={p.name === "DFY" ? "/solutions/dfy" : p.name === "DWY" ? "/solutions/dwy" : "/solutions/diy"} className="flex flex-col rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 min-h-[360px] transition-transform hover:scale-[1.01] hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-[--ring] pressable">
-                <h3 className="font-semibold text-lg">{p.name}</h3>
-                <div className="mt-2 text-3xl font-extrabold whitespace-nowrap">{p.price}</div>
-                {p.note && (
-                  <p className="text-xs text-neutral-500">{p.note}</p>
-                )}
-                <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">{p.description}</p>
-                <ul className="mt-4 space-y-2 text-sm flex-1">
-                  {p.items.map((i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />
-                      {i}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6 pt-1" />
-                <span className="inline-flex w-full justify-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 font-medium backdrop-blur">Voir l’offre →</span>
-              </a>
+              <Card key={p.name} className="min-h-[360px] pressable">
+                <CardHeader>
+                  <CardTitle>{p.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-3xl font-extrabold whitespace-nowrap">{p.price}</div>
+                  {p.note && <p className="text-xs text-neutral-500">{p.note}</p>}
+                  <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">{p.description}</p>
+                  <ul className="mt-4 space-y-2 text-sm">
+                    {p.items.map((i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <span className="inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                  <a href={p.name === "DFY" ? "/solutions/dfy" : p.name === "DWY" ? "/solutions/dwy" : "/solutions/diy"} className="mt-6 inline-flex w-full justify-center rounded-lg border border-white/20 bg-white/20 text-white px-4 py-2 font-medium backdrop-blur">Voir l’offre →</a>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
