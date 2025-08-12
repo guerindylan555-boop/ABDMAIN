@@ -33,3 +33,7 @@
   - **Nouveau fichier**: `components/mvpblocks/cta-3.tsx`
   - **Fichier modifié**: `app/layout.tsx`
     - Insertion de `<CTA3 />` juste avant `<Footer />` pour affichage sur toutes les pages.
+
+- **CTA**: intégration manuelle du composant fourni `CTA3` et ajout juste au-dessus du footer.
+  - **Nouveau fichier**: `components/mvpblocks/cta-3.tsx`
+  - **Fichier modifié**: `app/layout.tsx` (insertion de `<CTA3 />` avant `<Footer />`).
