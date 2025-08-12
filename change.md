@@ -37,6 +37,7 @@
 - **Hero**: ajout du même glow sur le bouton « Réserver un diagnostic 90 min » sous les chips “Sites & Funnels / SEO local & Google Business / CRM & Suivi / Agents IA & Automations”.
   - **Fichier modifié**: `app/components/sections/Hero.tsx`
     - Conteneur `glow-wrap` autour du bouton + style styled‑jsx (conic-gradient) aligné avec l’effet des cartes.
+  - Synchronisation animations: chips et CTA apparaissent en même temps avec une timeline GSAP déclenchée au scroll (et non au mount), états initiaux fixés par GSAP pour éviter les décalages avec le hover.
 
 - **CTA**: ajout d’un call-to-action global juste au-dessus du footer.
   - **Nouveau fichier**: `components/mvpblocks/cta-3.tsx`

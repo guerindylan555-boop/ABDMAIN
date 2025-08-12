@@ -14,11 +14,26 @@ export default function Hero() {
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       // Intro reveal for text
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      tl.from(".hero-title", { autoAlpha: 0, y: 20, duration: reducedMotion ? 0.4 : 0.8 })
-        .from(".hero-lead", { autoAlpha: 0, y: 16, duration: reducedMotion ? 0.3 : 0.6 }, "-=0.35")
-        .from(".hero-chip", { autoAlpha: 0, y: 10, duration: reducedMotion ? 0.25 : 0.4, stagger: 0.06 }, "-=0.2")
-        .from(".hero-cta", { autoAlpha: 0, y: 12, duration: reducedMotion ? 0.3 : 0.5, stagger: 0.12 }, "-=0.1");
+      // Initial states to avoid transform mismatch before hover
+      gsap.set([".hero-title"], { autoAlpha: 0, y: 20 });
+      gsap.set([".hero-lead"], { autoAlpha: 0, y: 16 });
+      gsap.set([".hero-chip"], { autoAlpha: 0, y: 10 });
+      gsap.set([".hero-cta"], { autoAlpha: 0, y: 12 });
+
+      // Reveal on scroll, not on mount
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out", duration: reducedMotion ? 0.25 : 0.55 },
+        scrollTrigger: {
+          trigger: rootRef.current,
+          start: "top 70%",
+          once: true,
+        },
+      });
+      tl
+        .to(".hero-title", { autoAlpha: 1, y: 0 }, 0)
+        .to(".hero-lead", { autoAlpha: 1, y: 0 }, 0.05)
+        .to(".hero-chip", { autoAlpha: 1, y: 0, stagger: 0.06 }, 0.15)
+        .to(".hero-cta", { autoAlpha: 1, y: 0, stagger: 0.12 }, 0.15);
 
       // Prism Glass Sweep + breathe (sans glint souris)
       if (glassRef.current) {
