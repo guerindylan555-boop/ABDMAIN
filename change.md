@@ -18,8 +18,8 @@
 
 - **Section**: refonte du bloc « Trois façons de travailler avec nous » pour refléter les nouvelles offres.
   - **Fichier modifié**: `app/components/sections/Offers.tsx`
-  - **Titre**: « Trois offres pour avancer avec nous ».
-  - **Cartes**: `Starter`, `Croissance`, `Performance` avec descriptions alignées et CTA mis à jour (Performance → « Réserver un audit »).
+  - **Titre**: « Trois offres pour avancer avec nous » + puces explicatives à gauche.
+  - **Cartes**: `Starter`, `Croissance`, `Performance` avec descriptions alignées et CTA mis à jour (Performance → « Réserver un audit »). Ajout de boutons d’accès rapide: « Voir Offres & Tarifs » et « Parler à un expert ».
 
 - **Ajustements**: simplification du plan Starter (retrait des formations/tutoriels, rapports avancés, formulaires/enquêtes/calendriers/newsletter) et clarification du plan Croissance (pas de répétition, renommage de l’optimisation Google Business, retrait E‑Réputation et planificateur social, retrait de « Devis »).
 

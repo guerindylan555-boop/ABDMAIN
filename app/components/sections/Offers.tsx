@@ -1,5 +1,5 @@
 import { ButtonLink } from "@/app/components/ui/button";
-import { Sparkles, Zap, Shield } from "lucide-react";
+import { Sparkles, Zap, Shield, Check } from "lucide-react";
 
 type Offer = {
   badge: string;
@@ -54,6 +54,40 @@ export default function Offers() {
               <p className="mt-3 text-lead text-foreground/90">
                 Des plans clairs et évolutifs: Starter, Croissance et Performance, selon vos objectifs et votre rythme.
               </p>
+              <ul className="mt-6 space-y-2">
+                <li className="flex items-start gap-2 text-foreground/90">
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span>
+                    <strong>Starter</strong> — lancement rapide: vitrine + blog + CRM essentiel.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2 text-foreground/90">
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span>
+                    <strong>Croissance</strong> — contenu à grande échelle, automatisations, support prioritaire.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2 text-foreground/90">
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span>
+                    <strong>Performance</strong> — audit et intégration sur‑mesure, équipes accompagnées.
+                  </span>
+                </li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <ButtonLink href="#offres" variant="glow" size="md">
+                  Voir Offres & Tarifs
+                </ButtonLink>
+                <ButtonLink href="/reservation-appel" variant="outline" size="md">
+                  Parler à un expert
+                </ButtonLink>
+              </div>
             </div>
 
             {/* Right: stacked cards */}
