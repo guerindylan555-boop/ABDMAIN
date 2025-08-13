@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import SmoothScroll from "./smooth-scroll";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import CTA3 from "@/components/mvpblocks/cta-3";
 import SeoJsonLd from "./components/SeoJsonLd";
 import NoFlashScript from "./components/NoFlashScript";
 import { GeistSans } from "geist/font/sans";
@@ -122,6 +123,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <SeoJsonLd />
         <Header />
         <main id="main">{children}</main>
+        <CTA3 />
         <Footer />
         <SpeedInsights />
       </body>

@@ -23,6 +23,10 @@
   - **Fichier modifié**: `components/mvpblocks/cta-3.tsx`
   - **Détails**: nouveau titre, sous‑texte et puces (« Analyse sur mesure », « Mise en œuvre clé en main », « Suivi personnalisé »), CTA « Réserver une visio stratégique (60 min) », encart témoignage neutralisé.
 
+- **CTA global (position)**: réintégration du CTA juste au‑dessus du footer via le layout global et retrait de son rendu local sur la Home.
+  - **Fichiers modifiés**: `app/layout.tsx` (insertion de `<CTA3 />` avant `<Footer />`), `app/page.tsx` (suppression de `<CTA3 />`).
+  - **Effet**: le CTA réapparaît en bas de la page d’accueil et sur toutes les pages.
+
 - **Offres & Tarifs**: mise à jour complète du contenu des cartes.
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
   - **Noms des offres**: `Starter`, `Croissance` (populaire), `Performance`.

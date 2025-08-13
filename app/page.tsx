@@ -5,7 +5,6 @@ import FeaturesGrid from "./components/sections/FeaturesGrid";
 // Process supprimé de la home (section "Notre méthode")
 import Pricing from "./components/sections/Pricing";
 import BlogLatest from "./components/sections/BlogLatest";
-import CTA3 from "@/components/mvpblocks/cta-3";
 import FAQ from "./components/sections/FAQ";
 import ScrollProgress from "./components/ScrollProgress";
 import TestimonialsMarquee from "@/components/mvpblocks/testimonials-marquee";
@@ -20,7 +19,6 @@ export default async function HomePage() {
       <FeaturesGrid />
       <TestimonialsMarquee />
       <Pricing />
-      <CTA3 />
       <BlogLatest />
       <FAQ />
       {/* CTA global supprimé de la home (présent en layout global) */}
