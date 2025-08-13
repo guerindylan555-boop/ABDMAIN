@@ -134,18 +134,18 @@ export default function SimplePricing() {
               <TabsList className="bg-transparent">
                 <TabsTrigger
                   value="monthly"
-                  className="data-[state=active]:bg-background rounded-full transition-all duration-300 data-[state=active]:shadow-sm"
+                  className="rounded-full transition-all duration-300 text-foreground/80 hover:text-foreground data-[state=active]:bg-background/70 data-[state=active]:text-foreground data-[state=active]:shadow-sm"
                 >
                   Mensuel
                 </TabsTrigger>
                 <TabsTrigger
                   value="yearly"
-                  className="data-[state=active]:bg-background rounded-full transition-all duration-300 data-[state=active]:shadow-sm"
+                  className="rounded-full transition-all duration-300 text-foreground/80 hover:text-foreground data-[state=active]:bg-background/70 data-[state=active]:text-foreground data-[state=active]:shadow-sm"
                 >
                   Annuel
                   <Badge
                     variant="secondary"
-                    className="bg-primary/15 text-primary hover:bg-primary/20 ml-2"
+                    className="bg-primary/10 text-primary hover:bg-primary/15 ml-2"
                   >
                     –20%
                   </Badge>
@@ -168,7 +168,8 @@ export default function SimplePricing() {
                 <div className="glow" />
                 <Card
                   className={cn(
-                    'bg-background/60 relative h-full w-full text-left transition-all duration-300 hover:shadow-xl flex flex-col border border-border/50 backdrop-blur',
+                    'relative h-full w-full text-left transition-all duration-300 hover:shadow-xl flex flex-col border border-border/50 backdrop-blur',
+                    plan.popular ? 'bg-background/60' : 'bg-background/40',
                     plan.popular
                       ? 'ring-primary/60 dark:shadow-primary/10 shadow-lg ring-2'
                       : 'hover:border-primary/40',
