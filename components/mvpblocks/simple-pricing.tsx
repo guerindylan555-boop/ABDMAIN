@@ -213,10 +213,13 @@ export default function SimplePricing() {
                     <p className="text-sm text-foreground/90">{plan.description}</p>
                     <div className="pt-2">
                       {(() => {
-                        const priceAny = plan.price[
-                          frequency as keyof typeof plan.price
-                        ] as unknown;
-                        if (typeof priceAny === 'number') {
+                        const monthlyBase = plan.price.monthly as unknown;
+                        const isYearly = frequency === 'yearly';
+                        if (typeof monthlyBase === 'number') {
+                          const displayValue = isYearly
+                            ? monthlyBase * 12 * 0.8
+                            : monthlyBase;
+                          const fractionDigits = isYearly ? 1 : 0;
                           return (
                             <div className="flex items-baseline">
                               <NumberFlow
@@ -227,19 +230,21 @@ export default function SimplePricing() {
                                 format={{
                                   style: 'currency',
                                   currency: 'EUR',
-                                  maximumFractionDigits: 0,
+                                  maximumFractionDigits: fractionDigits,
+                                  minimumFractionDigits: fractionDigits,
                                 }}
-                                value={priceAny as number}
+                                value={displayValue}
                               />
                               <span className="text-muted-foreground ml-1 text-sm">
-                                /mois, facturation {frequency === 'monthly' ? 'mensuelle' : 'annuelle'}
+                                {isYearly ? '/an' : '/mois'}
                               </span>
                             </div>
                           );
                         }
+                        // Non‑numérique: "Sur devis" ou équivalent
                         return (
                           <span className={cn('text-2xl font-bold', plan.popular ? 'text-primary' : 'text-foreground')}>
-                            {priceAny as string}
+                            {monthlyBase as string}
                           </span>
                         );
                       })()}
