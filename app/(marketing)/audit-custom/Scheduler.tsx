@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { format } from "date-fns";
+import { fr } from "date-fns/locale";
 
 import { Button } from "@/app/components/ui/button";
 import { Calendar } from "@/app/components/ui/calendar";
@@ -39,6 +40,7 @@ export default function Scheduler() {
       <div className="rounded-md border border-white/10 bg-white/5">
         <div className="flex max-sm:flex-col">
           <Calendar
+            locale={fr}
             mode="single"
             selected={date}
             onSelect={(newDate) => {
@@ -56,7 +58,7 @@ export default function Scheduler() {
                 <div className="space-y-3">
                   <div className="flex h-5 shrink-0 items-center px-5">
                     <p className="text-sm font-medium">
-                      {format(date, "EEEE, d")}
+                      {format(date, "EEEE d MMMM", { locale: fr })}
                     </p>
                   </div>
                   <div className="grid gap-1.5 px-5 max-sm:grid-cols-2">
@@ -79,21 +81,7 @@ export default function Scheduler() {
           </div>
         </div>
       </div>
-      <p
-        className="text-muted-foreground mt-4 text-center text-xs"
-        role="region"
-        aria-live="polite"
-      >
-        Appointment picker —
-        <a
-          className="hover:text-foreground underline ml-1"
-          href="https://daypicker.dev/"
-          target="_blank"
-          rel="noopener nofollow"
-        >
-          React DayPicker
-        </a>
-      </p>
+      {/* Légende supprimée */}
     </div>
   );
 }

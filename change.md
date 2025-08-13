@@ -16,6 +16,9 @@
 ## 2025-08-13
 
 - **Nettoyage — Études de cas retirées**: suppression des pages et des références.
+- **Footer CTA → Offres & Tarifs**: remplacement du CTA global par la section pricing.
+  - **Fichier modifié**: `app/layout.tsx` — suppression de `<CTA3 />` en bas de page et insertion de `<Pricing />` avant le footer pour afficher « Offres & Tarifs » globalement.
+
   - **Fichiers supprimés**:
     - `app/(marketing)/etudes-de-cas/les-halles-beaute/page.tsx`
     - `app/(marketing)/etudes-de-cas/couvreur-tourangeau/page.tsx`
@@ -39,6 +42,11 @@
   - **Nettoyage**: sur `/audit-custom`, le lien « Besoin d’échanger avant ? » pointe vers `/contact`.
 
 - **Build**: correction de l'erreur liée au calendrier (`react-day-picker`).
+- **Audit — Calendrier en français + nettoyage**:
+  - **Fichiers modifiés**:
+    - `app/components/ui/calendar.tsx` — locale par défaut `fr` (date-fns) pour `DayPicker`.
+    - `app/(marketing)/audit-custom/Scheduler.tsx` — passage de la locale `fr` au composant, formatage date `EEEE d MMMM`, suppression de la légende « Appointment picker — React DayPicker ».
+
   - **Fichier modifié**: `app/components/ui/calendar.tsx`
   - **Détails**: suppression de l'import inexistant `ReactDayPicker` (type) et usage direct de `ComponentProps<typeof DayPicker>` pour typer `CalendarProps`.
   - **Résultat**: `next build` passe, la page `/audit-custom` est générée.
