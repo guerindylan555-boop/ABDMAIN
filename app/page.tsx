@@ -15,9 +15,9 @@ export default async function HomePage() {
       <ScrollProgress />
       <Hero />
       <Essentiels />
-      <Offers />
       <FeaturesGrid />
       <TestimonialsMarquee />
+      <Offers />
       <CTA3 />
       <BlogLatest />
       <FAQ />

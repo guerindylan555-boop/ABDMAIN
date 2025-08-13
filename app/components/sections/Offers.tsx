@@ -52,83 +52,47 @@ export default function Offers() {
                 Trois offres pour <span style={{ color: "var(--brand)" }}>avancer</span> avec nous
               </h2>
               <p className="mt-3 text-lead text-foreground/90">
-                Des plans clairs et évolutifs: Starter, Croissance et Performance, selon vos objectifs et votre rythme.
+                Superchargez votre croissance avec <strong>LeadsFlowAI</strong>. Notre écosystème allie technologie de pointe et accompagnement humain pour permettre à chaque <strong>TPE</strong>, <strong>PME</strong> et <strong>grand compte</strong> de se développer efficacement.
               </p>
               {/* Highlights chips */}
               <div className="mt-4 flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs text-foreground/90">
-                  <Sparkles className="h-3.5 w-3.5 text-[--brand]" /> Diagnostic 90 min offert
+                  <Sparkles className="h-3.5 w-3.5 text-[--brand]" /> Écosystème tout‑en‑un
                 </span>
                 <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs text-foreground/90">
-                  <Shield className="h-3.5 w-3.5 text-[--brand]" /> RGPD by design
+                  <Zap className="h-3.5 w-3.5 text-[--brand]" /> Expertise IA & Automatisation
                 </span>
                 <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs text-foreground/90">
-                  <Check className="h-3.5 w-3.5 text-[--brand]" /> Transparence tarifaire
+                  <Check className="h-3.5 w-3.5 text-[--brand]" /> Communauté dynamique
                 </span>
                 <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs text-foreground/90">
-                  <Zap className="h-3.5 w-3.5 text-[--brand]" /> Mise en production rapide
+                  <Shield className="h-3.5 w-3.5 text-[--brand]" /> Accompagnement premium
                 </span>
               </div>
               <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                 <li className="flex items-start gap-2 text-foreground/90">
-                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
-                    <Check className="h-3.5 w-3.5" />
-                  </span>
-                  <span>
-                    <strong>Starter</strong> — lancement rapide: vitrine + blog + CRM essentiel.
-                  </span>
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]"><Check className="h-3.5 w-3.5" /></span>
+                  <span><strong>Starter</strong> — l’essentiel prêt à l’emploi dans un écosystème unifié.</span>
                 </li>
                 <li className="flex items-start gap-2 text-foreground/90">
-                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
-                    <Check className="h-3.5 w-3.5" />
-                  </span>
-                  <span>
-                    <strong>Croissance</strong> — contenu à grande échelle, automatisations, support prioritaire.
-                  </span>
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]"><Check className="h-3.5 w-3.5" /></span>
+                  <span><strong>Croissance</strong> — accélération contenus et <strong>automatisations IA</strong>.</span>
                 </li>
                 <li className="flex items-start gap-2 text-foreground/90">
-                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
-                    <Check className="h-3.5 w-3.5" />
-                  </span>
-                  <span>
-                    <strong>Performance</strong> — audit et intégration sur‑mesure, équipes accompagnées.
-                  </span>
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]"><Check className="h-3.5 w-3.5" /></span>
+                  <span><strong>Performance</strong> — consulting stratégique et <strong>intégrations sur‑mesure</strong>.</span>
                 </li>
                 <li className="flex items-start gap-2 text-foreground/90">
-                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
-                    <Check className="h-3.5 w-3.5" />
-                  </span>
-                  <span>
-                    SEO local & Google Business, appels manqués et automatisations intelligentes.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2 text-foreground/90">
-                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
-                    <Check className="h-3.5 w-3.5" />
-                  </span>
-                  <span>
-                    CRM unifié, formulaires, calendriers et tableaux de bord lisibles.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2 text-foreground/90">
-                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
-                    <Check className="h-3.5 w-3.5" />
-                  </span>
-                  <span>
-                    Contenu éditorial jusqu’à 50 articles/mois selon le plan.
-                  </span>
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]"><Check className="h-3.5 w-3.5" /></span>
+                  <span><strong>Communauté</strong> — un réseau d’entrepreneurs pour grandir ensemble.</span>
                 </li>
               </ul>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink href="#offres" variant="glow" size="md">
-                  Voir Offres & Tarifs
-                </ButtonLink>
-                <ButtonLink href="/reservation-appel" variant="outline" size="md">
-                  Parler à un expert
-                </ButtonLink>
+                <ButtonLink href="#offres" variant="glow" size="md">Voir Offres & Tarifs</ButtonLink>
+                <ButtonLink href="/reservation-appel" variant="outline" size="md">Parler à un expert</ButtonLink>
               </div>
               <p className="mt-4 text-xs text-foreground/70">
-                Le diagnostic est crédité si vous poursuivez avec nous. Nous priorisons la qualité, la clarté des chiffres et un accompagnement humain au quotidien.
+                Un écosystème tout‑en‑un, boosté par l’IA et porté par un accompagnement humain exigeant.
               </p>
             </div>
 

@@ -18,7 +18,7 @@
 - **Nettoyage — Études de cas retirées**: suppression des pages et des références.
 - **Footer CTA → Offres & Tarifs**: remplacement du CTA global par la section pricing.
   - **Fichier modifié**: `app/layout.tsx` — suppression de `<CTA3 />` en bas de page et insertion de `<Pricing />` avant le footer pour afficher « Offres & Tarifs » globalement.
-  - **Home**: `app/page.tsx` — CTA (`<CTA3 />`) placé juste au‑dessus de la section Blog.
+  - **Home**: `app/page.tsx` — CTA (`<CTA3 />`) placé juste au‑dessus de la section Blog; section Offres déplacée sous Témoignages.
 
   - **Fichiers supprimés**:
     - `app/(marketing)/etudes-de-cas/les-halles-beaute/page.tsx`
@@ -30,6 +30,10 @@
     - `ABDMAIN_SUMMARY.md` — note « Études de cas retirées ».
 
 - **Liens CTA → Audit personnalisé**: redirige tous les boutons pertinents vers `/audit-custom`.
+- **Section Offres (texte)**: reformulation avec l’ADN « LeadsFlowAI ».
+  - **Fichier modifié**: `app/components/sections/Offers.tsx`
+  - **Détails**: nouveau lead (Superchargez votre croissance…), puces: Écosystème tout‑en‑un, Expertise IA & Automatisation, Communauté dynamique, Accompagnement premium; bullets des offres adaptées; texte de réassurance condensé.
+
   - **Fichiers modifiés**:
     - `app/components/Header.tsx` — « Audit gratuit » pointe vers `/audit-custom`.
     - `app/components/sections/Hero.tsx` — CTA principal « Audit gratuit » → `/audit-custom`.
