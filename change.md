@@ -263,3 +263,4 @@
     - `app/components/sections/ValueProps.tsx` — accent sur « accélérer » via style inline `var(--brand)`.
   - **Fichier modifié**: `components/mvpblocks/cta-3.tsx`
     - Remplacement des couleurs hex par tokens (`--brand`) et utilitaires `glass`/`glass-highlight`.
+Ajiuter stripe
