@@ -215,10 +215,11 @@ export default function SimplePricing() {
                         const monthlyBase = plan.price.monthly as unknown;
                         const isYearly = frequency === 'yearly';
                         if (typeof monthlyBase === 'number') {
-                          const annualRaw = monthlyBase * 12 * 0.8;
-                          const annualValue = Math.floor(annualRaw);
-                          const displayValue = isYearly ? annualValue : monthlyBase;
-                          const savings = Math.max(0, monthlyBase * 12 - annualValue);
+                          const yearlyMonthlyRaw = monthlyBase * 0.8;
+                          const yearlyMonthly = Math.floor(yearlyMonthlyRaw);
+                          const annualDiscounted = Math.floor(monthlyBase * 12 * 0.8);
+                          const displayValue = isYearly ? yearlyMonthly : monthlyBase;
+                          const savings = Math.max(0, monthlyBase * 12 - annualDiscounted);
                           return (
                             <div className="flex flex-col items-start">
                               <div className="flex items-baseline">
@@ -235,9 +236,7 @@ export default function SimplePricing() {
                                   }}
                                   value={displayValue}
                                 />
-                                <span className="text-muted-foreground ml-1 text-sm">
-                                  {isYearly ? '/an' : '/mois'}
-                                </span>
+                                <span className="text-muted-foreground ml-1 text-sm">/mois</span>
                               </div>
                               {isYearly && savings > 0 && (
                                 <div className="text-xs text-muted-foreground mt-1">
@@ -251,7 +250,7 @@ export default function SimplePricing() {
                                     }}
                                     value={savings}
                                   />
-                                  {' '}par an
+                                  {' '}par an (facturation annuelle)
                                 </div>
                               )}
                             </div>
