@@ -11,38 +11,38 @@ import {
 import Link from 'next/link';
 
 const data = {
-  facebookLink: 'https://facebook.com/mvpblocks',
-  instaLink: 'https://instagram.com/mvpblocks',
-  twitterLink: 'https://twitter.com/mvpblocks',
-  githubLink: 'https://github.com/mvpblocks',
-  dribbbleLink: 'https://dribbble.com/mvpblocks',
+  facebookLink: 'https://facebook.com/abdigital',
+  instaLink: 'https://instagram.com/abdigital',
+  twitterLink: 'https://twitter.com/abdigital',
+  githubLink: 'https://github.com/abdigital',
+  dribbbleLink: 'https://dribbble.com/abdigital',
   services: {
-    webdev: '/web-development',
-    webdesign: '/web-design',
-    marketing: '/marketing',
-    googleads: '/google-ads',
+    webdev: '/site-web-sur-mesure',
+    webdesign: '/site-web-sur-mesure',
+    marketing: '/hubs',
+    googleads: '/publicite-payante',
   },
   about: {
-    history: '/company-history',
-    team: '/meet-the-team',
-    handbook: '/employee-handbook',
-    careers: '/careers',
+    history: '/a-propos',
+    team: '/a-propos',
+    handbook: '/a-propos',
+    careers: '/a-propos',
   },
   help: {
-    faqs: '/faqs',
-    support: '/support',
-    livechat: '/live-chat',
+    faqs: '/offres#faq',
+    support: '/contact',
+    livechat: '/contact',
   },
   contact: {
-    email: 'hello@mvpblocks.com',
-    phone: '+91 8637373116',
-    address: 'Kolkata, West Bengal, India',
+    email: 'contact@abdigital.fr',
+    phone: '+33 6 12 34 56 78',
+    address: 'Tours, France',
   },
   company: {
-    name: 'Mvpblocks',
+    name: 'AB Digital',
     description:
-      'Building beautiful and functional web experiences with modern technologies. We help startups and businesses create their digital presence.',
-    logo: 'https://res.cloudinary.com/dtyc0ob4r/image/upload/v1754994617/logo_bkqfei.webp',
+      'Sites performants, SEO local et automatisations IA pour convertir plus vite. Sans complexité, avec mesure et clarté.',
+    logo: '/favicon.ico',
   },
 };
 
@@ -119,7 +119,7 @@ export default function Footer() {
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">About Us</p>
+              <p className="text-lg font-medium">À propos</p>
               <ul className="mt-8 space-y-4 text-sm">
                 {aboutLinks.map(({ text, href }) => (
                   <li key={text}>
@@ -135,7 +135,7 @@ export default function Footer() {
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Our Services</p>
+              <p className="text-lg font-medium">Nos services</p>
               <ul className="mt-8 space-y-4 text-sm">
                 {serviceLinks.map(({ text, href }) => (
                   <li key={text}>
@@ -151,7 +151,7 @@ export default function Footer() {
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Helpful Links</p>
+              <p className="text-lg font-medium">Ressources</p>
               <ul className="mt-8 space-y-4 text-sm">
                 {helpfulLinks.map(({ text, href, hasIndicator }) => (
                   <li key={text}>
@@ -179,7 +179,7 @@ export default function Footer() {
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Contact Us</p>
+              <p className="text-lg font-medium">Contact</p>
               <ul className="mt-8 space-y-4 text-sm">
                 {contactInfo.map(({ icon: Icon, text, isAddress }) => (
                   <li key={text}>

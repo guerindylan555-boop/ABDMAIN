@@ -1,11 +1,11 @@
 export default function FeaturesGrid() {
   const features = [
-    { title: "Sites & Funnels", text: "Pages rapides, funnels efficaces, A/B testing et tracking propre." },
-    { title: "Agents IA", text: "Chat, nurturing multicanal, prise de RDV et réponses 24/7." },
-    { title: "Réputation", text: "Capture d’avis, réponses assistées par IA et vitrines sociales." },
-    { title: "Appels & Messages", text: "Missed‑call text back, voice drops, bots mots‑clés, routage." },
-    { title: "Lead Gen", text: "Aimants à leads, formulaires, qualification et séquences de relance." },
-    { title: "Analytics", text: "Dashboards lisibles, objectifs business, attribution cohérente." },
+    { title: "Sites & Funnels", text: "Pages rapides, funnels efficaces, A/B testing et tracking propre.", badges: ["Core", "Web"] },
+    { title: "Agents IA", text: "Chat, nurturing multicanal, prise de RDV et réponses 24/7.", badges: ["IA", "Automations"] },
+    { title: "Réputation", text: "Capture d’avis, réponses assistées par IA et vitrines sociales.", badges: ["SEO local", "Avis"] },
+    { title: "Appels & Messages", text: "Missed‑call text back, voice drops, bots mots‑clés, routage.", badges: ["Téléphonie", "SMS"] },
+    { title: "Lead Gen", text: "Aimants à leads, formulaires, qualification et séquences de relance.", badges: ["Acquisition", "Funnels"] },
+    { title: "Analytics", text: "Dashboards lisibles, objectifs business, attribution cohérente.", badges: ["Mesure", "Attribution"] },
   ] as const;
 
   return (
@@ -25,8 +25,10 @@ export default function FeaturesGrid() {
                 key={f.title}
                 className="rounded-xl p-6 border border-white/10 bg-white/10 dark:bg-neutral-900/20 pressable"
               >
-                <div className="flex items-center gap-2">
-                  <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] uppercase tracking-wide">Inclusion</span>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {f.badges.map((b) => (
+                    <span key={b} className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] uppercase tracking-wide">{b}</span>
+                  ))}
                 </div>
                 <h3 className="mt-3 font-semibold text-lg">{f.title}</h3>
                 <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">{f.text}</p>
