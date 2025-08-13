@@ -15,6 +15,16 @@
 
 ## 2025-08-13
 
+- **Nettoyage — Études de cas retirées**: suppression des pages et des références.
+  - **Fichiers supprimés**:
+    - `app/(marketing)/etudes-de-cas/les-halles-beaute/page.tsx`
+    - `app/(marketing)/etudes-de-cas/couvreur-tourangeau/page.tsx`
+    - `app/(marketing)/etudes-de-cas/la-cave-du-vieux-tours/page.tsx`
+  - **Fichiers modifiés**:
+    - `app/sitemap.ts` — retrait des URLs `etudes-de-cas/*`.
+    - `app/components/sections/Testimonials.tsx` — liens des cartes pointent vers `/audit-custom` et libellés ajustés.
+    - `ABDMAIN_SUMMARY.md` — note « Études de cas retirées ».
+
 - **Liens CTA → Audit personnalisé**: redirige tous les boutons pertinents vers `/audit-custom`.
   - **Fichiers modifiés**:
     - `app/components/Header.tsx` — « Audit gratuit » pointe vers `/audit-custom`.

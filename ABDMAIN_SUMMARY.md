@@ -41,9 +41,7 @@ CTA principaux:
 - `/offres-ia` — Focus offres IA
 - `/notre-methode` — Méthodologie en 4 étapes
 - `/a-propos` — À propos
-- `/etudes-de-cas/couvreur-tourangeau` — Étude de cas
-- `/etudes-de-cas/la-cave-du-vieux-tours` — Étude de cas
-- `/etudes-de-cas/les-halles-beaute` — Étude de cas
+  (Études de cas retirées)
 - `/reservation-appel` — Réserver un créneau (CTA)
 - `/blog` — Blog (liste)
 - `/blog/[slug]` — Article de blog (dynamique)

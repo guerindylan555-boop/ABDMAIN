@@ -35,10 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/blog/sequences-sms-relance`, changeFrequency: "monthly", priority: 0.5, lastModified: new Date() },
     { url: `${base}/blog/rss.xml`, changeFrequency: "weekly", priority: 0.2, lastModified: new Date() },
     { url: `${base}/blog/atom.xml`, changeFrequency: "weekly", priority: 0.2, lastModified: new Date() },
-    // Études de cas
-    { url: `${base}/etudes-de-cas/les-halles-beaute`, changeFrequency: "monthly", priority: 0.6, lastModified: new Date() },
-    { url: `${base}/etudes-de-cas/couvreur-tourangeau`, changeFrequency: "monthly", priority: 0.6, lastModified: new Date() },
-    { url: `${base}/etudes-de-cas/la-cave-du-vieux-tours`, changeFrequency: "monthly", priority: 0.6, lastModified: new Date() },
+    // Études de cas retirées
   ];
 }
 

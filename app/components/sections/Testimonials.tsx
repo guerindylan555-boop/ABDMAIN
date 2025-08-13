@@ -6,21 +6,21 @@ const testimonials = [
     sector: "Institut de beauté — Tours centre",
     text:
       "+30 avis en 90 jours (4,8★), no‑show −22% avec rappels SMS, créneaux 'pause déjeuner' remplis.",
-    href: "/etudes-de-cas/les-halles-beaute",
+    href: "/audit-custom",
   },
   {
     name: "Couvreur Tourangeau",
     sector: "Couvreur — Saint‑Avertin / Tours Métropole",
     text:
       "Top‑3 sur 'couvreur Tours' & 'démoussage toiture Tours', 10 études de cas publiées, +25 avis.",
-    href: "/etudes-de-cas/couvreur-tourangeau",
+    href: "/audit-custom",
   },
   {
     name: "La Cave du Vieux‑Tours",
     sector: "Caviste — Rue Colbert, Vieux‑Tours",
     text:
       "+40 avis en 90 jours (4,8★), 2 événements/mois (≥20 inscrits), 50 abonnés '3 bouteilles/mois'.",
-    href: "/etudes-de-cas/la-cave-du-vieux-tours",
+    href: "/audit-custom",
   },
 ];
 
@@ -38,14 +38,14 @@ export default function Testimonials() {
             {testimonials.map((t) => (
               <Card key={t.name} className="pressable">
                 <CardContent>
-                  <a href={t.href} aria-label={`Lire l’étude de cas ${t.name}`}>
+                  <a href={t.href} aria-label={`Nous contacter pour ${t.name}`}>
                     <blockquote>
                       <p className="text-neutral-900 dark:text-neutral-100">“{t.text}”</p>
                       <footer className="mt-4 text-sm text-neutral-700 dark:text-neutral-300">
                         <span className="font-medium">{t.name}</span>
                         <span className="block text-xs text-neutral-500 dark:text-neutral-400">{t.sector}</span>
                       </footer>
-                      <span className="mt-4 inline-flex items-center gap-1 text-sm text-[--brand]">Lire l’étude de cas →</span>
+                      <span className="mt-4 inline-flex items-center gap-1 text-sm text-[--brand]">Réserver une visio →</span>
                     </blockquote>
                   </a>
                 </CardContent>
