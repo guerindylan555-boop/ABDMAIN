@@ -213,6 +213,25 @@
   - **Fichier modifié**: `components/mvpblocks/testimonials-marquee.tsx`
     - Remplacement des bleus hardcodés (`text-blue-500`, `fill-blue-500`, `bg-blue-500/5`) par les tokens `--brand` (`text-[--brand]`, `fill-[--brand]`, `bg-[--brand]/5`).
 
+- **Stripe — Intégration Checkout**: ajout d'une intégration Stripe Checkout pour les offres Starter et Croissance.
+  - **Détails**:
+    - **Dépendances** ajoutées: `stripe`, `@stripe/stripe-js` (modification `package.json`).
+    - **API**: ajout de l'endpoint serveur `app/api/stripe/checkout/route.ts` qui crée une session Stripe Checkout (mode `subscription`) et retourne l'URL de redirection.
+    - **Composant client**: ajout de `app/components/StripeCheckoutButton.tsx` — bouton client qui appelle l'API et redirige vers Stripe Checkout.
+    - **Intégration UI**: remplacement du CTA pour le plan `Starter` par `StripeCheckoutButton` et prise en charge du `priceId` programmatique pour `Starter` et `Croissance` dans `components/mvpblocks/simple-pricing.tsx`.
+    - **Price IDs** ajoutés dans le code (fourni par l'équipe):
+      - Starter monthly: `price_1Rvkt4PKFguowobxLT25jsDW`
+      - Starter yearly: `price_1RvlJrPKFguowobxrcgORDeJ`
+      - Croissance monthly: `price_1RvlLkPKFguowobx9bTd5OSd`
+      - Croissance yearly: `price_1RvlMxPKFguowobxBDhuT5ze`
+  - **Remarques**:
+    - Un essai de création automatique de `.env.example` a échoué à cause d'une règle `globalIgnore`; il faut ajouter manuellement dans votre `.env` local les variables `STRIPE_SECRET_KEY` et `NEXT_PUBLIC_BASE_URL` si nécessaire.
+  - **Fichiers modifiés/ajoutés**:
+    - `package.json` (dépendances Stripe)
+    - `app/api/stripe/checkout/route.ts` (nouveau)
+    - `app/components/StripeCheckoutButton.tsx` (nouveau)
+    - `components/mvpblocks/simple-pricing.tsx` (modifié — intégration du bouton et IDs de price)
+
 - **FAQ**: uniformisation de la mise en forme et thème glass.
   - **Fichier modifié**: `components/mvpblocks/faq-1.tsx`
     - Titre unifié (`text-h2` + `text-[--brand]` sur le mot “fréquentes”), description en `text-lead`.

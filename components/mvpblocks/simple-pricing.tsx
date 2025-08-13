@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import NumberFlow from '@number-flow/react';
 import { Badge } from '@/components/ui/badge';
@@ -15,6 +15,7 @@ import { cn } from '@/lib/utils';
 import { Sparkles, ArrowRight, Check, Star, Zap, Shield } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import StripeCheckoutButton from '@/app/components/StripeCheckoutButton';
 
 const plans = [
   {
@@ -155,8 +156,25 @@ export default function SimplePricing() {
         </motion.div>
 
         <div className="mt-8 grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
-          {plans.map((plan, index) => (
-            <motion.div
+          {plans.map((plan, index) => {
+            const priceId = (() => {
+              // Starter prices
+              if (plan.id === 'starter') {
+                return frequency === 'yearly'
+                  ? 'price_1RvlJrPKFguowobxrcgORDeJ' // starter annuel
+                  : 'price_1Rvkt4PKFguowobxLT25jsDW'; // starter mensuel
+              }
+              // Croissance prices
+              if (plan.id === 'croissance') {
+                return frequency === 'yearly'
+                  ? 'price_1RvlMxPKFguowobxBDhuT5ze' // croissance annuel
+                  : 'price_1RvlLkPKFguowobx9bTd5OSd'; // croissance mensuel
+              }
+              return undefined;
+            })();
+
+            return (
+              <motion.div
               key={plan.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -285,28 +303,43 @@ export default function SimplePricing() {
                   ))}
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  <Button
-                    variant={plan.popular ? 'default' : 'outline'}
-                    className={cn(
-                      'w-full font-medium transition-all duration-300',
-                      plan.popular
-                        ? 'bg-[--brand] hover:bg-[color-mix(in_oklab,var(--brand),black_10%)] text-white hover:shadow-md'
-                        : 'hover:border-primary/30 hover:bg-primary/5 hover:text-primary',
-                    )}
-                  >
-                    {plan.cta}
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Button>
+                  {plan.id === 'starter' ? (
+                    // Replace with your actual Stripe Price ID
+                    <StripeCheckoutButton
+                      priceId={process.env.NEXT_PUBLIC_STRIPE_PRICE_STARTER || 'price_replace_me'}
+                      label={plan.cta}
+                      className={cn(
+                        'w-full font-medium transition-all duration-300',
+                        plan.popular
+                          ? 'bg-[--brand] hover:bg-[color-mix(in_oklab,var(--brand),black_10%)] text-white hover:shadow-md'
+                          : 'hover:border-primary/30 hover:bg-primary/5 hover:text-primary',
+                      )}
+                    />
+                  ) : (
+                    <Button
+                      variant={plan.popular ? 'default' : 'outline'}
+                      className={cn(
+                        'w-full font-medium transition-all duration-300',
+                        plan.popular
+                          ? 'bg-[--brand] hover:bg-[color-mix(in_oklab,var(--brand),black_10%)] text-white hover:shadow-md'
+                          : 'hover:border-primary/30 hover:bg-primary/5 hover:text-primary',
+                      )}
+                    >
+                      {plan.cta}
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </Button>
+                  )}
                 </CardFooter>
 
                 {/* Subtle gradient effects */}
-                {plan.popular ? (
+                  {plan.popular ? (
                   <div className="pointer-events-none absolute inset-0 rounded-lg border border-white/10" />
                 ) : null}
                 </Card>
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
         <style jsx>{``}</style>
       </div>
