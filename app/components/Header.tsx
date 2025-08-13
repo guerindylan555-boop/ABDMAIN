@@ -11,7 +11,7 @@ export default function Header() {
   const links: Array<{ href: string; label: string }> = useMemo(
     () => [
       { href: "/", label: "Accueil" },
-      { href: "/solutions", label: "Solutions" },
+      { href: "/solutions", label: "Nos solutions" },
       { href: "/offres", label: "Tarifs" },
       { href: "/blog", label: "Ressources" },
       { href: "/a-propos", label: "À propos" },

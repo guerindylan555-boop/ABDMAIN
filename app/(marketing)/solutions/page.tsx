@@ -4,9 +4,9 @@ import { ButtonLink } from "@/app/components/ui/button";
 import Pricing from "@/app/components/sections/Pricing";
 
 export const metadata: Metadata = {
-  title: "Solutions — AB Digital",
+  title: "Nos solutions — AB Digital",
   description:
-    "Trois niveaux pour avancer: Starter (lancer vite), Croissance (accélérer), Performance (sur‑mesure).",
+    "Des solutions sur‑mesure, pilotées par l’IA. Processus en 3 étapes: diagnostic personnalisé (60 min), plan d’action opérationnel, suivi & coaching continu.",
   alternates: { canonical: "/solutions" },
 };
 
@@ -57,8 +57,8 @@ const overview: OverviewCard[] = [
 export default function SolutionsIndex() {
   return (
     <SectionPage
-      title="Solutions"
-      description="Trois niveaux pour avancer selon vos besoins: lancez vite, accélérez la cadence, ou allez au sur‑mesure."
+      title="Nos solutions"
+      description="Trois niveaux pour avancer selon vos besoins: lancez vite, accélérez la cadence, ou passez au sur‑mesure piloté par l’IA."
       tag="Solutions"
       toc={[]}
       hideAside

@@ -32,6 +32,17 @@
   - **Fichier modifié**: `app/(marketing)/solutions/page.tsx`
   - **Détails**: remplace l’ancien bloc par « Diagnostic personnalisé (60 min) », « Plan d’action sur‑mesure », « Suivi & coaching continu », avec bénéfices/outputs concrets et CTA « Réserver une visio stratégique (60 min) ».
 
+- **Solutions (SEO + H1)**: mise à jour des métadonnées et du titre.
+  - **Fichier modifié**: `app/(marketing)/solutions/page.tsx`
+  - **Détails**: Title → « Nos solutions — AB Digital », description renforcée (processus en 3 étapes piloté par l’IA). H1 affiché → « Nos solutions ».
+
+- **Navigation**: libellé nav « Solutions » → « Nos solutions ».
+  - **Fichier modifié**: `app/components/Header.tsx`
+
+- **Nettoyage Solutions**: suppression des pages spécifiques DIY/DWY/DFY et retrait de leurs entrées du sitemap.
+  - **Fichiers supprimés**: `app/(marketing)/solutions/diy/page.tsx`, `app/(marketing)/solutions/dwy/page.tsx`, `app/(marketing)/solutions/dfy/page.tsx`
+  - **Fichier modifié**: `app/sitemap.ts` (entrées retirées)
+
 - **Offres & Tarifs**: mise à jour complète du contenu des cartes.
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
   - **Noms des offres**: `Starter`, `Croissance` (populaire), `Performance`.
