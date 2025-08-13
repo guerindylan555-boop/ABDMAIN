@@ -1,5 +1,15 @@
 # Change Log
 
+## 2025-08-13
+
+- **Offres & Tarifs**: mise à jour complète du contenu des cartes.
+  - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
+  - **Noms des offres**: `Starter`, `Croissance` (populaire), `Performance`.
+  - **Contenus**:
+    - Starter: Site web & Blog sur mesure (5 pages), 1 article/mois, Chat IA, CRM & Email & SMS & DM Marketing, Google Business (gestion des avis), Formulaires/Enquêtes/Calendriers/Newsletter, Tableaux de bord & Devis, Support basic + chat quotidien, Formations & tutoriels en autonomie, Rapports avancés (Pubs/CRM/Opportunités/RDV/Appels).
+    - Croissance: Tout Starter + pages illimitées, jusqu’à 50 articles/mois, optimisation des avis Google Business, E‑Réputation, récupération des appels manqués, planificateur social, tableaux de bord & devis, automatisations personnalisées & déclencheurs, support prioritaire + chat quotidien.
+    - Performance: Tout Croissance + support prioritaire, audits 100% personnalisés, conception & intégration de solutions sur‑mesure, gestion des systèmes et/ou formation des équipes.
+
 ## 2025-08-12
 
 - **Homepage**: ajout d’une nouvelle section de témoignages (marquee) juste en dessous de la section "Ils nous font confiance".
