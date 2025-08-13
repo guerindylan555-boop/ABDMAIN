@@ -5,10 +5,13 @@
 - **Offres & Tarifs**: mise à jour complète du contenu des cartes.
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
   - **Noms des offres**: `Starter`, `Croissance` (populaire), `Performance`.
+  - **Tarifs**: Starter 149€/mois, Croissance 399€/mois, Performance sur devis.
   - **Contenus**:
-    - Starter: Site web & Blog sur mesure (5 pages), 1 article/mois, Chat IA, CRM & Email & SMS & DM Marketing, Google Business (gestion des avis), Formulaires/Enquêtes/Calendriers/Newsletter, Tableaux de bord & Devis, Support basic + chat quotidien, Formations & tutoriels en autonomie, Rapports avancés (Pubs/CRM/Opportunités/RDV/Appels).
-    - Croissance: Tout Starter + pages illimitées, jusqu’à 50 articles/mois, optimisation des avis Google Business, E‑Réputation, récupération des appels manqués, planificateur social, tableaux de bord & devis, automatisations personnalisées & déclencheurs, support prioritaire + chat quotidien.
+    - Starter: Site web & Blog sur mesure (5 pages), 1 article/mois, Chat IA, CRM & Email & SMS & DM Marketing, Google Business (gestion des avis), Tableaux de bord, Support basic + chat quotidien.
+    - Croissance: Tout Starter + pages illimitées, jusqu’à 50 articles/mois, Google Business — optimisation des notes, récupération des appels manqués, automatisations personnalisées & déclencheurs, support prioritaire.
     - Performance: Tout Croissance + support prioritaire, audits 100% personnalisés, conception & intégration de solutions sur‑mesure, gestion des systèmes et/ou formation des équipes.
+
+- **Ajustements**: simplification du plan Starter (retrait des formations/tutoriels, rapports avancés, formulaires/enquêtes/calendriers/newsletter) et clarification du plan Croissance (pas de répétition, renommage de l’optimisation Google Business, retrait E‑Réputation et planificateur social, retrait de « Devis »).
 
 ## 2025-08-12
 
