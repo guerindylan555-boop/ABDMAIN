@@ -120,7 +120,7 @@ export default function CTA3() {
 
               <div className="mt-8">
                 <ButtonLink href="/reservation-appel" variant="glow" size="md" className="inline-flex">
-                  Réserver une visio stratégique (90 min)
+                  Réserver une visio stratégique (60 min)
                 </ButtonLink>
               </div>
             </div>
@@ -129,7 +129,7 @@ export default function CTA3() {
               <div className="absolute top-0 right-0 h-full w-full opacity-10"></div>
               <div className="relative z-10">
                 <h3 className="mb-6 text-2xl font-bold tracking-tight md:text-3xl">
-                  Réservez une visio stratégique de 90 min
+                  Réservez une visio stratégique de 60 min
                 </h3>
                 <p className="mb-8 text-white/80">
                   Repartez avec une vision claire et actionnable. Nous ne faisons pas de blabla. Juste de la stratégie et des résultats.
@@ -160,7 +160,7 @@ export default function CTA3() {
 
                 <div className="mt-10 rounded-xl glass p-6">
                   <p className="text-lg font-medium">
-                    « 90 minutes très concrètes : priorisation, chiffrage, plan d’action. On repart avec une trajectoire claire. »
+                    « 60 minutes très concrètes : priorisation, chiffrage, plan d’action. On repart avec une trajectoire claire. »
                   </p>
                   <p className="mt-3 font-medium text-white/70">
                     — Direction PME, services locaux

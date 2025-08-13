@@ -19,9 +19,9 @@
   - **Fichier modifié**: `components/mvpblocks/testimonials-marquee.tsx`
   - **Détails**: format des cartes conservé (5★, Highlight), noms/secteurs anonymisés (initiales + ville), chiffres plausibles (ex: no‑show −22%, +30 avis, +28% RDV), images `randomuser.me`, vocabulaire FR et cohérence avec la palette de marque (`--brand`).
 
-- **CTA (global, home)**: texte remanié pour refléter l’ADN « IA sur‑mesure » et la visio stratégique 90 min.
+- **CTA (global, home)**: texte remanié pour refléter l’ADN « IA sur‑mesure » et la visio stratégique 60 min.
   - **Fichier modifié**: `components/mvpblocks/cta-3.tsx`
-  - **Détails**: nouveau titre, sous‑texte et puces (« Analyse sur mesure », « Mise en œuvre clé en main », « Suivi personnalisé »), CTA « Réserver une visio stratégique (90 min) », encart témoignage neutralisé.
+  - **Détails**: nouveau titre, sous‑texte et puces (« Analyse sur mesure », « Mise en œuvre clé en main », « Suivi personnalisé »), CTA « Réserver une visio stratégique (60 min) », encart témoignage neutralisé.
 
 - **Offres & Tarifs**: mise à jour complète du contenu des cartes.
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
