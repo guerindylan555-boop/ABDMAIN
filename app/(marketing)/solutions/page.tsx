@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
 import { ButtonLink } from "@/app/components/ui/button";
+import Pricing from "@/app/components/sections/Pricing";
 
 export const metadata: Metadata = {
   title: "Solutions — AB Digital",
@@ -36,7 +37,7 @@ const overview: OverviewCard[] = [
     points: [
       "Pages illimitées",
       "Jusqu’à 50 articles/mois",
-      "Récup. appels + déclencheurs",
+      "Récupération des appels manqués + déclencheurs",
     ],
     cta: { label: "Découvrir Croissance", href: "#croissance" },
   },
@@ -62,11 +63,7 @@ export default function SolutionsIndex() {
       toc={[]}
       hideAside
     >
-      {/* CTA header */}
-      <div className="flex flex-wrap gap-3">
-        <ButtonLink href="/reservation-appel" variant="glow">Parler à un expert</ButtonLink>
-        <ButtonLink href="/offres" variant="outline">Voir Offres & Tarifs</ButtonLink>
-      </div>
+      {/* CTA header supprimé */}
 
       {/* Aperçu rapide */}
       <section className="mt-8 grid gap-6 md:grid-cols-3">
@@ -77,7 +74,12 @@ export default function SolutionsIndex() {
                 <span key={b} className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] uppercase tracking-wide">{b}</span>
               ))}
             </div>
-            <h3 className="mt-3 text-h3 font-semibold">{card.title}</h3>
+            <div className="mt-3 flex items-center gap-2">
+              <h3 className="text-h3 font-semibold">{card.title}</h3>
+              {card.id === 'croissance' && (
+                <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-0.5 text-[10px] uppercase tracking-wide">Populaire</span>
+              )}
+            </div>
             <ul className="mt-2 space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
               {card.points.map((p) => (
                 <li key={p} className="flex items-center gap-2">
@@ -93,40 +95,7 @@ export default function SolutionsIndex() {
         ))}
       </section>
 
-      {/* Comparatif essentiel */}
-      <section className="mt-10 rounded-2xl glass p-4 border border-white/10">
-        <div className="overflow-x-auto">
-          <table className="min-w-[700px] w-full text-sm">
-            <thead>
-              <tr className="text-left">
-                <th className="px-3 py-2">Fonctionnalités</th>
-                <th className="px-3 py-2">Starter</th>
-                <th className="px-3 py-2">Croissance</th>
-                <th className="px-3 py-2">Performance</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-white/10">
-              {[
-                { label: "Pages", s: "5", c: "Illimitées", p: "Illimitées" },
-                { label: "Articles/mois", s: "1", c: "Jusqu’à 50", p: "Selon besoin" },
-                { label: "Google Business", s: "Avis", c: "Optimisation notes", p: "Avancé" },
-                { label: "Automations", s: "Base", c: "Personnalisées", p: "Sur‑mesure" },
-                { label: "Support", s: "Basic", c: "Prioritaire", p: "Prioritaire" },
-              ].map((r) => (
-                <tr key={r.label}>
-                  <td className="px-3 py-2 text-neutral-300">{r.label}</td>
-                  <td className="px-3 py-2">{r.s}</td>
-                  <td className="px-3 py-2">{r.c}</td>
-                  <td className="px-3 py-2">{r.p}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="mt-3">
-          <ButtonLink href="/offres" variant="outline">Voir le tableau complet</ButtonLink>
-        </div>
-      </section>
+      {/* Comparatif essentiel supprimé */}
 
       {/* Détails Starter */}
       <section id="starter" className="mt-12">
@@ -162,8 +131,7 @@ export default function SolutionsIndex() {
                 ))}
               </ul>
               <div className="mt-4 flex gap-2">
-                <ButtonLink href="/reservation-appel" variant="glow" className="flex-1 justify-center">Démarrer avec Starter</ButtonLink>
-                <ButtonLink href="/offres" variant="outline" className="flex-1 justify-center">Voir Offres & Tarifs</ButtonLink>
+                <ButtonLink href="/reservation-appel" variant="glow" size="lg" className="flex-1 justify-center">Démarrer avec Starter</ButtonLink>
               </div>
             </div>
           </div>
@@ -207,8 +175,7 @@ export default function SolutionsIndex() {
                 ))}
               </ul>
               <div className="mt-4 flex gap-2">
-                <ButtonLink href="/reservation-appel" variant="glow" className="flex-1 justify-center">Passer à Croissance</ButtonLink>
-                <ButtonLink href="/offres" variant="outline" className="flex-1 justify-center">Voir Offres & Tarifs</ButtonLink>
+                <ButtonLink href="/reservation-appel" variant="glow" size="lg" className="flex-1 justify-center">Passer à Croissance</ButtonLink>
               </div>
             </div>
           </div>
@@ -246,12 +213,16 @@ export default function SolutionsIndex() {
                 ))}
               </ul>
               <div className="mt-4 flex gap-2">
-                <ButtonLink href="/reservation-appel" variant="outline" className="flex-1 justify-center">Réserver un audit</ButtonLink>
-                <ButtonLink href="/offres" variant="outline" className="flex-1 justify-center">Voir Offres & Tarifs</ButtonLink>
+                <ButtonLink href="/reservation-appel" variant="outline" size="lg" className="flex-1 justify-center">Réserver un audit</ButtonLink>
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Offres & Tarifs inséré ici */}
+      <section className="mt-12">
+        <Pricing />
       </section>
 
       {/* FAQ + CTA final */}
