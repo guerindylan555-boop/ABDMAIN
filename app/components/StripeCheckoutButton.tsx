@@ -23,8 +23,8 @@ export default function StripeCheckoutButton({
       if (!data.ok || !data.url) throw new Error(data.error || "Erreur lors de la création de la session");
       window.location.href = data.url;
     } catch (e) {
-      // eslint-disable-next-line no-console
-      console.error(e);
+      const errMsg = e instanceof Error ? e.message : String(e);
+      console.error(errMsg);
       alert("Impossible de démarrer le paiement.");
     }
   };

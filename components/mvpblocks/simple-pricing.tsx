@@ -303,10 +303,9 @@ export default function SimplePricing() {
                   ))}
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  {plan.id === 'starter' ? (
-                    // Replace with your actual Stripe Price ID
+                  { (plan.id === 'starter' || plan.id === 'croissance') ? (
                     <StripeCheckoutButton
-                      priceId={process.env.NEXT_PUBLIC_STRIPE_PRICE_STARTER || 'price_replace_me'}
+                      priceId={priceId as string}
                       label={plan.cta}
                       className={cn(
                         'w-full font-medium transition-all duration-300',
