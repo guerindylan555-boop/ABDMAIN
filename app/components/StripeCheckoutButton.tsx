@@ -1,16 +1,24 @@
 "use client";
 import React from "react";
+import { Button } from "@/components/ui/button";
 
 type StripeCheckoutButtonProps = {
   priceId: string;
   label?: string;
   className?: string;
+  // Match variants from components/ui/button.tsx
+  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  withGlow?: boolean;
 };
 
 export default function StripeCheckoutButton({
   priceId,
   label = "Payer",
   className,
+  variant,
+  size,
+  withGlow,
 }: StripeCheckoutButtonProps) {
   const handleClick = async () => {
     try {
@@ -29,11 +37,22 @@ export default function StripeCheckoutButton({
     }
   };
 
-  return (
-    <button type="button" onClick={handleClick} className={className}>
+  const button = (
+    <Button onClick={handleClick} className={className} {...(variant ? { variant } : {})} {...(size ? { size } : {})}>
       {label}
-    </button>
+    </Button>
   );
+
+  if (withGlow) {
+    return (
+      <span className={`glow-wrap ${className?.includes('w-full') ? 'block w-full' : ''}`}>
+        <span className="glow" />
+        {button}
+      </span>
+    );
+  }
+
+  return button;
 }
 
 

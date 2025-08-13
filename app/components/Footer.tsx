@@ -23,19 +23,15 @@ const data = {
     googleads: '/publicite-payante',
   },
   about: {
-    history: '/a-propos',
-    team: '/a-propos',
-    handbook: '/a-propos',
-    careers: '/a-propos',
+    about: '/a-propos',
   },
   help: {
     faqs: '/offres#faq',
-    support: '/contact',
-    livechat: '/contact',
+    contact: '/contact',
   },
   contact: {
-    email: 'contact@abdigital.fr',
-    phone: '+33 6 12 34 56 78',
+    email: 'contact@ab-digital.fr',
+    phone: '+33694530472',
     address: 'Tours, France',
   },
   company: {
@@ -50,28 +46,22 @@ const socialLinks = [
   { icon: Facebook, label: 'Facebook', href: data.facebookLink },
   { icon: Instagram, label: 'Instagram', href: data.instaLink },
   { icon: Twitter, label: 'Twitter', href: data.twitterLink },
-  { icon: Github, label: 'GitHub', href: data.githubLink },
-  { icon: Dribbble, label: 'Dribbble', href: data.dribbbleLink },
 ];
 
 const aboutLinks = [
-  { text: 'Company History', href: data.about.history },
-  { text: 'Meet the Team', href: data.about.team },
-  { text: 'Employee Handbook', href: data.about.handbook },
-  { text: 'Careers', href: data.about.careers },
+  { text: "À propos", href: data.about.about },
 ];
 
 const serviceLinks = [
-  { text: 'Web Development', href: data.services.webdev },
-  { text: 'Web Design', href: data.services.webdesign },
-  { text: 'Marketing', href: data.services.marketing },
-  { text: 'Google Ads', href: data.services.googleads },
+  { text: 'Site web sur mesure', href: data.services.webdev },
+  { text: 'Design & UI', href: data.services.webdesign },
+  { text: 'Marketing & Growth', href: data.services.marketing },
+  { text: 'Publicité payante', href: data.services.googleads },
 ];
 
 const helpfulLinks = [
   { text: 'FAQs', href: data.help.faqs },
-  { text: 'Support', href: data.help.support },
-  { text: 'Live Chat', href: data.help.livechat, hasIndicator: true },
+  { text: 'Contact', href: data.help.contact },
 ];
 
 const contactInfo = [
@@ -103,7 +93,7 @@ export default function Footer() {
             </p>
 
             <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
-              {socialLinks.map(({ icon: Icon, label, href }) => (
+                {socialLinks.map(({ icon: Icon, label, href }) => (
                 <li key={label}>
                   <Link
                     href={href}
@@ -181,25 +171,32 @@ export default function Footer() {
             <div className="text-center sm:text-left">
               <p className="text-lg font-medium">Contact</p>
               <ul className="mt-8 space-y-4 text-sm">
-                {contactInfo.map(({ icon: Icon, text, isAddress }) => (
-                  <li key={text}>
-                    <a
-                      className="flex items-center justify-center gap-1.5 sm:justify-start"
-                      href="#"
-                    >
-                      <Icon className="text-primary size-5 shrink-0 shadow-sm" />
-                      {isAddress ? (
-                        <address className="text-secondary-foreground/70 -mt-0.5 flex-1 not-italic transition">
-                          {text}
-                        </address>
-                      ) : (
-                        <span className="text-secondary-foreground/70 flex-1 transition">
-                          {text}
-                        </span>
-                      )}
-                    </a>
-                  </li>
-                ))}
+                {contactInfo.map(({ icon: Icon, text, isAddress }) => {
+                  const href = isAddress
+                    ? `https://www.google.com/maps/search/${encodeURIComponent(text)}`
+                    : Icon === Mail
+                    ? `mailto:${text}`
+                    : `tel:${text.replace(/\s+/g, '')}`;
+                  return (
+                    <li key={text}>
+                      <a
+                        className="flex items-center justify-center gap-1.5 sm:justify-start"
+                        href={href}
+                      >
+                        <Icon className="text-primary size-5 shrink-0 shadow-sm" />
+                        {isAddress ? (
+                          <address className="text-secondary-foreground/70 -mt-0.5 flex-1 not-italic transition">
+                            {text}
+                          </address>
+                        ) : (
+                          <span className="text-secondary-foreground/70 flex-1 transition">
+                            {text}
+                          </span>
+                        )}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
