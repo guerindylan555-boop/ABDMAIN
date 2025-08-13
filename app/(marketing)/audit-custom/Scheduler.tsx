@@ -56,9 +56,9 @@ export default function Scheduler() {
             <div className="absolute inset-0 py-4 max-sm:border-t">
               <ScrollArea className="h-full sm:border-s">
                 <div className="space-y-3">
-                  <div className="flex h-5 shrink-0 items-center px-5">
-                    <p className="text-sm font-medium">
-                      {format(date, "EEEE d MMMM", { locale: fr })}
+                  <div className="flex shrink-0 items-center px-5">
+                    <p className="text-sm font-medium truncate whitespace-nowrap pr-2">
+                      {format(date, "EEEE", { locale: fr })}
                     </p>
                   </div>
                   <div className="grid gap-1.5 px-5 max-sm:grid-cols-2">

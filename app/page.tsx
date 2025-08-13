@@ -8,6 +8,7 @@ import BlogLatest from "./components/sections/BlogLatest";
 import FAQ from "./components/sections/FAQ";
 import ScrollProgress from "./components/ScrollProgress";
 import TestimonialsMarquee from "@/components/mvpblocks/testimonials-marquee";
+import CTA3 from "@/components/mvpblocks/cta-3";
 
 export default async function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default async function HomePage() {
       <Pricing />
       <BlogLatest />
       <FAQ />
+      <CTA3 />
       {/* CTA global supprimé de la home (présent en layout global) */}
     </main>
   );
