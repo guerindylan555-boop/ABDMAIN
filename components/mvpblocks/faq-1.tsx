@@ -8,7 +8,13 @@ import {
   AccordionItem,
 } from '@/components/ui/accordion';
 
-const items = [
+export type FAQItem = {
+  id?: string;
+  title: string;
+  content: string;
+};
+
+const defaultItems: FAQItem[] = [
   {
     id: '1',
     title: 'Y a‑t‑il un engagement ?',
@@ -43,17 +49,23 @@ const items = [
 
 // Variants supprimés (pas de framer-motion)
 
-export default function Faq1() {
+export default function Faq1({
+  items = defaultItems,
+  title = 'Questions fréquentes',
+  lead = 'Réponses aux questions les plus courantes sur nos offres et notre façon de travailler.',
+}: {
+  items?: FAQItem[];
+  title?: string;
+  lead?: string;
+}) {
   return (
     <section className="py-12 md:py-16">
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-10 text-center">
           <h2 className="mb-3 text-h2 font-bold tracking-tight">
-            Questions <span style={{ color: 'var(--brand)' }}>fréquentes</span>
+            {title}
           </h2>
-          <p className="text-muted-foreground mx-auto max-w-2xl text-lead">
-            Réponses aux questions les plus courantes sur nos offres et notre façon de travailler.
-          </p>
+          <p className="text-foreground/80 mx-auto max-w-2xl text-lead">{lead}</p>
         </div>
 
         <div className="relative mx-auto max-w-3xl">
@@ -67,10 +79,12 @@ export default function Faq1() {
             className="glass-panel w-full rounded-xl p-2"
             defaultValue="1"
           >
-            {items.map((item) => (
-              <div key={item.id}>
+            {items.map((item, index) => {
+              const value = item.id ?? String(index + 1);
+              return (
+              <div key={value}>
                 <AccordionItem
-                  value={item.id}
+                  value={value}
                   className={cn(
                     'glass my-1 overflow-hidden rounded-lg px-2 transition-all',
                     'data-[state=open]:glass-highlight',
@@ -98,7 +112,7 @@ export default function Faq1() {
                   </AccordionPrimitive.Header>
                   <AccordionContent
                     className={cn(
-                      'text-muted-foreground overflow-hidden pt-0 pb-4',
+                      'text-foreground/80 overflow-hidden pt-0 pb-4',
                       'data-[state=open]:animate-accordion-down',
                       'data-[state=closed]:animate-accordion-up',
                     )}
@@ -109,7 +123,7 @@ export default function Faq1() {
                   </AccordionContent>
                 </AccordionItem>
               </div>
-            ))}
+            );})}
           </Accordion>
         </div>
       </div>

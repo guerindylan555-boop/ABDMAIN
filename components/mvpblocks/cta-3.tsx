@@ -8,19 +8,13 @@ export default function CTA3() {
           <div className="relative z-10 grid gap-0 lg:grid-cols-2">
             <div className="p-8 md:p-12 lg:p-16">
               <div className="mb-6 inline-block rounded-full border border-white/15 bg-white/10 px-4 py-1 text-[--brand]">
-                Passez à l’action
+                Plan d’action sur‑mesure
               </div>
               <h2 className="mb-6 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-                Prêts à{' '}
-                <span className="text-[--brand]">
-                  transformer
-                </span>{' '}
-                votre marketing ?
+                Un plan d’action 100% sur‑mesure pour propulser votre entreprise grâce à l’IA
               </h2>
               <p className="text-muted-foreground mb-8 text-lg">
-                96% des visiteurs quittent les sites sans agir. Nos tunnels
-                optimisés pour la conversion récupèrent ces opportunités perdues
-                et les transforment en revenus prévisibles.
+                Notre équipe conçoit et intègre des processus entièrement personnalisés, adaptés à vos spécificités. Profitez d’un accompagnement complet, de l’analyse initiale à la mise en œuvre, pour maximiser vos performances et vos résultats.
               </p>
 
               <div className="space-y-6">
@@ -49,10 +43,10 @@ export default function CTA3() {
                   </div>
                   <div>
                     <h3 className="font-heading text-lg font-bold text-white">
-                      Session stratégique gratuite
+                      Analyse sur mesure
                     </h3>
                     <p className="text-muted-foreground">
-                      Sans engagement, uniquement de la valeur pour votre activité.
+                      Des solutions adaptées à vos objectifs et à votre contexte métier.
                     </p>
                   </div>
                 </div>
@@ -82,10 +76,10 @@ export default function CTA3() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white">
-                      Plan de tunnel personnalisé
+                      Mise en œuvre clé en main
                     </h3>
                     <p className="text-muted-foreground">
-                      Repartez avec des actions concrètes, quel que soit votre prestataire.
+                      Technologies avancées, agents IA et automatisations intégrés à vos outils.
                     </p>
                   </div>
                 </div>
@@ -115,13 +109,19 @@ export default function CTA3() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white">
-                      Projection du ROI
+                      Suivi personnalisé
                     </h3>
                     <p className="text-muted-foreground">
-                      Visualisez l’impact potentiel sur votre chiffre d’affaires avant d’investir.
+                      Résultats mesurables, itérations continues et tableaux de bord clairs.
                     </p>
                   </div>
                 </div>
+              </div>
+
+              <div className="mt-8">
+                <ButtonLink href="/reservation-appel" variant="glow" size="md" className="inline-flex">
+                  Réserver une visio stratégique (90 min)
+                </ButtonLink>
               </div>
             </div>
 
@@ -129,10 +129,10 @@ export default function CTA3() {
               <div className="absolute top-0 right-0 h-full w-full opacity-10"></div>
               <div className="relative z-10">
                 <h3 className="mb-6 text-2xl font-bold tracking-tight md:text-3xl">
-                  N’attendez plus avec un tunnel marketing qui fuit
+                  Réservez une visio stratégique de 90 min
                 </h3>
                 <p className="mb-8 text-white/80">
-                  Chaque jour avec un tunnel sous‑performant vous coûte :
+                  Repartez avec une vision claire et actionnable. Nous ne faisons pas de blabla. Juste de la stratégie et des résultats.
                 </p>
 
                 <div className="space-y-6">
@@ -140,31 +140,30 @@ export default function CTA3() {
                     <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-white text-lg font-bold">
                       1
                     </div>
-                    <p className="text-lg">Des leads qualifiés qui ne convertissent pas</p>
+                    <p className="text-lg">Analyse personnalisée de votre contexte et de vos priorités</p>
                   </div>
 
                   <div className="flex items-center">
                     <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-white text-lg font-bold">
                       2
                     </div>
-                    <p className="text-lg">Du chiffre d’affaires qui part chez vos concurrents</p>
+                    <p className="text-lg">Plan d’action et architecture IA adaptés à vos objectifs</p>
                   </div>
 
                   <div className="flex items-center">
                     <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-white text-lg font-bold">
                       3
                     </div>
-                    <p className="text-lg">Du budget pub gaspillé sur un trafic qui ne convertit pas</p>
+                    <p className="text-lg">Roadmap d’exécution et métriques de suivi</p>
                   </div>
                 </div>
 
                 <div className="mt-10 rounded-xl glass p-6">
                   <p className="text-lg font-medium">
-                    « Nous avons fait passer notre taux de conversion de 1,7% à 6,3% en 31 jours
-                    après la mise en place du système. »
+                    « 90 minutes très concrètes : priorisation, chiffrage, plan d’action. On repart avec une trajectoire claire. »
                   </p>
                   <p className="mt-3 font-medium text-white/70">
-                    — Ryan Miller, CEO, Apex Solutions
+                    — Direction PME, services locaux
                   </p>
                 </div>
               </div>

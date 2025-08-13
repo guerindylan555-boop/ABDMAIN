@@ -1,3 +1,9 @@
+- **FAQ**: composant généralisé et contenus contextualisés.
+  - **Composant**: `components/mvpblocks/faq-1.tsx` accepte désormais `items`, `title`, `lead` (réutilisable par page).
+  - **Home**: `app/components/sections/FAQ.tsx` — FAQ centrée sur offres, audit gratuit, KPI et migration.
+  - **SEO Hub**: `app/(marketing)/hubs/seo/page.tsx` — FAQ dédiée Google Business/SEO local.
+  - **Offres**: `app/(marketing)/offres/page.tsx` — FAQ remaniée (mensuel vs annuel, différences des plans, migration SEO).
+  - Exclusions demandées: pas de changements DWY/DFY/DIY pour leurs FAQ spécifiques.
 - **CTA wording**: remplacement global de « Diagnostic 90 min » / « Réserver le diagnostic » par « Audit gratuit » (taille de boutons conservée).
   - **Fichiers modifiés**:
     - `app/components/Header.tsx`
@@ -12,6 +18,10 @@
 - **Témoignages (Home)**: remplacement par 15 témoignages B2B réalistes en français, alignés aux avatars cibles (beauté/coiffure, immobilier, métiers du bâtiment).
   - **Fichier modifié**: `components/mvpblocks/testimonials-marquee.tsx`
   - **Détails**: format des cartes conservé (5★, Highlight), noms/secteurs anonymisés (initiales + ville), chiffres plausibles (ex: no‑show −22%, +30 avis, +28% RDV), images `randomuser.me`, vocabulaire FR et cohérence avec la palette de marque (`--brand`).
+
+- **CTA (global, home)**: texte remanié pour refléter l’ADN « IA sur‑mesure » et la visio stratégique 90 min.
+  - **Fichier modifié**: `components/mvpblocks/cta-3.tsx`
+  - **Détails**: nouveau titre, sous‑texte et puces (« Analyse sur mesure », « Mise en œuvre clé en main », « Suivi personnalisé »), CTA « Réserver une visio stratégique (90 min) », encart témoignage neutralisé.
 
 - **Offres & Tarifs**: mise à jour complète du contenu des cartes.
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`

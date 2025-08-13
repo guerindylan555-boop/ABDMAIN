@@ -195,22 +195,10 @@ export default function OffresPage() {
         <h2 className="text-2xl font-semibold">FAQ</h2>
         <div className="rounded-2xl glass overflow-hidden">
           {[
-            {
-              q: "Y a‑t‑il un engagement ?",
-              a: "Non. Accompagnements mensuels, résiliables à tout moment.",
-            },
-            {
-              q: "Combien de temps pour voir des résultats ?",
-              a: "Entre 4 et 8 semaines sur le trafic et les conversions, selon le point de départ.",
-            },
-            {
-              q: "Puis‑je évoluer d’un pack à l’autre ?",
-              a: "Oui. Les packs sont pensés pour être cumulés: vous pouvez monter en puissance à tout moment.",
-            },
-            {
-              q: "Les publicités incluent‑elles le budget média ?",
-              a: "Non, les budgets publicitaires sont définis et validés séparément.",
-            },
+            { q: 'Y a‑t‑il un engagement ?', a: 'Non. Accompagnements mensuels, résiliables à tout moment.' },
+            { q: 'Mensuel vs Annuel: comment marche la remise ?', a: 'Le plan annuel applique -20% sur le prix mensuel. Nous affichons l’équivalent mensuel remisé, la facturation est annuelle.' },
+            { q: 'Quelles différences entre Starter, Croissance et Performance ?', a: 'Starter = site/blog/CRM/GB/rapports essentiels; Croissance = + pages illimitées, jusqu’à 50 articles/mois, optimisation des notes, automatisations; Performance = + audit sur‑mesure et intégrations avancées.' },
+            { q: 'Puis‑je migrer mon site sans perdre le SEO ?', a: 'Oui: redirections, reprise de contenu, suivi via Search Console et analytics pour éviter les pertes.' },
           ].map((item) => (
             <details key={item.q} className="group">
               <summary className="cursor-pointer list-none px-4 py-3 flex items-center justify-between gap-4">
