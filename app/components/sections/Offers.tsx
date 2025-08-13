@@ -13,30 +13,30 @@ type Offer = {
 export default function Offers() {
   const offers: Offer[] = [
     {
-      badge: "DIY",
-      title: "Templates & snapshots prêts à déployer",
+      badge: "Starter",
+      title: "Démarrez avec l’essentiel",
       desc:
-        "Modèles de sites, funnels, agents IA et workflows prêts à l’emploi. Guides pas‑à‑pas et vidéos inclus.",
-      href: "/solutions/diy",
-      cta: "Découvrir le DIY",
+        "Site + blog (5 pages), 1 article/mois, Chat IA, CRM multi‑canal (Email/SMS/DM), Google Business (avis), tableaux de bord, support basic.",
+      href: "/offres",
+      cta: "Choisir Starter",
       icon: Sparkles,
     },
     {
-      badge: "DWY",
-      title: "Plateforme + coaching pour avancer ensemble",
+      badge: "Croissance",
+      title: "Accélérez votre acquisition",
       desc:
-        "Sous‑compte tout‑en‑un (CRM, tunnels, calendriers, facturation) + templates + coaching hebdo. Sprints d’implémentation en direct.",
-      href: "/solutions/dwy",
-      cta: "Découvrir le DWY",
+        "Tout Starter + pages illimitées, jusqu’à 50 articles/mois, Google Business (optimisation des notes), appels manqués, automatisations & déclencheurs, support prioritaire.",
+      href: "/offres",
+      cta: "Choisir Croissance",
       icon: Zap,
     },
     {
-      badge: "DFY",
-      title: "Nous concevons et implémentons pour vous",
+      badge: "Performance",
+      title: "Sur‑mesure de bout en bout",
       desc:
-        "Conseil + exécution clé en main: site/funnel, SEO local, agents IA et automations d’appels/SMS. Délai moyen: 2–6 semaines.",
-      href: "/solutions/dfy",
-      cta: "Découvrir le DFY",
+        "Tout Croissance + audits personnalisés, conception & intégration, gestion des systèmes et/ou formation de vos équipes.",
+      href: "/diagnostic-90-min",
+      cta: "Réserver un audit",
       icon: Shield,
     },
   ];
@@ -49,10 +49,10 @@ export default function Offers() {
             {/* Left: title + lead */}
             <div className="max-w-2xl">
               <h2 className="text-h2 font-bold tracking-tight">
-                Trois façons de <span style={{ color: "var(--brand)" }}>travailler</span> avec nous
+                Trois offres pour <span style={{ color: "var(--brand)" }}>avancer</span> avec nous
               </h2>
-              <p className="mt-3 text-lead text-neutral-700 dark:text-neutral-300">
-                Couverts tous les niveaux de budget et de maturité, avec la même qualité d’exécution.
+              <p className="mt-3 text-lead text-foreground/90">
+                Des plans clairs et évolutifs: Starter, Croissance et Performance, selon vos objectifs et votre rythme.
               </p>
             </div>
 
@@ -78,7 +78,7 @@ export default function Offers() {
 
                       <div className="mt-4 flex h-full flex-col">
                         <h3 className="text-lg font-semibold text-foreground">{o.title}</h3>
-                        <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">
+                        <p className="mt-2 text-sm text-foreground/90">
                           {o.desc}
                         </p>
                         <div className="mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12" />

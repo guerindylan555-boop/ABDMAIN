@@ -16,6 +16,11 @@
     - Croissance: Tout Starter + pages illimitées, jusqu’à 50 articles/mois, Google Business — optimisation des notes, récupération des appels manqués, automatisations personnalisées & déclencheurs, support prioritaire.
     - Performance: Tout Croissance + support prioritaire, audits 100% personnalisés, conception & intégration de solutions sur‑mesure, gestion des systèmes et/ou formation des équipes.
 
+- **Section**: refonte du bloc « Trois façons de travailler avec nous » pour refléter les nouvelles offres.
+  - **Fichier modifié**: `app/components/sections/Offers.tsx`
+  - **Titre**: « Trois offres pour avancer avec nous ».
+  - **Cartes**: `Starter`, `Croissance`, `Performance` avec descriptions alignées et CTA mis à jour (Performance → « Réserver un audit »).
+
 - **Ajustements**: simplification du plan Starter (retrait des formations/tutoriels, rapports avancés, formulaires/enquêtes/calendriers/newsletter) et clarification du plan Croissance (pas de répétition, renommage de l’optimisation Google Business, retrait E‑Réputation et planificateur social, retrait de « Devis »).
 
 ## 2025-08-12
