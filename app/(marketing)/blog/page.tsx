@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog/posts";
+import CTA3 from "@/components/mvpblocks/cta-3";
 
 export const metadata: Metadata = {
   title: "Blog — AB Digital",

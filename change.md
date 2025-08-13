@@ -18,7 +18,7 @@
 - **Nettoyage — Études de cas retirées**: suppression des pages et des références.
 - **Footer CTA → Offres & Tarifs**: remplacement du CTA global par la section pricing.
   - **Fichier modifié**: `app/layout.tsx` — suppression de `<CTA3 />` en bas de page et insertion de `<Pricing />` avant le footer pour afficher « Offres & Tarifs » globalement.
-  - **Home**: `app/page.tsx` — réintégration du CTA (`<CTA3 />`) uniquement sur la page d’accueil, après la FAQ.
+  - **Home**: `app/page.tsx` — CTA (`<CTA3 />`) placé juste au‑dessus de la section Blog.
 
   - **Fichiers supprimés**:
     - `app/(marketing)/etudes-de-cas/les-halles-beaute/page.tsx`

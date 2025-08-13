@@ -3,7 +3,6 @@ import Essentiels from "./components/sections/Essentiels";
 import Offers from "./components/sections/Offers";
 import FeaturesGrid from "./components/sections/FeaturesGrid";
 // Process supprimé de la home (section "Notre méthode")
-import Pricing from "./components/sections/Pricing";
 import BlogLatest from "./components/sections/BlogLatest";
 import FAQ from "./components/sections/FAQ";
 import ScrollProgress from "./components/ScrollProgress";
@@ -19,10 +18,9 @@ export default async function HomePage() {
       <Offers />
       <FeaturesGrid />
       <TestimonialsMarquee />
-      <Pricing />
+      <CTA3 />
       <BlogLatest />
       <FAQ />
-      <CTA3 />
       {/* CTA global supprimé de la home (présent en layout global) */}
     </main>
   );
