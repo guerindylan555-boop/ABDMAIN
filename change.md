@@ -7,6 +7,8 @@
   - **Noms des offres**: `Starter`, `Croissance` (populaire), `Performance`.
   - **Tarifs**: Starter 149€/mois, Croissance 399€/mois, Performance sur devis.
   - **Fonctionnalité**: bascule Mensuel/Annuel corrigée. Affichage annuel = (mensuel × 12 × 0,8), ex. Starter 149€ → 1 430,4€/an.
+  - **Visuel**: badge « Populaire » traduit; contraste renforcé (fond, bordures, blur) et suppression des textes gris pour homogénéité.
+  - **Affichage**: en annuel, arrondi à l’euro inférieur et ajout d’une ligne « Économisez X€/an » sous le prix.
   - **Contenus**:
     - Starter: Site web & Blog sur mesure (5 pages), 1 article/mois, Chat IA, CRM & Email & SMS & DM Marketing, Google Business (gestion des avis), Tableaux de bord, Support basic + chat quotidien.
     - Croissance: Tout Starter + pages illimitées, jusqu’à 50 articles/mois, Google Business — optimisation des notes, récupération des appels manqués, automatisations personnalisées & déclencheurs, support prioritaire.

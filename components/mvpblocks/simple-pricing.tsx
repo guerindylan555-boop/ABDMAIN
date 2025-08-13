@@ -119,7 +119,7 @@ export default function SimplePricing() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-muted-foreground max-w-md pt-2 text-lg"
+            className="text-foreground/90 max-w-md pt-2 text-lg"
           >
             Des tarifs simples et transparents qui évoluent avec votre entreprise. Aucun frais caché, aucune surprise.
           </motion.p>
@@ -133,7 +133,7 @@ export default function SimplePricing() {
           <Tabs
             defaultValue={frequency}
             onValueChange={setFrequency}
-            className="bg-muted/30 inline-block rounded-full p-1 shadow-sm"
+            className="bg-background/60 inline-block rounded-full p-1 shadow-sm border border-border/50 backdrop-blur"
           >
               <TabsList className="bg-transparent">
                 <TabsTrigger
@@ -149,7 +149,7 @@ export default function SimplePricing() {
                   Annuel
                   <Badge
                     variant="secondary"
-                    className="bg-primary/10 text-primary hover:bg-primary/15 ml-2"
+                    className="bg-primary/15 text-primary hover:bg-primary/20 ml-2"
                   >
                     –20%
                   </Badge>
@@ -172,19 +172,18 @@ export default function SimplePricing() {
                 <div className="glow" />
                 <Card
                   className={cn(
-                    'bg-secondary/30 relative h-full w-full text-left transition-all duration-300 hover:shadow-lg flex flex-col',
+                    'bg-background/60 relative h-full w-full text-left transition-all duration-300 hover:shadow-xl flex flex-col border border-border/50 backdrop-blur',
                     plan.popular
-                      ? 'ring-primary/50 dark:shadow-primary/10 shadow-md ring-2'
-                      : 'hover:border-primary/30',
-                    plan.popular &&
-                      'from-primary/[0.03] bg-gradient-to-b to-transparent',
+                      ? 'ring-primary/60 dark:shadow-primary/10 shadow-lg ring-2'
+                      : 'hover:border-primary/40',
+                    plan.popular && 'from-primary/[0.05] bg-gradient-to-b to-transparent',
                   )}
                 >
                 {plan.popular && (
                   <div className="absolute -top-3 right-0 left-0 mx-auto w-fit">
                     <Badge className="bg-primary text-primary-foreground rounded-full px-4 py-1 shadow-sm">
                       <Sparkles className="mr-1 h-3.5 w-3.5" />
-                      Popular
+                      Populaire
                     </Badge>
                   </div>
                 )}
@@ -216,28 +215,45 @@ export default function SimplePricing() {
                         const monthlyBase = plan.price.monthly as unknown;
                         const isYearly = frequency === 'yearly';
                         if (typeof monthlyBase === 'number') {
-                          const displayValue = isYearly
-                            ? monthlyBase * 12 * 0.8
-                            : monthlyBase;
-                          const fractionDigits = isYearly ? 1 : 0;
+                          const annualRaw = monthlyBase * 12 * 0.8;
+                          const annualValue = Math.floor(annualRaw);
+                          const displayValue = isYearly ? annualValue : monthlyBase;
+                          const savings = Math.max(0, monthlyBase * 12 - annualValue);
                           return (
-                            <div className="flex items-baseline">
-                              <NumberFlow
-                                className={cn(
-                                  'text-3xl font-bold',
-                                  plan.popular ? 'text-primary' : 'text-foreground',
-                                )}
-                                format={{
-                                  style: 'currency',
-                                  currency: 'EUR',
-                                  maximumFractionDigits: fractionDigits,
-                                  minimumFractionDigits: fractionDigits,
-                                }}
-                                value={displayValue}
-                              />
-                              <span className="text-muted-foreground ml-1 text-sm">
-                                {isYearly ? '/an' : '/mois'}
-                              </span>
+                            <div className="flex flex-col items-start">
+                              <div className="flex items-baseline">
+                                <NumberFlow
+                                  className={cn(
+                                    'text-3xl font-bold',
+                                    plan.popular ? 'text-primary' : 'text-foreground',
+                                  )}
+                                  format={{
+                                    style: 'currency',
+                                    currency: 'EUR',
+                                    maximumFractionDigits: 0,
+                                    minimumFractionDigits: 0,
+                                  }}
+                                  value={displayValue}
+                                />
+                                <span className="text-muted-foreground ml-1 text-sm">
+                                  {isYearly ? '/an' : '/mois'}
+                                </span>
+                              </div>
+                              {isYearly && savings > 0 && (
+                                <div className="text-xs text-muted-foreground mt-1">
+                                  Économisez{' '}
+                                  <NumberFlow
+                                    format={{
+                                      style: 'currency',
+                                      currency: 'EUR',
+                                      maximumFractionDigits: 0,
+                                      minimumFractionDigits: 0,
+                                    }}
+                                    value={savings}
+                                  />
+                                  {' '}par an
+                                </div>
+                              )}
                             </div>
                           );
                         }
@@ -268,13 +284,7 @@ export default function SimplePricing() {
                       >
                         <Check className="h-3.5 w-3.5" />
                       </div>
-                      <span
-                        className={
-                          plan.popular ? 'text-foreground' : 'text-muted-foreground'
-                        }
-                      >
-                        {feature}
-                      </span>
+                      <span className={'text-foreground'}>{feature}</span>
                     </motion.div>
                   ))}
                 </CardContent>
