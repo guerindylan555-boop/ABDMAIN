@@ -51,7 +51,7 @@ export default function DWYPage() {
 
       <section id="cta" className="space-y-3 mt-8">
         <h2 className="text-h2">Démarrer</h2>
-        <ButtonLink href="/reservation-appel">Réserver le diagnostic 90 min</ButtonLink>
+        <ButtonLink href="/reservation-appel">Audit gratuit</ButtonLink>
       </section>
 
       <section id="pricing" className="space-y-3 mt-8">

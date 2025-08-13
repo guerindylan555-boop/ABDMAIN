@@ -83,149 +83,169 @@ export function TestimonialCard({
 }
 const testimonials = [
   {
-    name: 'Jordan Hayes',
-    role: 'CTO at Quantum Innovations',
+    name: 'Sophie M.',
+    role: "Gérante — Institut de beauté (Tours)",
+    img: 'https://randomuser.me/api/portraits/women/12.jpg',
+    description: (
+      <p>
+        « En 90 jours, on est passés de 0 à +30 avis (4,8★). »
+        <Highlight>No‑show réduit de 22% grâce aux rappels SMS</Highlight> et
+        les créneaux « pause déjeuner » sont désormais pleins chaque semaine.
+      </p>
+    ),
+  },
+  {
+    name: 'Nadia B.',
+    role: 'Patronne — Salon de coiffure (Nantes) ',
+    img: 'https://randomuser.me/api/portraits/women/45.jpg',
+    description: (
+      <p>
+        Les pages services et Google Business ont fait la différence.
+        <Highlight>Les RDV colorations du mardi/mercredi ont doublé</Highlight>{' '}
+        en 6 semaines, avec un suivi clair des appels.
+      </p>
+    ),
+  },
+  {
+    name: 'Julien R.',
+    role: 'Fondateur — Barbier premium (Lyon)',
+    img: 'https://randomuser.me/api/portraits/men/41.jpg',
+    description: (
+      <p>
+        On a lancé les abonnements « entretien » sans perdre le côté haut de gamme.
+        <Highlight>+38% d’adhésions en 2 mois</Highlight> avec un tunnel clair et du retargeting propre.
+      </p>
+    ),
+  },
+  {
+    name: 'Claire D.',
+    role: 'Directrice — Spa & bien‑être (Bordeaux)',
+    img: 'https://randomuser.me/api/portraits/women/68.jpg',
+    description: (
+      <p>
+        Cartes cadeaux et packs duo structurés.
+        <Highlight>Q4 à +52% vs N‑1</Highlight>{' '}grâce aux campagnes saisonnières et aux posts Google Business.
+      </p>
+    ),
+  },
+  {
+    name: 'Thomas L.',
+    role: "Directeur d'agence — Immobilier (Paris 11e)",
     img: 'https://randomuser.me/api/portraits/men/22.jpg',
     description: (
       <p>
-        NexaUI has completely transformed our development workflow.
-        <Highlight>
-          The component system saved us weeks of custom coding and design work.
-        </Highlight>{' '}
-        Our team can now focus on business logic instead of UI details.
+        Les entonnoirs d’estimation ont ramené des vendeurs sérieux.
+        <Highlight>Coût par estimation −34%</Highlight> et plus de mandats exclusifs ce trimestre.
       </p>
     ),
   },
   {
-    name: 'Maya Rodriguez',
-    role: 'Lead Developer at Skyline Digital',
+    name: 'Marine S.',
+    role: 'Responsable — Gestion locative (Lille)',
     img: 'https://randomuser.me/api/portraits/women/33.jpg',
     description: (
       <p>
-        I was skeptical at first, but NexaUI proved me wrong.
-        <Highlight>
-          The accessibility features and responsive design are top-notch.
-        </Highlight>{' '}
-        It&apos;s rare to find a framework that prioritizes both aesthetics and
-        functionality.
+        On a automatisé les relances visite.
+        <Highlight>Taux de no‑show visites −29%</Highlight>{' '}et un meilleur débit de signatures bailleurs.
       </p>
     ),
   },
   {
-    name: 'Ethan Park',
-    role: 'Startup Founder at Elevate Labs',
-    img: 'https://randomuser.me/api/portraits/men/32.jpg',
-    description: (
-      <p>
-        As a non-technical founder, NexaUI has been a game-changer for our MVP.
-        <Highlight>We launched three months ahead of schedule.</Highlight> The
-        modular components allowed us to iterate quickly based on user feedback.
-      </p>
-    ),
-  },
-  {
-    name: 'Zoe Bennett',
-    role: 'UX Architect at Fusion Systems',
-    img: 'https://randomuser.me/api/portraits/women/44.jpg',
-    description: (
-      <p>
-        NexaUI&apos;s attention to detail is impressive.
-        <Highlight>
-          The micro-interactions and animations create a polished experience.
-        </Highlight>{' '}
-        It&apos;s become our go-to solution for client projects with tight
-        deadlines.
-      </p>
-    ),
-  },
-  {
-    name: 'Victor Nguyen',
-    role: 'Product Lead at FinEdge',
-    img: 'https://randomuser.me/api/portraits/men/55.jpg',
-    description: (
-      <p>
-        Our financial dashboard needed a complete overhaul, and NexaUI
-        delivered.
-        <Highlight>
-          The data visualization components are both beautiful and functional.
-        </Highlight>{' '}
-        User engagement has increased by 47% since the redesign.
-      </p>
-    ),
-  },
-  {
-    name: 'Amara Johnson',
-    role: 'Frontend Specialist at Nimbus Tech',
-    img: 'https://randomuser.me/api/portraits/women/67.jpg',
-    description: (
-      <p>
-        The documentation for NexaUI is exceptional.
-        <Highlight>
-          I was able to implement complex UI patterns in just a few hours.
-        </Highlight>{' '}
-        The TypeScript support is also a major productivity booster.
-      </p>
-    ),
-  },
-  {
-    name: 'Leo Tanaka',
-    role: 'Creative Technologist at Prism Agency',
+    name: 'Pierre A.',
+    role: 'Head of Growth — Réseau de mandataires',
     img: 'https://randomuser.me/api/portraits/men/78.jpg',
     description: (
       <p>
-        NexaUI has the perfect balance of flexibility and structure.
-        <Highlight>
-          We can maintain brand consistency while still creating unique
-          experiences.
-        </Highlight>{' '}
-        Our clients are consistently impressed with the results.
+        Recrutement prévisible, enfin.
+        <Highlight>Coût par candidature qualifiée −41%</Highlight> avec pages dédiées + nurturing SMS.
       </p>
     ),
   },
   {
-    name: 'Sophia Martinez',
-    role: 'E-commerce Director at StyleHub',
-    img: 'https://randomuser.me/api/portraits/women/89.jpg',
-    description: (
-      <p>
-        Our conversion rates have increased by 28% since implementing NexaUI.
-        <Highlight>
-          The checkout flow components are optimized for both desktop and
-          mobile.
-        </Highlight>{' '}
-        The dark mode support was also a huge hit with our customers.
-      </p>
-    ),
-  },
-  {
-    name: 'Aiden Wilson',
-    role: 'Healthcare Solutions Architect',
+    name: 'Karim E.',
+    role: 'Gérant — Plomberie urgences (Toulouse)',
     img: 'https://randomuser.me/api/portraits/men/92.jpg',
     description: (
       <p>
-        NexaUI&apos;s accessibility features were crucial for our healthcare
-        platform.
-        <Highlight>
-          We passed compliance requirements with minimal additional work.
-        </Highlight>{' '}
-        The form components are especially well-designed for complex data entry.
+        Campagnes call‑only et GBP propres.
+        <Highlight>+63% d’appels qualifiés</Highlight>{' '}et filtrage anti‑clics frauduleux.
       </p>
     ),
   },
   {
-    name: 'Olivia Chen',
-    role: 'EdTech Product Manager at LearnSphere',
+    name: 'Luc P.',
+    role: 'Artisan — Électricien B2B (Strasbourg)',
+    img: 'https://randomuser.me/api/portraits/men/55.jpg',
+    description: (
+      <p>
+        Un site rapide avec des pages métiers claires.
+        <Highlight>Devis IRVE & tableaux: +47%</Highlight>{' '}et une meilleure crédibilité auprès des pros.
+      </p>
+    ),
+  },
+  {
+    name: 'Stéphane G.',
+    role: 'Dirigeant — Couvreur (Tours Métropole)',
+    img: 'https://randomuser.me/api/portraits/men/32.jpg',
+    description: (
+      <p>
+        Double entonnoir urgences/rénovation.
+        <Highlight>Top‑3 local sur mots clés clés</Highlight>{' '}et une hausse nette des appels « bâchage ».
+      </p>
+    ),
+  },
+  {
+    name: 'Aline V.',
+    role: 'Peintre décoratrice (Rennes)',
     img: 'https://randomuser.me/api/portraits/women/29.jpg',
     description: (
       <p>
-        Our educational platform needed to work for students of all ages and
-        abilities.
-        <Highlight>
-          NexaUI&apos;s inclusive design principles made this possible without
-          compromise.
-        </Highlight>{' '}
-        The interactive components have significantly improved student
-        engagement.
+        Le portfolio SEO et le formulaire filtrant nous font gagner du temps.
+        <Highlight>Moins de petits budgets, plus de chantiers complets</Highlight>.
+      </p>
+    ),
+  },
+  {
+    name: 'Jean C.',
+    role: 'Dirigeant — Chauffage & PAC (Lyon Est)',
+    img: 'https://randomuser.me/api/portraits/men/60.jpg',
+    description: (
+      <p>
+        Landing PAC + qualification automatique.
+        <Highlight>+35% de visites techniques posées</Highlight>{' '}et moins d’allers‑retours.
+      </p>
+    ),
+  },
+  {
+    name: 'Didier N.',
+    role: 'Serrurier 24/7 (Nice)',
+    img: 'https://randomuser.me/api/portraits/men/15.jpg',
+    description: (
+      <p>
+        Ciblage fin et appels enregistrés.
+        <Highlight>Coût par appel divisé par 2</Highlight> sur les urgences réelles.
+      </p>
+    ),
+  },
+  {
+    name: 'Mathieu K.',
+    role: 'Menuiserie — Pergolas & fenêtres (Bordeaux)',
+    img: 'https://randomuser.me/api/portraits/men/47.jpg',
+    description: (
+      <p>
+        Pages produit + financement, qualification SMS.
+        <Highlight>+28% de RDV showroom</Highlight> et paniers moyens en hausse.
+      </p>
+    ),
+  },
+  {
+    name: 'Élodie F.',
+    role: 'Paysagiste — Entretien & création (Nantes)',
+    img: 'https://randomuser.me/api/portraits/women/89.jpg',
+    description: (
+      <p>
+        On a lissé la saison avec des contrats annuels.
+        <Highlight>Leads printemps +40%</Highlight>{' '}et avis 4,9★ maintenus.
       </p>
     ),
   },

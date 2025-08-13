@@ -127,7 +127,7 @@ export default function Hero() {
                   className="hero-cta opacity-0 translate-y-2 w-full justify-center rounded-xl px-7 py-3.5 text-neutral-900 dark:text-white whitespace-normal"
                   data-magnetic
                 >
-                  Réserver un diagnostic 90 min
+                  Audit gratuit
                 </ButtonLink>
               </div>
               <div className="w-full max-w-sm">

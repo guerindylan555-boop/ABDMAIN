@@ -17,7 +17,7 @@ export default function CTA() {
               className="mt-6 md:mt-0"
               data-magnetic
             >
-              Réserver le diagnostic
+              Audit gratuit
             </ButtonLink>
           </div>
         </div>

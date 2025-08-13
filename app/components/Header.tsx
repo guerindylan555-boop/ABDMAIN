@@ -71,7 +71,7 @@ export default function Header() {
 
           <div className="flex items-center gap-3">
             <ButtonLink href="/diagnostic-90-min" variant="glow" size="md" className="text-sm" data-magnetic>
-              Diagnostic 90 min
+              Audit gratuit
             </ButtonLink>
           </div>
         </div>

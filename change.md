@@ -1,6 +1,17 @@
+- **CTA wording**: remplacement global de « Diagnostic 90 min » / « Réserver le diagnostic » par « Audit gratuit » (taille de boutons conservée).
+  - **Fichiers modifiés**:
+    - `app/components/Header.tsx`
+    - `app/components/sections/Hero.tsx`
+    - `app/(marketing)/solutions/dfy/page.tsx` (texte, TOC et OpenGraph)
+    - `app/(marketing)/solutions/dwy/page.tsx`
+    - `app/components/sections/CTA.tsx`
 # Change Log
 
 ## 2025-08-13
+
+- **Témoignages (Home)**: remplacement par 15 témoignages B2B réalistes en français, alignés aux avatars cibles (beauté/coiffure, immobilier, métiers du bâtiment).
+  - **Fichier modifié**: `components/mvpblocks/testimonials-marquee.tsx`
+  - **Détails**: format des cartes conservé (5★, Highlight), noms/secteurs anonymisés (initiales + ville), chiffres plausibles (ex: no‑show −22%, +30 avis, +28% RDV), images `randomuser.me`, vocabulaire FR et cohérence avec la palette de marque (`--brand`).
 
 - **Offres & Tarifs**: mise à jour complète du contenu des cartes.
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DFY — Conseil & Réalisations clés en main",
     description:
-      "Diagnostic 90 min → Build & Implémentation → Optimisation & transfert. Sites & funnels, SEO local, agents IA, automations.",
+      "Audit gratuit → Build & Implémentation → Optimisation & transfert. Sites & funnels, SEO local, agents IA, automations.",
     type: "website",
     url: "/solutions/dfy",
   },
@@ -29,7 +29,7 @@ export default function DFYPage() {
         { id: "pour-qui", label: "Pour qui ?" },
         { id: "process", label: "Process en 3 étapes" },
         { id: "packages", label: "Packages" },
-        { id: "cta", label: "Passer au diagnostic" },
+        { id: "cta", label: "Demander un audit" },
         { id: "pricing", label: "Tarifs" },
         { id: "faq", label: "FAQ" },
       ]}
@@ -47,7 +47,7 @@ export default function DFYPage() {
       <section id="process" className="space-y-3 mt-8">
         <h2 className="text-h2">Process en 3 étapes</h2>
         <ol className="list-decimal pl-5 space-y-1">
-          <li><strong>Diagnostic 90 min</strong> — audit funnel/SEO/GB/appels/CRM/tracking → feuille de route priorisée.</li>
+          <li><strong>Audit gratuit</strong> — audit funnel/SEO/GB/appels/CRM/tracking → feuille de route priorisée.</li>
           <li><strong>Build & Implémentation</strong> — site/funnel, agents IA, automations, tracking, GB.</li>
           <li><strong>Optimisation & transfert</strong> — revues, KPIs, dashboard, handover et formation.</li>
         </ol>
@@ -82,7 +82,7 @@ export default function DFYPage() {
 
       <section id="cta" className="space-y-3 mt-8">
         <h2 className="text-h2">Prêt à démarrer ?</h2>
-        <ButtonLink href="/reservation-appel">Réserver le diagnostic 90 min</ButtonLink>
+        <ButtonLink href="/reservation-appel">Audit gratuit</ButtonLink>
       </section>
 
       {/* Section tarifs simplifiée ou renvoyant vers /offres */}
