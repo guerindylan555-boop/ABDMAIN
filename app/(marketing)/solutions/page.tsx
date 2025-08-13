@@ -182,40 +182,118 @@ export default function SolutionsIndex() {
         </div>
       </section>
 
-      {/* Détails Performance */}
+      {/* Détails Performance (nouvelle section spécifique) */}
       <section id="performance" className="mt-12">
         <div className="glass-panel rounded-2xl p-6 border border-white/10 flex flex-col">
-          <h2 className="text-h2 font-bold">Performance — Sur‑mesure piloté par les résultats</h2>
-          <p className="mt-2 text-lead text-neutral-300">Idéal pour des besoins spécifiques, intégrations et montée en compétence des équipes.</p>
-          <div className="mt-4 grid md:grid-cols-2 gap-4">
-            <div className="glass-card rounded-xl p-4 border border-white/10">
-              <h3 className="font-semibold">Inclus</h3>
-              <ul className="mt-2 space-y-1 text-sm text-neutral-300">
-                {[
-                  "Tout Croissance",
-                  "Audits 100% personnalisés",
-                  "Conception & intégrations sur‑mesure",
-                  "Gestion des systèmes et/ou formation des équipes",
-                ].map((i) => (
-                  <li key={i} className="flex items-center gap-2"><span className="inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />{i}</li>
-                ))}
-              </ul>
-            </div>
+          <h2 className="text-h2 font-bold">Performance — Propulsez votre entreprise avec des solutions sur‑mesure et innovantes</h2>
+          <p className="mt-2 text-lead text-neutral-300">
+            Nous avons conçu un processus en trois étapes pour garantir votre succès: analyse précise, plan d’action opérationnel, puis mise en œuvre et optimisation continue. Le tout, sur‑mesure et orienté résultats.
+          </p>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {/* 1. Diagnostic personnalisé */}
             <div className="glass-card rounded-xl p-4 border border-white/10 flex flex-col">
-              <h3 className="font-semibold">Résultats attendus</h3>
-              <ul className="mt-2 space-y-1 text-sm text-neutral-300 flex-1">
-                {[
-                  "Architecture scalable et fiable",
-                  "Automatisations avancées adaptées à vos cas",
-                  "Équipe outillée et formée",
-                ].map((i) => (
-                  <li key={i} className="flex items-center gap-2"><span className="inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />{i}</li>
-                ))}
-              </ul>
-              <div className="mt-4 flex gap-2">
-                <ButtonLink href="/reservation-appel" variant="outline" size="lg" className="flex-1 justify-center">Réserver un audit</ButtonLink>
+              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-wide opacity-80">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-white/15 bg-white/5">1</span>
+                Diagnostic personnalisé (60 min)
+              </div>
+              <h3 className="mt-2 font-semibold">Clarté immédiate</h3>
+              <div className="mt-2">
+                <p className="text-sm text-neutral-300">Ce que vous obtenez:</p>
+                <ul className="mt-2 space-y-1 text-sm text-neutral-300">
+                  {[
+                    "Clarté sur vos enjeux et objectifs",
+                    "Analyse de vos processus, outils et stratégies actuelles",
+                    "Identification des leviers de croissance et opportunités",
+                  ].map((i) => (
+                    <li key={i} className="flex items-start gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />{i}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-3">
+                <p className="text-sm text-neutral-300">Pourquoi c’est essentiel:</p>
+                <ul className="mt-2 space-y-1 text-sm text-neutral-300">
+                  {[
+                    "Vision limpide de votre situation",
+                    "Priorisation précise: vous gagnez du temps",
+                    "Feuille de route validée avant d’agir",
+                  ].map((i) => (
+                    <li key={i} className="flex items-start gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />{i}</li>
+                  ))}
+                </ul>
               </div>
             </div>
+
+            {/* 2. Plan d'action sur-mesure */}
+            <div className="glass-card rounded-xl p-4 border border-white/10 flex flex-col">
+              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-wide opacity-80">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-white/15 bg-white/5">2</span>
+                Plan d’action sur‑mesure
+              </div>
+              <h3 className="mt-2 font-semibold">Outils, automatisations et stratégie</h3>
+              <div className="mt-2">
+                <p className="text-sm text-neutral-300">Ce que vous obtenez:</p>
+                <ul className="mt-2 space-y-1 text-sm text-neutral-300">
+                  {[
+                    "Un document opérationnel (objectifs, étapes, indicateurs)",
+                    "Liste d’outils et d’automatisations adaptés à vos besoins",
+                    "Calendrier d’implémentation orchestrant chaque action",
+                  ].map((i) => (
+                    <li key={i} className="flex items-start gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />{i}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-3">
+                <p className="text-sm text-neutral-300">Ce que vous gagnez:</p>
+                <ul className="mt-2 space-y-1 text-sm text-neutral-300">
+                  {[
+                    "Sérénité: la marche à suivre est claire",
+                    "Efficacité: priorisation et optimisation par l’IA",
+                    "Gain de temps: automatisation des tâches répétitives",
+                  ].map((i) => (
+                    <li key={i} className="flex items-start gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />{i}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* 3. Suivi et coaching */}
+            <div className="glass-card rounded-xl p-4 border border-white/10 flex flex-col">
+              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-wide opacity-80">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-white/15 bg-white/5">3</span>
+                Suivi et coaching continu
+              </div>
+              <h3 className="mt-2 font-semibold">Optimisation en continu</h3>
+              <div className="mt-2">
+                <p className="text-sm text-neutral-300">Ce que vous obtenez:</p>
+                <ul className="mt-2 space-y-1 text-sm text-neutral-300">
+                  {[
+                    "Rendez‑vous réguliers pour ajuster le plan",
+                    "Accompagnement pour lever les blocages en temps réel",
+                    "Optimisations continues selon le marché et les données",
+                  ].map((i) => (
+                    <li key={i} className="flex items-start gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />{i}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-3">
+                <p className="text-sm text-neutral-300">Pourquoi c’est vital:</p>
+                <ul className="mt-2 space-y-1 text-sm text-neutral-300">
+                  {[
+                    "Adaptation continue aux opportunités/contraintes",
+                    "ROI maximisé en restant focalisé sur les résultats",
+                    "Soutien expert pour monter en compétence",
+                  ].map((i) => (
+                    <li key={i} className="flex items-start gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[--brand]" />{i}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 flex flex-col gap-2 sm:flex-row">
+            <ButtonLink href="/reservation-appel" variant="glow" size="lg" className="flex-1 justify-center">Réserver une visio stratégique (60 min)</ButtonLink>
+            <ButtonLink href="/offres" variant="outline" className="flex-1 justify-center">Voir Offres & Tarifs</ButtonLink>
           </div>
         </div>
       </section>

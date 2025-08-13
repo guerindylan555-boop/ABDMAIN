@@ -22,10 +22,15 @@
 - **CTA (global, home)**: texte remanié pour refléter l’ADN « IA sur‑mesure » et la visio stratégique 60 min.
   - **Fichier modifié**: `components/mvpblocks/cta-3.tsx`
   - **Détails**: nouveau titre, sous‑texte et puces (« Analyse sur mesure », « Mise en œuvre clé en main », « Suivi personnalisé »), CTA « Réserver une visio stratégique (60 min) », encart témoignage neutralisé.
+  - **UI**: bouton déplacé en bas de la colonne de droite et agrandi (`size="lg"`, `w-full`).
 
 - **CTA global (position)**: réintégration du CTA juste au‑dessus du footer via le layout global et retrait de son rendu local sur la Home.
   - **Fichiers modifiés**: `app/layout.tsx` (insertion de `<CTA3 />` avant `<Footer />`), `app/page.tsx` (suppression de `<CTA3 />`).
   - **Effet**: le CTA réapparaît en bas de la page d’accueil et sur toutes les pages.
+
+- **Solutions/Performance (refonte)**: nouvelle section spécifique alignée à l’ADN « sur‑mesure + IA » avec un processus en 3 étapes.
+  - **Fichier modifié**: `app/(marketing)/solutions/page.tsx`
+  - **Détails**: remplace l’ancien bloc par « Diagnostic personnalisé (60 min) », « Plan d’action sur‑mesure », « Suivi & coaching continu », avec bénéfices/outputs concrets et CTA « Réserver une visio stratégique (60 min) ».
 
 - **Offres & Tarifs**: mise à jour complète du contenu des cartes.
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`

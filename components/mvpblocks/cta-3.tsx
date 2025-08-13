@@ -118,11 +118,7 @@ export default function CTA3() {
                 </div>
               </div>
 
-              <div className="mt-8">
-                <ButtonLink href="/reservation-appel" variant="glow" size="md" className="inline-flex">
-                  Réserver une visio stratégique (60 min)
-                </ButtonLink>
-              </div>
+              {/* Bouton déplacé dans la colonne de droite */}
             </div>
 
             <div className="relative flex flex-col justify-center overflow-hidden glass p-8 text-white md:p-12 lg:p-16">
@@ -166,6 +162,12 @@ export default function CTA3() {
                     — Direction PME, services locaux
                   </p>
                 </div>
+
+              <div className="mt-8">
+                <ButtonLink href="/reservation-appel" variant="glow" size="lg" className="w-full">
+                  Réserver une visio stratégique (60 min)
+                </ButtonLink>
+              </div>
               </div>
             </div>
           </div>
