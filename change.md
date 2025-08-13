@@ -9,6 +9,7 @@
   - **Fonctionnalité**: bascule Mensuel/Annuel corrigée. Affichage annuel = (mensuel × 12 × 0,8), ex. Starter 149€ → 1 430,4€/an.
   - **Visuel**: badge « Populaire » traduit; contraste renforcé (fond, bordures, blur) et suppression des textes gris pour homogénéité.
   - **Affichage**: en annuel, on montre l’équivalent mensuel (mensuel × 0,8) arrondi à l’euro inférieur; ajout d’une ligne « Économisez X€/an (facturation annuelle) ».
+  - **UX**: l’onglet Annuel est désormais sélectionné par défaut; CTA de Croissance recoloré pour une meilleure lisibilité; CTA Performance renommé « Réserver un audit ».
   - **Contenus**:
     - Starter: Site web & Blog sur mesure (5 pages), 1 article/mois, Chat IA, CRM & Email & SMS & DM Marketing, Google Business (gestion des avis), Tableaux de bord, Support basic + chat quotidien.
     - Croissance: Tout Starter + pages illimitées, jusqu’à 50 articles/mois, Google Business — optimisation des notes, récupération des appels manqués, automatisations personnalisées & déclencheurs, support prioritaire.

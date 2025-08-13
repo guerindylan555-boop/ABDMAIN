@@ -77,12 +77,12 @@ const plans = [
       'Conception & Intégration de solutions sur‑mesure',
       'Gestion des systèmes et/ou formation de vos équipes',
     ],
-    cta: 'Nous contacter',
+    cta: 'Réserver un audit',
   },
 ];
 
 export default function SimplePricing() {
-  const [frequency, setFrequency] = useState<string>('monthly');
+  const [frequency, setFrequency] = useState<string>('yearly');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -293,7 +293,7 @@ export default function SimplePricing() {
                     className={cn(
                       'w-full font-medium transition-all duration-300',
                       plan.popular
-                        ? 'bg-primary hover:bg-primary/90 text-white hover:shadow-md'
+                        ? 'bg-[--brand] hover:bg-[color-mix(in_oklab,var(--brand),black_10%)] text-white hover:shadow-md'
                         : 'hover:border-primary/30 hover:bg-primary/5 hover:text-primary',
                     )}
                   >
