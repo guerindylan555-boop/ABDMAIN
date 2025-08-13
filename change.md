@@ -8,6 +8,7 @@
   - **Tarifs**: Starter 149€/mois, Croissance 399€/mois, Performance sur devis.
   - **Fonctionnalité**: bascule Mensuel/Annuel corrigée. Affichage annuel = (mensuel × 12 × 0,8), ex. Starter 149€ → 1 430,4€/an.
   - **Visuel**: badge « Populaire » traduit; contraste renforcé (fond, bordures, blur) et suppression des textes gris pour homogénéité.
+  - **Titre/texte**: le titre et le sous‑texte utilisent la couleur `text-foreground` (plus de voile/gradient).
   - **Affichage**: en annuel, on montre l’équivalent mensuel (mensuel × 0,8) arrondi à l’euro inférieur; ajout d’une ligne « Économisez X€/an (facturation annuelle) ».
   - **UX**: l’onglet Annuel est désormais sélectionné par défaut; CTA de Croissance recoloré pour une meilleure lisibilité; CTA Performance renommé « Réserver un audit ».
   - **Contenus**:

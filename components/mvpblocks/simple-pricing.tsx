@@ -93,10 +93,6 @@ export default function SimplePricing() {
 
   return (
     <div className="not-prose relative flex w-full flex-col gap-16 overflow-hidden px-4 py-24 text-center sm:px-8">
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="bg-primary/5 absolute -right-[10%] -bottom-[10%] h-[40%] w-[40%] rounded-full blur-3xl" />
-        <div className="bg-primary/5 absolute -bottom-[10%] -left-[10%] h-[40%] w-[40%] rounded-full blur-3xl" />
-      </div>
 
       <div className="flex flex-col items-center justify-center gap-8">
         <div className="flex flex-col items-center space-y-2">
@@ -111,7 +107,7 @@ export default function SimplePricing() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="from-foreground to-foreground/30 bg-gradient-to-b bg-clip-text text-4xl font-bold text-transparent sm:text-5xl"
+            className="text-4xl font-bold text-foreground sm:text-5xl"
           >
             Choisissez la meilleure offre pour vos besoins
           </motion.h1>
@@ -119,7 +115,7 @@ export default function SimplePricing() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-foreground/90 max-w-md pt-2 text-lg"
+            className="text-foreground max-w-md pt-2 text-lg"
           >
             Des tarifs simples et transparents qui évoluent avec votre entreprise. Aucun frais caché, aucune surprise.
           </motion.p>
