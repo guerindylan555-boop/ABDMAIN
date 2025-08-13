@@ -15,6 +15,11 @@
 
 ## 2025-08-13
 
+- **Build**: correction de l'erreur liée au calendrier (`react-day-picker`).
+  - **Fichier modifié**: `app/components/ui/calendar.tsx`
+  - **Détails**: suppression de l'import inexistant `ReactDayPicker` (type) et usage direct de `ComponentProps<typeof DayPicker>` pour typer `CalendarProps`.
+  - **Résultat**: `next build` passe, la page `/audit-custom` est générée.
+
 - **Témoignages (Home)**: remplacement par 15 témoignages B2B réalistes en français, alignés aux avatars cibles (beauté/coiffure, immobilier, métiers du bâtiment).
   - **Fichier modifié**: `components/mvpblocks/testimonials-marquee.tsx`
   - **Détails**: format des cartes conservé (5★, Highlight), noms/secteurs anonymisés (initiales + ville), chiffres plausibles (ex: no‑show −22%, +30 avis, +28% RDV), images `randomuser.me`, vocabulaire FR et cohérence avec la palette de marque (`--brand`).

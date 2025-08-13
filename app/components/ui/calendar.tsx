@@ -2,7 +2,6 @@
 
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
-import type { ReactDayPicker } from "react-day-picker";
 
 // Minimal wrapper to match the Calendar API used in the app
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
