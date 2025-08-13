@@ -4,8 +4,8 @@ import { useState } from "react";
 import { format } from "date-fns";
 
 import { Button } from "@/app/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { Calendar } from "@/app/components/ui/calendar";
+import { ScrollArea } from "@/app/components/ui/scroll-area";
 
 export default function Scheduler() {
   const today = new Date();
@@ -48,7 +48,7 @@ export default function Scheduler() {
               }
             }}
             className="p-2 sm:pe-5"
-            disabled={{ before: today }}
+            disabled={[{ before: today }]}
           />
           <div className="relative w-full max-sm:h-48 sm:w-40">
             <div className="absolute inset-0 py-4 max-sm:border-t">
@@ -63,7 +63,7 @@ export default function Scheduler() {
                     {timeSlots.map(({ time: timeSlot, available }) => (
                       <Button
                         key={timeSlot}
-                        variant={time === timeSlot ? "glow" : "outline"}
+                        variant={time === timeSlot ? "default" : "outline"}
                         size="sm"
                         className="w-full"
                         onClick={() => setTime(timeSlot)}

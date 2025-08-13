@@ -47,6 +47,7 @@
   - **Fichiers ajoutés**: `app/(marketing)/audit-custom/page.tsx`, `app/(marketing)/audit-custom/Scheduler.tsx`, `app/components/ui/calendar.tsx`, `app/components/ui/scroll-area.tsx`
   - **Détails**: page explicative (objectif, déroulé) + calendrier interactif (DayPicker) et sélection d’horaires. Visio 60 min.
   - **Dépendances**: ajout de `react-day-picker` et `date-fns`.
+  - **Fix import**: le calendrier et la zone de scroll sont importés depuis `@/app/components/ui/*` pour l’environnement Next (App Router).
 
 - **Offres & Tarifs**: mise à jour complète du contenu des cartes.
   - **Fichier modifié**: `components/mvpblocks/simple-pricing.tsx`
