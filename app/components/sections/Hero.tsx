@@ -118,7 +118,7 @@ export default function Hero() {
                 <li className="hero-chip opacity-0 translate-y-2 rounded-full border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 px-3 py-1.5 text-sm text-neutral-700 dark:text-neutral-300">Agents IA & Automations</li>
               </ul>
             </div>
-            <div className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-10 flex flex-col justify-center items-stretch md:items-end gap-3 w-full md:w-max">
+            <div className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-10 flex flex-col justify-center items-stretch md:items-end gap-6 w-full md:w-max">
               <div className="w-full max-w-sm">
                 <ButtonLink
                   href="/reservation-appel"

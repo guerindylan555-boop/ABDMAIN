@@ -23,9 +23,12 @@ export default function FeaturesGrid() {
             {features.map((f) => (
               <div
                 key={f.title}
-                className="rounded-xl p-6 border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/30 pressable"
+                className="rounded-xl p-6 border border-white/10 bg-white/10 dark:bg-neutral-900/20 pressable"
               >
-                <h3 className="font-semibold text-lg">{f.title}</h3>
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-1 text-[10px] uppercase tracking-wide">Inclusion</span>
+                </div>
+                <h3 className="mt-3 font-semibold text-lg">{f.title}</h3>
                 <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">{f.text}</p>
               </div>
             ))}

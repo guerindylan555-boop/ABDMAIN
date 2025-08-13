@@ -82,8 +82,9 @@ const contactInfo = [
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary dark:bg-secondary/20 mt-16 w-full place-self-end rounded-t-xl">
-      <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
+    <footer className="mt-16 w-full place-self-end rounded-t-2xl">
+      <div className="mx-auto max-w-screen-xl px-0">
+        <div className="glass rounded-t-2xl border-t border-white/10 px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="text-primary flex justify-center gap-2 sm:justify-start">
@@ -204,7 +205,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t pt-6">
+        <div className="mt-12 border-t border-white/10 pt-6">
           <div className="text-center sm:flex sm:justify-between sm:text-left">
             <p className="text-sm">
               <span className="block sm:inline">All rights reserved.</span>
@@ -213,6 +214,7 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} {data.company.name}
             </p>
           </div>
+        </div>
         </div>
       </div>
     </footer>
