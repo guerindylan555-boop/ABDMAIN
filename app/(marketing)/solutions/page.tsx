@@ -292,7 +292,7 @@ export default function SolutionsIndex() {
           </div>
 
           <div className="mt-6 flex flex-col gap-2 sm:flex-row">
-            <ButtonLink href="/reservation-appel" variant="glow" size="lg" className="flex-1 justify-center">Réserver une visio stratégique (60 min)</ButtonLink>
+            <ButtonLink href="/audit-custom" variant="glow" size="lg" className="flex-1 justify-center">Réserver une visio stratégique (60 min)</ButtonLink>
             <ButtonLink href="/offres" variant="outline" className="flex-1 justify-center">Voir Offres & Tarifs</ButtonLink>
           </div>
         </div>

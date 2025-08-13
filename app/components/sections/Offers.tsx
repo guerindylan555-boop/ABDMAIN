@@ -35,7 +35,7 @@ export default function Offers() {
       title: "Sur‑mesure de bout en bout",
       desc:
         "Tout Croissance + audits personnalisés, conception & intégration, gestion des systèmes et/ou formation de vos équipes.",
-      href: "/diagnostic-90-min",
+      href: "/audit-custom",
       cta: "Réserver un audit",
       icon: Shield,
     },

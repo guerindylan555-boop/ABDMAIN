@@ -211,7 +211,7 @@ export default function OffresPage() {
           ))}
         </div>
         <div className="pt-2">
-          <ButtonLink href="/reservation-appel" variant="glow">Réserver un audit gratuit</ButtonLink>
+          <ButtonLink href="/audit-custom" variant="glow">Réserver un audit gratuit</ButtonLink>
         </div>
       </section>
     </SectionPage>

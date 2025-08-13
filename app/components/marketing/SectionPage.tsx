@@ -54,8 +54,8 @@ export default function SectionPage({
             <section className="rounded-2xl glass p-5">
               <h4 className="font-semibold text-white">Prêt à avancer ?</h4>
               <p className="mt-2 text-sm text-neutral-300">Réservez un audit gratuit, on priorise les gains rapides.</p>
-              <a
-                href="/reservation-appel"
+            <a
+              href="/audit-custom"
                 className="mt-3 inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20"
               >
                 Audit gratuit

@@ -164,7 +164,7 @@ export default function CTA3() {
                 </div>
 
               <div className="mt-8">
-                <ButtonLink href="/reservation-appel" variant="glow" size="lg" className="w-full">
+                <ButtonLink href="/audit-custom" variant="glow" size="lg" className="w-full">
                   Réserver une visio stratégique (60 min)
                 </ButtonLink>
               </div>

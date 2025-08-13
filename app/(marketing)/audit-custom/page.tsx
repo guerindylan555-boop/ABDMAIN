@@ -48,7 +48,7 @@ export default function AuditCustomPage() {
             </ol>
 
             <div className="mt-6">
-              <ButtonLink href="/reservation-appel" variant="outline">Besoin d’échanger avant ?</ButtonLink>
+              <ButtonLink href="/contact" variant="outline">Besoin d’échanger avant ?</ButtonLink>
             </div>
           </section>
         </article>

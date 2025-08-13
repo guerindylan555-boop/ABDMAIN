@@ -11,7 +11,7 @@ export default function CTA() {
               <p className="mt-2 text-neutral-700 dark:text-neutral-300">Repartez avec une feuille de route priorisée pour gagner des leads et automatiser le suivi.</p>
             </div>
             <ButtonLink
-              href="/reservation-appel"
+              href="/audit-custom"
               variant="glow"
               size="lg"
               className="mt-6 md:mt-0"

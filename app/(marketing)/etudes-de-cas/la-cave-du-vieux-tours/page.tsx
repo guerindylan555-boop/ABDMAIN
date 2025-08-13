@@ -87,7 +87,7 @@ export default function CaseStudyPage() {
       </section>
 
       <div className="mt-10 flex flex-wrap gap-3">
-        <a href="/reservation-appel" className="inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">Réserver un audit gratuit</a>
+        <a href="/audit-custom" className="inline-flex rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">Réserver un audit gratuit</a>
         <a href="/seo-google-business" className="inline-flex text-sm text-[--brand] hover:underline">Voir notre offre SEO local</a>
       </div>
     </SectionPage>

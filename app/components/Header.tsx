@@ -70,7 +70,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <ButtonLink href="/diagnostic-90-min" variant="glow" size="md" className="text-sm" data-magnetic>
+            <ButtonLink href="/audit-custom" variant="glow" size="md" className="text-sm" data-magnetic>
               Audit gratuit
             </ButtonLink>
           </div>

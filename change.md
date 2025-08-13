@@ -15,6 +15,19 @@
 
 ## 2025-08-13
 
+- **Liens CTA → Audit personnalisé**: redirige tous les boutons pertinents vers `/audit-custom`.
+  - **Fichiers modifiés**:
+    - `app/components/Header.tsx` — « Audit gratuit » pointe vers `/audit-custom`.
+    - `app/components/sections/Hero.tsx` — CTA principal « Audit gratuit » → `/audit-custom`.
+    - `components/mvpblocks/cta-3.tsx` — « Réserver une visio stratégique (60 min) » → `/audit-custom`.
+    - `app/(marketing)/solutions/page.tsx` — « Réserver une visio stratégique (60 min) » → `/audit-custom`; « Parler à un expert » conservé vers `/reservation-appel`.
+    - `app/components/marketing/SectionPage.tsx` — aside « Audit gratuit » → `/audit-custom`.
+    - `app/components/sections/CTA.tsx` — bouton « Audit gratuit » → `/audit-custom`.
+    - Études de cas (`etudes-de-cas/*/page.tsx`) — liens « Réserver un audit gratuit » → `/audit-custom`.
+    - `app/(marketing)/offres/page.tsx` — CTA FAQ « Réserver un audit gratuit » → `/audit-custom`.
+    - `app/(marketing)/diagnostic-90-min/page.tsx` — « Réserver un créneau » → `/audit-custom`.
+  - **Nettoyage**: sur `/audit-custom`, le lien « Besoin d’échanger avant ? » pointe vers `/contact`.
+
 - **Build**: correction de l'erreur liée au calendrier (`react-day-picker`).
   - **Fichier modifié**: `app/components/ui/calendar.tsx`
   - **Détails**: suppression de l'import inexistant `ReactDayPicker` (type) et usage direct de `ComponentProps<typeof DayPicker>` pour typer `CalendarProps`.

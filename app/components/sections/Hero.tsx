@@ -121,7 +121,7 @@ export default function Hero() {
             <div className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-10 flex flex-col justify-center items-stretch md:items-end gap-6 w-full md:w-max">
               <div className="w-full max-w-sm">
                 <ButtonLink
-                  href="/reservation-appel"
+                  href="/audit-custom"
                   variant="glow"
                   size="lg"
                   className="hero-cta opacity-0 translate-y-2 w-full justify-center rounded-xl px-7 py-3.5 text-neutral-900 dark:text-white whitespace-normal"

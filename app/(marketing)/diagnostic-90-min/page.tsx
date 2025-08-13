@@ -54,7 +54,7 @@ export default function DiagnosticPage() {
       <section id="tarif" className="space-y-3 mt-8">
         <h2 className="text-2xl font-semibold">Tarif</h2>
         <p>Gratuit ou 97–197€ (déduit de tout projet/abonnement).</p>
-        <ButtonLink href="/reservation-appel">Réserver un créneau</ButtonLink>
+        <ButtonLink href="/audit-custom">Réserver un créneau</ButtonLink>
       </section>
 
       <section id="faq" className="space-y-3 mt-8">
