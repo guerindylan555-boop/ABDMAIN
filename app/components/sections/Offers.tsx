@@ -54,7 +54,22 @@ export default function Offers() {
               <p className="mt-3 text-lead text-foreground/90">
                 Des plans clairs et évolutifs: Starter, Croissance et Performance, selon vos objectifs et votre rythme.
               </p>
-              <ul className="mt-6 space-y-2">
+              {/* Highlights chips */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs text-foreground/90">
+                  <Sparkles className="h-3.5 w-3.5 text-[--brand]" /> Diagnostic 90 min offert
+                </span>
+                <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs text-foreground/90">
+                  <Shield className="h-3.5 w-3.5 text-[--brand]" /> RGPD by design
+                </span>
+                <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs text-foreground/90">
+                  <Check className="h-3.5 w-3.5 text-[--brand]" /> Transparence tarifaire
+                </span>
+                <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs text-foreground/90">
+                  <Zap className="h-3.5 w-3.5 text-[--brand]" /> Mise en production rapide
+                </span>
+              </div>
+              <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                 <li className="flex items-start gap-2 text-foreground/90">
                   <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
                     <Check className="h-3.5 w-3.5" />
@@ -79,8 +94,32 @@ export default function Offers() {
                     <strong>Performance</strong> — audit et intégration sur‑mesure, équipes accompagnées.
                   </span>
                 </li>
+                <li className="flex items-start gap-2 text-foreground/90">
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span>
+                    SEO local & Google Business, appels manqués et automatisations intelligentes.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2 text-foreground/90">
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span>
+                    CRM unifié, formulaires, calendriers et tableaux de bord lisibles.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2 text-foreground/90">
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[--brand]">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span>
+                    Contenu éditorial jusqu’à 50 articles/mois selon le plan.
+                  </span>
+                </li>
               </ul>
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap gap-3">
                 <ButtonLink href="#offres" variant="glow" size="md">
                   Voir Offres & Tarifs
                 </ButtonLink>
@@ -88,6 +127,9 @@ export default function Offers() {
                   Parler à un expert
                 </ButtonLink>
               </div>
+              <p className="mt-4 text-xs text-foreground/70">
+                Le diagnostic est crédité si vous poursuivez avec nous. Nous priorisons la qualité, la clarté des chiffres et un accompagnement humain au quotidien.
+              </p>
             </div>
 
             {/* Right: stacked cards */}

@@ -20,6 +20,7 @@
   - **Fichier modifié**: `app/components/sections/Offers.tsx`
   - **Titre**: « Trois offres pour avancer avec nous » + puces explicatives à gauche.
   - **Cartes**: `Starter`, `Croissance`, `Performance` avec descriptions alignées et CTA mis à jour (Performance → « Réserver un audit »). Ajout de boutons d’accès rapide: « Voir Offres & Tarifs » et « Parler à un expert ».
+  - **Colonne gauche**: enrichie avec chips ADN (Diagnostic 90 min, RGPD by design, Transparence, Mise en prod rapide), une grille de bénéfices et un micro‑texte de réassurance.
 
 - **Ajustements**: simplification du plan Starter (retrait des formations/tutoriels, rapports avancés, formulaires/enquêtes/calendriers/newsletter) et clarification du plan Croissance (pas de répétition, renommage de l’optimisation Google Business, retrait E‑Réputation et planificateur social, retrait de « Devis »).
 
