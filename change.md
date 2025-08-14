@@ -40,6 +40,18 @@
       ```
       - Attendu: `Cache-Control: public, max-age=31536000, immutable`.
 
+- Performance — Images (poids & lazy)
+  - Remplacement de `<img>` par `next/image` dans:
+    - `components/mvpblocks/testimonials-marquee.tsx` (avatars)
+    - `app/components/Footer.tsx` (logo)
+  - Suppression de la dépendance `randomuser.me`:
+    - Avatars désormais locaux: `/public/img/testimonials/avatar-default.svg` (fallback commun, léger)
+  - Favicon modernisé:
+    - Ajout `/public/favicon.svg` et déclaration dans les `icons` du `metadata`.
+  - Contrôle:
+    - DevTools Network: vérifier que les avatars proviennent de `/img/testimonials/...` et non de `randomuser.me`
+    - Lighthouse: volet « Différez le chargement des images hors écran » doit disparaître pour ces éléments; et « code tiers » ne doit plus lister `randomuser.me`.
+
 feat: Rework pricing, CTA, FAQ, and solutions pages
 
 This commit introduces a major overhaul of several key sections of the website to align with the new AI-powered custom solutions DNA and enhance user experience.

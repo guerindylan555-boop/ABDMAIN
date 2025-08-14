@@ -48,7 +48,12 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "AB Digital" }],
   category: "Marketing",
-  icons: { icon: "/favicon.ico" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+  },
   openGraph: {
     type: "website",
     title: "AB Digital — Sites web, SEO, Google Business & automatisations IA",

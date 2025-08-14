@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 // framer-motion retiré pour compatibilité RSC/Next build
 import { Star } from 'lucide-react';
 import { Marquee } from '@/components/ui/marquee';
+import Image from 'next/image';
 
 export function Highlight({
   children,
@@ -65,15 +66,14 @@ export function TestimonialCard({
       </div>
 
       <div className="flex w-full items-center justify-start gap-5 select-none">
-        <img
+        <Image
           width={40}
           height={40}
-          src={img || ''}
+          src={img || '/img/testimonials/avatar-default.svg'}
           alt={name}
           loading="lazy"
-          decoding="async"
-          fetchPriority="low"
           className="size-10 rounded-full ring-1 ring-brand-20 ring-offset-2"
+          sizes="40px"
         />
 
         <div>
@@ -88,7 +88,7 @@ const testimonials = [
   {
     name: 'Sophie M.',
     role: "Gérante — Institut de beauté (Tours)",
-    img: 'https://randomuser.me/api/portraits/women/12.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         « En 90 jours, on est passés de 0 à +30 avis (4,8★). »
@@ -100,7 +100,7 @@ const testimonials = [
   {
     name: 'Nadia B.',
     role: 'Patronne — Salon de coiffure (Nantes) ',
-    img: 'https://randomuser.me/api/portraits/women/45.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Les pages services et Google Business ont fait la différence.
@@ -112,7 +112,7 @@ const testimonials = [
   {
     name: 'Julien R.',
     role: 'Fondateur — Barbier premium (Lyon)',
-    img: 'https://randomuser.me/api/portraits/men/41.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         On a lancé les abonnements « entretien » sans perdre le côté haut de gamme.
@@ -123,7 +123,7 @@ const testimonials = [
   {
     name: 'Claire D.',
     role: 'Directrice — Spa & bien‑être (Bordeaux)',
-    img: 'https://randomuser.me/api/portraits/women/68.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Cartes cadeaux et packs duo structurés.
@@ -134,7 +134,7 @@ const testimonials = [
   {
     name: 'Thomas L.',
     role: "Directeur d'agence — Immobilier (Paris 11e)",
-    img: 'https://randomuser.me/api/portraits/men/22.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Les entonnoirs d’estimation ont ramené des vendeurs sérieux.
@@ -145,7 +145,7 @@ const testimonials = [
   {
     name: 'Marine S.',
     role: 'Responsable — Gestion locative (Lille)',
-    img: 'https://randomuser.me/api/portraits/women/33.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         On a automatisé les relances visite.
@@ -156,7 +156,7 @@ const testimonials = [
   {
     name: 'Pierre A.',
     role: 'Head of Growth — Réseau de mandataires',
-    img: 'https://randomuser.me/api/portraits/men/78.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Recrutement prévisible, enfin.
@@ -167,7 +167,7 @@ const testimonials = [
   {
     name: 'Karim E.',
     role: 'Gérant — Plomberie urgences (Toulouse)',
-    img: 'https://randomuser.me/api/portraits/men/92.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Campagnes call‑only et GBP propres.
@@ -178,7 +178,7 @@ const testimonials = [
   {
     name: 'Luc P.',
     role: 'Artisan — Électricien B2B (Strasbourg)',
-    img: 'https://randomuser.me/api/portraits/men/55.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Un site rapide avec des pages métiers claires.
@@ -189,7 +189,7 @@ const testimonials = [
   {
     name: 'Stéphane G.',
     role: 'Dirigeant — Couvreur (Tours Métropole)',
-    img: 'https://randomuser.me/api/portraits/men/32.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Double entonnoir urgences/rénovation.
@@ -200,7 +200,7 @@ const testimonials = [
   {
     name: 'Aline V.',
     role: 'Peintre décoratrice (Rennes)',
-    img: 'https://randomuser.me/api/portraits/women/29.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Le portfolio SEO et le formulaire filtrant nous font gagner du temps.
@@ -211,7 +211,7 @@ const testimonials = [
   {
     name: 'Jean C.',
     role: 'Dirigeant — Chauffage & PAC (Lyon Est)',
-    img: 'https://randomuser.me/api/portraits/men/60.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Landing PAC + qualification automatique.
@@ -222,7 +222,7 @@ const testimonials = [
   {
     name: 'Didier N.',
     role: 'Serrurier 24/7 (Nice)',
-    img: 'https://randomuser.me/api/portraits/men/15.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Ciblage fin et appels enregistrés.
@@ -233,7 +233,7 @@ const testimonials = [
   {
     name: 'Mathieu K.',
     role: 'Menuiserie — Pergolas & fenêtres (Bordeaux)',
-    img: 'https://randomuser.me/api/portraits/men/47.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         Pages produit + financement, qualification SMS.
@@ -244,7 +244,7 @@ const testimonials = [
   {
     name: 'Élodie F.',
     role: 'Paysagiste — Entretien & création (Nantes)',
-    img: 'https://randomuser.me/api/portraits/women/89.jpg',
+    img: '/img/testimonials/avatar-default.svg',
     description: (
       <p>
         On a lissé la saison avec des contrats annuels.
