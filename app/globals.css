@@ -188,6 +188,42 @@ html.dark {
   display: none !important;
 }
 
+/* Optimized multi-stop radial gradient with grain overlay (reusable) */
+.gradient-background {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      circle at 48% 99%,
+      #8B5CF6 0%,
+      #06B6D4 8%,
+      #10B981 16%,
+      #F59E0B 24%,
+      #8B5CF6 34%,
+      #DC2626 45%,
+      #EC4899 58%
+    );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.gradient-background::after {
+  /* Non-destructive grain identical to .site-bg */
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><filter id='g1'><feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23g1)'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><filter id='g2'><feTurbulence type='fractalNoise' baseFrequency='0.4' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23g2)'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><filter id='g3'><feTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23g3)'/></svg>");
+  background-size: 90px 90px, 260px 260px, 520px 520px;
+  opacity: 0.24;
+  mix-blend-mode: overlay;
+}
+
+.dark .gradient-background::after { opacity: 0.15; }
+
 /* Typography utilities */
 :root,
 html,
