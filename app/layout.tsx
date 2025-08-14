@@ -89,6 +89,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="font-sans antialiased site-bg text-[--text] dark" data-halo-anim="on">
         {/* Lovable background image + grain + halo */}
         <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+<<<<<<< HEAD
           {/* LCP background rendered via Next/Image for optimal preload */}
           <div
             className="absolute left-1/2 -translate-x-1/2"
@@ -112,6 +113,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               }}
             />
           </div>
+=======
+>>>>>>> e4fafff2ff6cab2cf8b34b84ff3a833ba214852d
           {/* Halo layer (between PNG ellipse and overlays) */}
           <Halo />
           {/* dark tint to reduce blue and give more room to black */}
