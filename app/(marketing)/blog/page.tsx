@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog/posts";
 import CTA3 from "@/components/mvpblocks/cta-3";

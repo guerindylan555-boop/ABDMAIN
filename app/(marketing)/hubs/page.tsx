@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
 import { Card, CardHeader, CardTitle, CardContent } from "@/app/components/ui/card";

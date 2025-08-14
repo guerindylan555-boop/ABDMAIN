@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import type { Metadata } from "next";
 import SectionPage from "@/app/components/marketing/SectionPage";
 import Faq1, { FAQItem } from "@/components/mvpblocks/faq-1";

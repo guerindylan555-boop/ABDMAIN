@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import Hero from "./components/sections/Hero";
 import Essentiels from "./components/sections/Essentiels";
 import Offers from "./components/sections/Offers";
