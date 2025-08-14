@@ -1,40 +1,32 @@
-feat: Rework pricing, CTA, FAQ, and solutions pages
+feat: Performance and image optimization, CSS cleanup, and static page forcing
 
-This commit introduces a major overhaul of several key sections of the website to align with the new AI-powered custom solutions DNA and enhance user experience.
+This commit focuses on improving performance, optimizing image loading, cleaning up CSS, and ensuring marketing pages are statically generated for faster loading.
 
 Key changes include:
 
-- **Offers & Pricing Rework**:
-  - Updated pricing plans (Starter, Growth, Performance) with detailed content and revised monthly/annual billing logic.
-  - Enhanced UI/UX for pricing cards, including "Popular" badge, improved contrast, and adjusted transparency.
-  - CTA for "Performance" plan renamed to "Request an Audit."
+- **Performance — Images (weight & lazy loading)**:
+  - Replaced `<img>` with `next/image` for avatars in `components/mvpblocks/testimonials-marquee.tsx` and for the logo in `app/components/Footer.tsx`.
+  - Removed dependency on `randomuser.me`; avatars are now local (`/public/img/testimonials/avatar-default.svg`).
+  - Modernized favicon by adding `/public/favicon.svg` and declaring it in `metadata` icons.
 
-- **Global CTA & Redirection**:
-  - Replaced "90 min Diagnostic" wording with "Free Audit" across the site.
-  - All relevant CTAs now redirect to the new `/audit-custom` page.
-  - Global CTA (`CTA3`) integrated above the footer, ensuring consistent visibility across all pages.
+- **LCP — Gradient & Preload**:
+  - Restored gradient rendering to CSS (`background-image`) in `app/layout.tsx` for visual fidelity.
+  - Added explicit preload link for the gradient image in `app/head.tsx` (`<link rel="preload" as="image" href="/img/background/gradient-optimized.png">`).
+  - Added a hidden `Next/Image` component in `app/layout.tsx` to force Next.js to optimize and preload the gradient image.
 
-- **FAQ Component Enhancement**:
-  - Generalized FAQ component (`faq-1.tsx`) for reusability.
-  - Contextualized FAQ content for Home, SEO Hub, and Offers pages.
+- **Image Configuration**:
+  - Kept modern image formats (AVIF/WebP) in `next.config.mjs`.
+  - Removed `remotePatterns` from `next.config.mjs` as `randomuser.me` dependency is gone.
 
-- **Solutions & Navigation Revamp**:
-  - Refactored "Solutions" section with a new dedicated page (`app/(marketing)/solutions/page.tsx`) showcasing a 3-step AI-powered process.
-  - Removed deprecated DIY/DWY/DFY solution pages and their sitemap entries.
-  - Navigation label updated from "Solutions" to "Our Solutions."
+- **Performance — TTFB: Forced Static Marketing Pages**:
+  - Added `export const dynamic = 'force-static'` to all marketing pages and the homepage (`/solutions`, `/audit-custom`, `/offres`, `/offres-ia`, `/site-web-sur-mesure`, `/seo-local-google-business`, `/seo-google-business`, `/reservation-appel`, `/publicite-payante`, `/notre-methode`, `/hubs` and sub-pages, `/diagnostic-90-min`, `/a-propos`, `/automatisations-appels-sms`, `/blog`, `/blog/[slug]`).
+  - This ensures faster TTFB due to pre-generated HTML and edge caching.
 
-- **New "Custom Audit" Page**:
-  - Introduced `/audit-custom` page for personalized audit scheduling, including an interactive calendar powered by `react-day-picker`.
+- **Performance — Blocking CSS: Decoupling and Lightening**:
+  - Removed global `tw-animate-css` import from `app/globals.css`, replacing it with necessary local animations.
+  - Removed global `react-day-picker/style.css` import from `app/components/ui/calendar.tsx` to avoid loading it unnecessarily.
+  - `Scheduler` component is now client-only (`next/dynamic` with `ssr: false`) on `/audit-custom` to reduce initial bundle size.
 
-- **Testimonials Update**:
-  - Replaced existing testimonials with 15 realistic French B2B testimonials on the homepage, aligned with target avatars.
-  - Implemented a new marquee testimonial section on the homepage, replacing the old "Trusted By" and "Services" sections.
-
-- **UI/UX Harmonization**:
-  - Unified "glow" effect styling for CTAs and pricing cards using global CSS utilities.
-  - Standardized typography and color usage with new CSS variables (`--brand`, `text-h1`, `text-lead`, etc.).
-  - Minor UI adjustments for readability and visual coherence across various components.
-
-- **Technical Fixes**:
-  - Resolved `react-day-picker` build error.
-  - Cleaned up duplicate lockfiles and unused ESLint imports.
+- **Fix — Testimonials (avatars)**:
+  - Resolved display regression where SVG avatars were not showing correctly in the `Marquee` carousel.
+  - Reverted to native `<img>` for avatars in `components/mvpblocks/testimonials-marquee.tsx` with `loading="lazy"`, `decoding="async"`, `fetchPriority="low"`, and a fallback to `/img/testimonials/avatar-default.svg`.

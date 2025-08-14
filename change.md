@@ -80,6 +80,13 @@
   - `Scheduler` chargé en client-only (`next/dynamic` avec `ssr: false`) sur `/audit-custom` pour éviter d’inclure ses styles/scripts dans le bundle initial.
   - Impact attendu: -50 à -100 ms sur « Render‑blocking resources » et bundle CSS/JS initial allégé (pas de fuite de styles spécifiques vers la home).
 
+ - Correctif — Témoignages (avatars)
+   - Régression d’affichage: les avatars SVG ne s’affichaient plus correctement dans le carrousel vertical (`Marquee`) après l’optimisation.
+   - Cause: l’usage de `next/image` sur des SVG animés/transformés à l’intérieur d’un `Marquee` pouvait empêcher le lazy‑load/rendu attendu.
+   - Changement: retour à `<img>` natif pour les avatars, avec `loading="lazy"`, `decoding="async"`, `fetchPriority="low"` et fallback vers `/img/testimonials/avatar-default.svg`.
+   - Fichier modifié: `components/mvpblocks/testimonials-marquee.tsx`.
+   - Impact: affichage des avatars restauré sans régression de performance.
+
 feat: Rework pricing, CTA, FAQ, and solutions pages
 
 This commit introduces a major overhaul of several key sections of the website to align with the new AI-powered custom solutions DNA and enhance user experience.

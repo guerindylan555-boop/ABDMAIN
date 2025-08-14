@@ -192,16 +192,34 @@ html.dark {
 .gradient-background {
   position: relative;
   isolation: isolate;
+  /* Defaults are set to current brand gradient; can be overridden via CSS variables */
+  --g-shape: circle;
+  --g-x: 48%;
+  --g-y: 99%;
+  --g1: rgba(241,113,0,1);
+  --p1: 0%;
+  --g2: rgba(240,113,135,1);
+  --p2: 8%;
+  --g3: rgba(185,150,202,1);
+  --p3: 16%;
+  --g4: rgba(61,89,142,1);
+  --p4: 24%;
+  --g5: rgba(28,28,28,1);
+  --p5: 34%;
+  --g6: rgba(28,28,28,1);
+  --p6: 45%;
+  --g7: rgba(28,28,28,1);
+  --p7: 58%;
   background:
     radial-gradient(
-      circle at 48% 99%,
-      #8B5CF6 0%,
-      #06B6D4 8%,
-      #10B981 16%,
-      #F59E0B 24%,
-      #8B5CF6 34%,
-      #DC2626 45%,
-      #EC4899 58%
+      var(--g-shape) at var(--g-x) var(--g-y),
+      var(--g1) var(--p1),
+      var(--g2) var(--p2),
+      var(--g3) var(--p3),
+      var(--g4) var(--p4),
+      var(--g5) var(--p5),
+      var(--g6) var(--p6),
+      var(--g7) var(--p7)
     );
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -210,7 +228,7 @@ html.dark {
 .gradient-background::after {
   /* Non-destructive grain identical to .site-bg */
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   pointer-events: none;
   background-image:
@@ -223,6 +241,11 @@ html.dark {
 }
 
 .dark .gradient-background::after { opacity: 0.15; }
+
+/* Allow editors to disable grain globally as with .site-bg */
+.grain-override .gradient-background::after {
+  display: none !important;
+}
 
 /* Typography utilities */
 :root,
