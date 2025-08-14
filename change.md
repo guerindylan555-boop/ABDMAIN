@@ -104,3 +104,8 @@
   - Empêche le débordement horizontal et le scroll latéral accidentel.
   - Ajout de `overflow-x: hidden` et `width: 100%` sur `html, body`.
   - Fichier modifié: `app/globals.css`.
+
+- Ordre des sections — Tarifs & Offres
+  - Demande: afficher « Tarifs & Offres » juste sous la section « Trois offres pour avancer avec nous ».
+  - Changement: rendu global de `Pricing` retiré de `DeferredClient` et insertion directe après `Offers` sur la home.
+  - Fichiers modifiés: `app/page.tsx`, `app/components/DeferredClient.tsx`.

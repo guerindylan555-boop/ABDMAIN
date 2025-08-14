@@ -19,6 +19,10 @@ export default async function HomePage() {
       <FeaturesGrid />
       <TestimonialsMarquee />
       <Offers />
+      {/* Tarifs & Offres (pricing) juste après la section "Trois offres pour avancer avec nous" */}
+      {/* Composant: app/components/sections/Pricing -> SimplePricing */}
+      {/** Prix insérés ici pour l'ordre demandé **/}
+      {(await import('./components/sections/Pricing')).default()}
       <CTA3 />
       <BlogLatest />
       <FAQ />
