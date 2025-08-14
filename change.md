@@ -46,7 +46,7 @@
     - `app/components/Footer.tsx` (logo)
   - Suppression de la dépendance `randomuser.me` (avatars)
     - Étape B1 (temporaire) remplacée par B2 (durable): avatars référencés en local.
-    - Mappage avatars → fichiers locaux WebP (40×40) sous `/public/img/testimonials/*.webp`.
+    - Mappage avatars → fichiers locaux SVG (40×40) sous `/public/img/testimonials/*.svg`.
     - Fallback robuste: si un fichier manque, bascule auto sur `/img/testimonials/avatar-default.svg`.
   - Favicon modernisé:
     - Ajout `/public/favicon.svg` et déclaration dans les `icons` du `metadata`.
@@ -62,6 +62,12 @@
 
 - Config images
   - `next.config.mjs`: formats modernes AVIF/WebP conservés; suppression de `remotePatterns` (plus de dépendance avatars tierce).
+
+- Performance — LCP background (gradient) via Next/Image « invisible »
+  - Ajout d’un `<Image />` prioritaire et `fetchPriority="high"` dans `app/layout.tsx` pointant vers `/img/background/gradient-optimized.png` pour garantir un préchargement optimisé par Next.
+  - Props: `priority`, `fetchPriority="high"`, `decoding="async"`, `sizes="100vw"`, `width={1}`, `height={1}`, `placeholder="blur"`.
+  - Rendu visuel inchangé: le gradient reste appliqué en CSS pour une fidélité parfaite; l’image Next est cachée (0×0) et n’affecte pas la mise en page.
+  - Suivi: préparer une version **AVIF** du gradient (15–30 KB) et, si possible, un `image-set()` CSS (AVIF/WebP/PNG) pour réduire davantage le poids de l’arrière‑plan pur CSS.
 
 feat: Rework pricing, CTA, FAQ, and solutions pages
 

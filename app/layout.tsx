@@ -2,6 +2,7 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import SmoothScroll from "./smooth-scroll";
+import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SeoJsonLd from "./components/SeoJsonLd";
@@ -96,6 +97,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)",
               maskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)",
             }}
+          />
+          {/* Invisible Image to hint priority & fetchPriority for LCP background */
+          <Image
+            src="/img/background/gradient-optimized.png"
+            alt=""
+            priority
+            fetchPriority="high"
+            decoding="async"
+            sizes="100vw"
+            width={1}
+            height={1}
+            placeholder="blur"
+            blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+            style={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }}
           />
           {/* Halo layer (between PNG ellipse and overlays) */}
           <Halo />

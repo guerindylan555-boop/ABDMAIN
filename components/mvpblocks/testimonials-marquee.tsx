@@ -91,7 +91,7 @@ const testimonials = [
   {
     name: 'Sophie M.',
     role: "Gérante — Institut de beauté (Tours)",
-    img: '/img/testimonials/sophie-m.webp',
+    img: '/img/testimonials/sophie-m.svg',
     description: (
       <p>
         « En 90 jours, on est passés de 0 à +30 avis (4,8★). »
@@ -103,7 +103,7 @@ const testimonials = [
   {
     name: 'Nadia B.',
     role: 'Patronne — Salon de coiffure (Nantes) ',
-    img: '/img/testimonials/nadia-b.webp',
+    img: '/img/testimonials/nadia-b.svg',
     description: (
       <p>
         Les pages services et Google Business ont fait la différence.
@@ -115,7 +115,7 @@ const testimonials = [
   {
     name: 'Julien R.',
     role: 'Fondateur — Barbier premium (Lyon)',
-    img: '/img/testimonials/julien-r.webp',
+    img: '/img/testimonials/julien-r.svg',
     description: (
       <p>
         On a lancé les abonnements « entretien » sans perdre le côté haut de gamme.
@@ -126,7 +126,7 @@ const testimonials = [
   {
     name: 'Claire D.',
     role: 'Directrice — Spa & bien‑être (Bordeaux)',
-    img: '/img/testimonials/claire-d.webp',
+    img: '/img/testimonials/claire-d.svg',
     description: (
       <p>
         Cartes cadeaux et packs duo structurés.
@@ -137,7 +137,7 @@ const testimonials = [
   {
     name: 'Thomas L.',
     role: "Directeur d'agence — Immobilier (Paris 11e)",
-    img: '/img/testimonials/thomas-l.webp',
+    img: '/img/testimonials/thomas-l.svg',
     description: (
       <p>
         Les entonnoirs d’estimation ont ramené des vendeurs sérieux.
@@ -148,7 +148,7 @@ const testimonials = [
   {
     name: 'Marine S.',
     role: 'Responsable — Gestion locative (Lille)',
-    img: '/img/testimonials/marine-s.webp',
+    img: '/img/testimonials/marine-s.svg',
     description: (
       <p>
         On a automatisé les relances visite.
@@ -159,7 +159,7 @@ const testimonials = [
   {
     name: 'Pierre A.',
     role: 'Head of Growth — Réseau de mandataires',
-    img: '/img/testimonials/pierre-a.webp',
+    img: '/img/testimonials/pierre-a.svg',
     description: (
       <p>
         Recrutement prévisible, enfin.
@@ -170,7 +170,7 @@ const testimonials = [
   {
     name: 'Karim E.',
     role: 'Gérant — Plomberie urgences (Toulouse)',
-    img: '/img/testimonials/karim-e.webp',
+    img: '/img/testimonials/karim-e.svg',
     description: (
       <p>
         Campagnes call‑only et GBP propres.
@@ -181,7 +181,7 @@ const testimonials = [
   {
     name: 'Luc P.',
     role: 'Artisan — Électricien B2B (Strasbourg)',
-    img: '/img/testimonials/luc-p.webp',
+    img: '/img/testimonials/luc-p.svg',
     description: (
       <p>
         Un site rapide avec des pages métiers claires.
@@ -192,7 +192,7 @@ const testimonials = [
   {
     name: 'Stéphane G.',
     role: 'Dirigeant — Couvreur (Tours Métropole)',
-    img: '/img/testimonials/stephane-g.webp',
+    img: '/img/testimonials/stephane-g.svg',
     description: (
       <p>
         Double entonnoir urgences/rénovation.
@@ -203,7 +203,7 @@ const testimonials = [
   {
     name: 'Aline V.',
     role: 'Peintre décoratrice (Rennes)',
-    img: '/img/testimonials/aline-v.webp',
+    img: '/img/testimonials/aline-v.svg',
     description: (
       <p>
         Le portfolio SEO et le formulaire filtrant nous font gagner du temps.
@@ -214,7 +214,7 @@ const testimonials = [
   {
     name: 'Jean C.',
     role: 'Dirigeant — Chauffage & PAC (Lyon Est)',
-    img: '/img/testimonials/jean-c.webp',
+    img: '/img/testimonials/jean-c.svg',
     description: (
       <p>
         Landing PAC + qualification automatique.
@@ -225,7 +225,7 @@ const testimonials = [
   {
     name: 'Didier N.',
     role: 'Serrurier 24/7 (Nice)',
-    img: '/img/testimonials/didier-n.webp',
+    img: '/img/testimonials/didier-n.svg',
     description: (
       <p>
         Ciblage fin et appels enregistrés.
@@ -236,7 +236,7 @@ const testimonials = [
   {
     name: 'Mathieu K.',
     role: 'Menuiserie — Pergolas & fenêtres (Bordeaux)',
-    img: '/img/testimonials/mathieu-k.webp',
+    img: '/img/testimonials/mathieu-k.svg',
     description: (
       <p>
         Pages produit + financement, qualification SMS.
@@ -247,7 +247,7 @@ const testimonials = [
   {
     name: 'Élodie F.',
     role: 'Paysagiste — Entretien & création (Nantes)',
-    img: '/img/testimonials/elodie-f.webp',
+    img: '/img/testimonials/elodie-f.svg',
     description: (
       <p>
         On a lissé la saison avec des contrats annuels.
