@@ -210,7 +210,7 @@ html.dark {
 .gradient-background::after {
   /* Non-destructive grain identical to .site-bg */
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   pointer-events: none;
   background-image:
@@ -223,6 +223,11 @@ html.dark {
 }
 
 .dark .gradient-background::after { opacity: 0.15; }
+
+/* Allow editors to disable grain globally as with .site-bg */
+.grain-override .gradient-background::after {
+  display: none !important;
+}
 
 /* Typography utilities */
 :root,
