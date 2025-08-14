@@ -107,5 +107,5 @@
 
 - Ordre des sections — Tarifs & Offres
   - Demande: afficher « Tarifs & Offres » juste sous la section « Trois offres pour avancer avec nous ».
-  - Changement: rendu global de `Pricing` retiré de `DeferredClient` et insertion directe après `Offers` sur la home.
+  - Changement: `DeferredClient` (qui inclut `Pricing`) est désormais inséré sur la home juste après `Offers` pour conserver l’ordre demandé, sans retirer sa logique différée potentiellement liée à Stripe.
   - Fichiers modifiés: `app/page.tsx`, `app/components/DeferredClient.tsx`.

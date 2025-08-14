@@ -9,6 +9,7 @@ import FAQ from "./components/sections/FAQ";
 import ScrollProgress from "./components/ScrollProgress";
 import TestimonialsMarquee from "@/components/mvpblocks/testimonials-marquee";
 import CTA3 from "@/components/mvpblocks/cta-3";
+import DeferredClient from "./components/DeferredClient";
 
 export default async function HomePage() {
   return (
@@ -19,10 +20,8 @@ export default async function HomePage() {
       <FeaturesGrid />
       <TestimonialsMarquee />
       <Offers />
-      {/* Tarifs & Offres (pricing) juste après la section "Trois offres pour avancer avec nous" */}
-      {/* Composant: app/components/sections/Pricing -> SimplePricing */}
-      {/** Prix insérés ici pour l'ordre demandé **/}
-      {(await import('./components/sections/Pricing')).default()}
+      {/* Insérer le rendu différé (inclut Pricing) juste après Offers */}
+      <DeferredClient />
       <CTA3 />
       <BlogLatest />
       <FAQ />
