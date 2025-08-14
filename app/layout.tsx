@@ -10,6 +10,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import DeferredClient from "./components/DeferredClient";
+import GradientLoader from "./gradient/loader";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -79,7 +80,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${GeistSans.variable} ${GeistMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="font-sans antialiased gradient-background text-[--text] dark" data-halo-anim="on">
+      <body className="font-sans antialiased gradient-background text-[--text] dark" data-halo-anim="on" suppressHydrationWarning>
+        <GradientLoader />
         <NoFlashScript />
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded focus:bg-neutral-900 focus:text-white focus:px-3 focus:py-2">Aller au contenu</a>
         <SmoothScroll />
