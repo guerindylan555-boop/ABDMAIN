@@ -94,43 +94,7 @@
    - Fichiers modifiés: `app/layout.tsx`.
    - Fichiers supprimés: `app/head.tsx`, `app/gradient-editor/page.tsx`.
 
-feat: Rework pricing, CTA, FAQ, and solutions pages
-
-This commit introduces a major overhaul of several key sections of the website to align with the new AI-powered custom solutions DNA and enhance user experience.
-
-Key changes include:
-
-- **Offers & Pricing Rework**:
-  - Updated pricing plans (Starter, Growth, Performance) with detailed content and revised monthly/annual billing logic.
-  - Enhanced UI/UX for pricing cards, including "Popular" badge, improved contrast, and adjusted transparency.
-  - CTA for "Performance" plan renamed to "Request an Audit."
-
-- **Global CTA & Redirection**:
-  - Replaced "90 min Diagnostic" wording with "Free Audit" across the site.
-  - All relevant CTAs now redirect to the new `/audit-custom` page.
-  - Global CTA (`CTA3`) integrated above the footer, ensuring consistent visibility across all pages.
-
-- **FAQ Component Enhancement**:
-  - Generalized FAQ component (`faq-1.tsx`) for reusability.
-  - Contextualized FAQ content for Home, SEO Hub, and Offers pages.
-
-- **Solutions & Navigation Revamp**:
-  - Refactored "Solutions" section with a new dedicated page (`app/(marketing)/solutions/page.tsx`) showcasing a 3-step AI-powered process.
-  - Removed deprecated DIY/DWY/DFY solution pages and their sitemap entries.
-  - Navigation label updated from "Solutions" to "Our Solutions."
-
-- **New "Custom Audit" Page**:
-  - Introduced `/audit-custom` page for personalized audit scheduling, including an interactive calendar powered by `react-day-picker`.
-
-- **Testimonials Update**:
-  - Replaced existing testimonials with 15 realistic French B2B testimonials on the homepage, aligned with target avatars.
-  - Implemented a new marquee testimonial section on the homepage, replacing the old "Trusted By" and "Services" sections.
-
-- **UI/UX Harmonization**:
-  - Unified "glow" effect styling for CTAs and pricing cards using global CSS utilities.
-  - Standardized typography and color usage with new CSS variables (`--brand`, `text-h1`, `text-lead`, etc.).
-  - Minor UI adjustments for readability and visual coherence across various components.
-
-- **Technical Fixes**:
-  - Resolved `react-day-picker` build error.
-  - Cleaned up duplicate lockfiles and unused ESLint imports.
+ - Ajustement mobile — Fond aplati
+   - Problème: sur mobile, le gradient paraissait aplati/écrasé.
+   - Solution: styles spécifiques mobile (`@media (max-width: 640px)`) pour déplacer le centre du gradient sous l’écran (150%) et désactiver `background-attachment: fixed` → `scroll` pour éviter le bug de flatten iOS/Android.
+   - Fichier modifié: `app/globals.css`.
