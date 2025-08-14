@@ -6,15 +6,16 @@ import "lenis/dist/lenis.css";
 
 export default function SmoothScroll() {
   useEffect(() => {
-    // Toggle simple via URL param: ?lenis=off (ou 0/false)
+    // Toggle via URL param: enable only with ?lenis=on (ou 1/true)
     const searchParams = new URLSearchParams(window.location.search);
     const lenisParam = (searchParams.get("lenis") || "").toLowerCase();
-    const disabledByQuery = ["off", "0", "false"].includes(lenisParam);
+    const enabledByQuery = ["on", "1", "true"].includes(lenisParam);
 
     // Respecte la préférence d'accessibilité
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    if (disabledByQuery || prefersReducedMotion) {
+    // Désactiver par défaut, sauf si explicitement activé via l'URL
+    if (prefersReducedMotion || !enabledByQuery) {
       return;
     }
 
