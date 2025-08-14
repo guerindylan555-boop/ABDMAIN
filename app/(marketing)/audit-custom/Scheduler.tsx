@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import "react-day-picker/style.css";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 

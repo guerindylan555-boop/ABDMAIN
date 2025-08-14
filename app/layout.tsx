@@ -84,34 +84,30 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="font-sans antialiased site-bg text-[--text] dark" data-halo-anim="on">
         {/* Lovable background image + grain + halo */}
         <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-          {/* LCP background rendered via CSS background-image for exact visual fidelity */}
+          {/* LCP background now as real image element (fetchPriority applies) */}
           <div
             className="absolute left-1/2 -translate-x-1/2"
             style={{
               width: "175%",
               aspectRatio: "1 / 1",
-              backgroundImage: "url(/img/background/gradient-optimized.png)",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "70% auto",
-              backgroundPosition: "center 30vh",
               WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)",
               maskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)",
+              position: "relative",
             }}
-          />
-          {/* Invisible Image to hint priority & fetchPriority for LCP background */}
-          <Image
-            src="/img/background/gradient-optimized.png"
-            alt=""
-            priority
-            fetchPriority="high"
-            decoding="async"
-            sizes="100vw"
-            width={1}
-            height={1}
-            placeholder="blur"
-            blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-            style={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }}
-          />
+          >
+            <Image
+              src="/img/background/gradient-optimized.png"
+              alt=""
+              priority
+              fetchPriority="high"
+              decoding="async"
+              sizes="100vw"
+              fill
+              placeholder="blur"
+              blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              style={{ objectFit: "contain", objectPosition: "center 30vh" }}
+            />
+          </div>
           {/* Halo layer (between PNG ellipse and overlays) */}
           <Halo />
           {/* dark tint to reduce blue and give more room to black */}
