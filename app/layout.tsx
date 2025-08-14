@@ -9,7 +9,6 @@ import NoFlashScript from "./components/NoFlashScript";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import DeferredClient from "./components/DeferredClient";
 import Script from "next/script";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
@@ -104,7 +103,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <SeoJsonLd />
         <Header />
         <main id="main">{children}</main>
-        <DeferredClient />
         <Footer />
         <SpeedInsights />
       </body>
