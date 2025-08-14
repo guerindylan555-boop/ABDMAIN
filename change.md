@@ -97,4 +97,5 @@
  - Ajustement mobile — Fond aplati
    - Problème: sur mobile, le gradient paraissait aplati/écrasé.
    - Solution: styles spécifiques mobile (`@media (max-width: 640px)`) pour déplacer le centre du gradient sous l’écran (150%) et désactiver `background-attachment: fixed` → `scroll` pour éviter le bug de flatten iOS/Android.
+  - Affinage: augmentation de la zone orange visible à ~15% en bas de l’écran (mobile) en déplaçant le centre à 130% et en étendant les stops orange (#f27601) jusqu’à ~28% puis orange‑rouge à ~35%.
    - Fichier modifié: `app/globals.css`.
