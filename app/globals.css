@@ -167,48 +167,43 @@ html.dark {
 @media (max-width: 640px) {
   .site-bg {
     background:
-      radial-gradient(circle at 50% 180%,
+      radial-gradient(circle 75vh at 50% 115vh,
         #f27601 0%,            /* orange plein */
         #f27601 20%,           /* orange visible ~15% bas */
-        #ff5a2a 28%,           /* orange-rouge */
-        #ff3d3d 34%,           /* rouge court */
-        rgba(241,107,123,1) 42%,
-        #e187b5 52%,           /* roses réduits */
-        #6b85c8 66%,           /* bleu clair */
-        #5775b6 78%,           /* bleu */
-        #8fa3da 90%,           /* bleu adouci */
-        #dbe6ff 96%,           /* vers blanc */
+        #ff5a2a 27%,           /* orange-rouge */
+        #ff3d3d 33%,           /* rouge court */
+        rgba(241,107,123,1) 41%,
+        #e187b5 51%,           /* roses réduits */
+        #6b85c8 63%,           /* bleu clair */
+        #5775b6 75%,           /* bleu */
+        #8fa3da 88%,           /* bleu adouci */
+        #dbe6ff 95%,           /* vers blanc */
         #ffffff 100%
       ),
       radial-gradient(70% 55% at 50% -8%, rgba(87,117,182,0.12) 0%, rgba(255,255,255,0.00) 74%),
       #ffffff;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /* Zoom the main gradient to avoid flattening */
-    background-size: 220% 220%, auto, auto;
-    background-position: 50% 100%, 50% 0, 0 0;
   }
   .dark .site-bg {
     background:
-      radial-gradient(circle at 50% 180%,
+      radial-gradient(circle 75vh at 50% 115vh,
         #f27601 0%,
         #f27601 20%,          /* orange visible ~15% */
-        #ff5a2a 28%,
-        #ff3d3d 34%,
-        rgba(241,107,123,1) 42%,
-        #e187b5 52%,          /* roses courts */
-        #6b85c8 66%,          /* bleu clair */
-        #5775b6 78%,          /* bleu */
-        #3b4a7f 90%,          /* indigo */
-        #27314d 96%,          /* navy */
+        #ff5a2a 27%,
+        #ff3d3d 33%,
+        rgba(241,107,123,1) 41%,
+        #e187b5 51%,          /* roses courts */
+        #6b85c8 63%,          /* bleu clair */
+        #5775b6 75%,          /* bleu */
+        #3b4a7f 88%,          /* indigo */
+        #27314d 95%,          /* navy */
         #1a1b1e 100%
       ),
       radial-gradient(70% 55% at 50% -8%, rgba(87,117,182,0.12) 0%, rgba(0,0,0,0.00) 74%),
       #1a1b1e;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 220% 220%, auto, auto;
-    background-position: 50% 100%, 50% 0, 0 0;
   }
 }
 
