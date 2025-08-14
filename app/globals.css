@@ -167,43 +167,48 @@ html.dark {
 @media (max-width: 640px) {
   .site-bg {
     background:
-      radial-gradient(ellipse farthest-corner at 50% 140%,
+      radial-gradient(circle at 50% 180%,
         #f27601 0%,            /* orange plein */
-        #f27601 24%,           /* orange ~15% visible en bas */
-        #ff5a2a 30%,           /* orange-rouge */
-        #ff3d3d 36%,           /* rouge court */
-        rgba(241,107,123,1) 46%,
-        #e187b5 56%,           /* roses réduits */
-        #6b85c8 68%,           /* bleu clair */
-        #5775b6 80%,           /* bleu */
-        #8fa3da 92%,           /* bleu adouci */
-        #dbe6ff 97%,           /* vers blanc */
+        #f27601 20%,           /* orange visible ~15% bas */
+        #ff5a2a 28%,           /* orange-rouge */
+        #ff3d3d 34%,           /* rouge court */
+        rgba(241,107,123,1) 42%,
+        #e187b5 52%,           /* roses réduits */
+        #6b85c8 66%,           /* bleu clair */
+        #5775b6 78%,           /* bleu */
+        #8fa3da 90%,           /* bleu adouci */
+        #dbe6ff 96%,           /* vers blanc */
         #ffffff 100%
       ),
       radial-gradient(70% 55% at 50% -8%, rgba(87,117,182,0.12) 0%, rgba(255,255,255,0.00) 74%),
       #ffffff;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    /* Zoom the main gradient to avoid flattening */
+    background-size: 220% 220%, auto, auto;
+    background-position: 50% 100%, 50% 0, 0 0;
   }
   .dark .site-bg {
     background:
-      radial-gradient(ellipse farthest-corner at 50% 140%,
+      radial-gradient(circle at 50% 180%,
         #f27601 0%,
-        #f27601 24%,          /* orange ~15% visible */
-        #ff5a2a 30%,
-        #ff3d3d 36%,
-        rgba(241,107,123,1) 46%,
-        #e187b5 56%,          /* roses courts */
-        #6b85c8 68%,          /* bleu clair */
-        #5775b6 80%,          /* bleu */
-        #3b4a7f 92%,          /* indigo */
-        #27314d 97%,          /* navy */
+        #f27601 20%,          /* orange visible ~15% */
+        #ff5a2a 28%,
+        #ff3d3d 34%,
+        rgba(241,107,123,1) 42%,
+        #e187b5 52%,          /* roses courts */
+        #6b85c8 66%,          /* bleu clair */
+        #5775b6 78%,          /* bleu */
+        #3b4a7f 90%,          /* indigo */
+        #27314d 96%,          /* navy */
         #1a1b1e 100%
       ),
       radial-gradient(70% 55% at 50% -8%, rgba(87,117,182,0.12) 0%, rgba(0,0,0,0.00) 74%),
       #1a1b1e;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: 220% 220%, auto, auto;
+    background-position: 50% 100%, 50% 0, 0 0;
   }
 }
 
