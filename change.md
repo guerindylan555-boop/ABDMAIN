@@ -87,6 +87,13 @@
    - Fichier modifié: `components/mvpblocks/testimonials-marquee.tsx`.
    - Impact: affichage des avatars restauré sans régression de performance.
 
+ - Revert — Fond (background)
+   - Restauration du fond d’origine basé 100% CSS via la classe `.site-bg`.
+   - Remplacement de `gradient-background` par `site-bg` dans `app/layout.tsx` et retrait du `GradientLoader`.
+   - Suppression du preload d’image de gradient et de la page d’édition du background.
+   - Fichiers modifiés: `app/layout.tsx`.
+   - Fichiers supprimés: `app/head.tsx`, `app/gradient-editor/page.tsx`.
+
 feat: Rework pricing, CTA, FAQ, and solutions pages
 
 This commit introduces a major overhaul of several key sections of the website to align with the new AI-powered custom solutions DNA and enhance user experience.
