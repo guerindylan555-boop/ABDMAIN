@@ -70,6 +70,9 @@ export function TestimonialCard({
           height={40}
           src={img || ''}
           alt={name}
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
           className="size-10 rounded-full ring-1 ring-brand-20 ring-offset-2"
         />
 

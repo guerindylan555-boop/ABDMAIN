@@ -4,14 +4,23 @@ import type { Metadata } from "next";
 import SmoothScroll from "./smooth-scroll";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Pricing from "@/app/components/sections/Pricing";
 import SeoJsonLd from "./components/SeoJsonLd";
 import NoFlashScript from "./components/NoFlashScript";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import MagneticButtons from "./components/magnetic-buttons";
 import Halo from "./components/Halo";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import dynamic from "next/dynamic";
+
+const Pricing = dynamic(() => import("@/app/components/sections/Pricing"), {
+  ssr: false,
+  loading: () => null,
+});
+
+const MagneticButtons = dynamic(() => import("./components/magnetic-buttons"), {
+  ssr: false,
+  loading: () => null,
+});
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -79,19 +88,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="font-sans antialiased site-bg text-[--text] dark" data-halo-anim="on">
         {/* Lovable background image + grain + halo */}
         <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-          <div
-            className="absolute left-1/2 -translate-x-1/2"
-            style={{
-              width: "175%",
-              aspectRatio: "1 / 1",
-              backgroundImage: "url(/img/background/gradient-optimized.png)",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "70% auto",
-              backgroundPosition: "center 30vh",
-              WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)",
-              maskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)",
-            }}
-          />
           {/* Halo layer (between PNG ellipse and overlays) */}
           <Halo />
           {/* dark tint to reduce blue and give more room to black */}
@@ -104,15 +100,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 radial-gradient(150% 110% at 100% 50%, rgba(12,18,32,0.60) 0%, rgba(12,18,32,0.0) 56%)
               `,
               backgroundRepeat: "no-repeat",
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url(/img/background/grain.png)",
-              backgroundSize: "200px 200px",
-              mixBlendMode: "overlay",
-              opacity: 0.56,
             }}
           />
         </div>
