@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               maskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)",
             }}
           />
-          {/* Invisible Image to hint priority & fetchPriority for LCP background */
+          {/* Invisible Image to hint priority & fetchPriority for LCP background */}
           <Image
             src="/img/background/gradient-optimized.png"
             alt=""
