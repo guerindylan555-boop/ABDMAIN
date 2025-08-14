@@ -109,3 +109,8 @@
   - Demande: afficher « Tarifs & Offres » juste sous la section « Trois offres pour avancer avec nous ».
   - Changement: `DeferredClient` (qui inclut `Pricing`) est désormais inséré sur la home juste après `Offers` pour conserver l’ordre demandé, sans retirer sa logique différée potentiellement liée à Stripe.
   - Fichiers modifiés: `app/page.tsx`, `app/components/DeferredClient.tsx`.
+
+- Intégration — Google Tag Manager
+  - Ajout du conteneur `GTM-5BQLR36H`.
+  - Insertion du script GTM dans le `<body>` avec `strategy="beforeInteractive"` et du bloc `<noscript>` tout en haut du `<body>`.
+  - Fichier modifié: `app/layout.tsx`.
