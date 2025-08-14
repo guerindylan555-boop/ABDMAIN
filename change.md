@@ -44,13 +44,24 @@
   - Remplacement de `<img>` par `next/image` dans:
     - `components/mvpblocks/testimonials-marquee.tsx` (avatars)
     - `app/components/Footer.tsx` (logo)
-  - Suppression de la dépendance `randomuser.me`:
-    - Avatars désormais locaux: `/public/img/testimonials/avatar-default.svg` (fallback commun, léger)
+  - Suppression de la dépendance `randomuser.me` (avatars)
+    - Étape B1 (temporaire) remplacée par B2 (durable): avatars référencés en local.
+    - Mappage avatars → fichiers locaux WebP (40×40) sous `/public/img/testimonials/*.webp`.
+    - Fallback robuste: si un fichier manque, bascule auto sur `/img/testimonials/avatar-default.svg`.
   - Favicon modernisé:
     - Ajout `/public/favicon.svg` et déclaration dans les `icons` du `metadata`.
   - Contrôle:
-    - DevTools Network: vérifier que les avatars proviennent de `/img/testimonials/...` et non de `randomuser.me`
-    - Lighthouse: volet « Différez le chargement des images hors écran » doit disparaître pour ces éléments; et « code tiers » ne doit plus lister `randomuser.me`.
+    - DevTools Network: avatars chargés depuis `/img/testimonials/...` (pas de `randomuser.me`).
+    - Lighthouse: « code tiers » ne liste plus `randomuser.me`.
+
+- LCP — Gradient & Preload
+  - Rendu du gradient rétabli en CSS (fidélité visuelle) via `background-image` dans `app/layout.tsx`.
+  - Préchargement explicite ajouté dans `app/head.tsx`:
+    - `<link rel="preload" as="image" href="/img/background/gradient-optimized.png">`.
+  - Contrôle: DevTools Elements → `<head>` contient le preload; Network → ressource marquée Preload.
+
+- Config images
+  - `next.config.mjs`: formats modernes AVIF/WebP conservés; suppression de `remotePatterns` (plus de dépendance avatars tierce).
 
 feat: Rework pricing, CTA, FAQ, and solutions pages
 

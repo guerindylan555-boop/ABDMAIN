@@ -2,7 +2,6 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import SmoothScroll from "./smooth-scroll";
-import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SeoJsonLd from "./components/SeoJsonLd";
