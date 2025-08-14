@@ -13,6 +13,14 @@
     - `app/components/sections/CTA.tsx`
 # Change Log
 
+## 2025-08-14
+
+- **Performance — Smooth scroll (Lenis)**: interrupteur runtime pour diagnostic et accessibilité.
+  - Ajout d’un toggle via paramètre d’URL `?lenis=off` (`off`/`0`/`false`) pour désactiver Lenis sans rebuild.
+  - Respect d’accessibilité: désactivation automatique si `prefers-reduced-motion: reduce`.
+  - **Fichier modifié**: `app/smooth-scroll.tsx`
+  - **Test**: recharger une page avec `?lenis=off` pour comparer la fluidité du scroll.
+
 ## 2025-08-13
 
 - **Nettoyage — Études de cas retirées**: suppression des pages et des références.

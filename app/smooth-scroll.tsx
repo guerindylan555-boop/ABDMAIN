@@ -6,6 +6,18 @@ import "lenis/dist/lenis.css";
 
 export default function SmoothScroll() {
   useEffect(() => {
+    // Toggle simple via URL param: ?lenis=off (ou 0/false)
+    const searchParams = new URLSearchParams(window.location.search);
+    const lenisParam = (searchParams.get("lenis") || "").toLowerCase();
+    const disabledByQuery = ["off", "0", "false"].includes(lenisParam);
+
+    // Respecte la préférence d'accessibilité
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (disabledByQuery || prefersReducedMotion) {
+      return;
+    }
+
     const lenis = new Lenis({ autoRaf: true });
     // Re-émet la vélocité pour d'autres effets (flottement, etc.)
     lenis.on("scroll", (e: { velocity?: number } | Record<string, unknown>) => {
