@@ -3,6 +3,12 @@ const nextConfig = {
   // Ensure static file compression and modern image formats in prod
   images: {
     formats: ["image/avif", "image/webp"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "randomuser.me",
+      },
+    ],
   },
   async headers() {
     return [
