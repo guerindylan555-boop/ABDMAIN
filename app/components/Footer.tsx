@@ -81,6 +81,9 @@ export default function Footer() {
               <img
                 src={data.company.logo || '/placeholder.svg'}
                 alt="logo"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
                 className="h-8 w-8 rounded-full"
               />
               <span className="text-2xl font-semibold">

@@ -5,14 +5,23 @@ import SmoothScroll from "./smooth-scroll";
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Pricing from "@/app/components/sections/Pricing";
 import SeoJsonLd from "./components/SeoJsonLd";
 import NoFlashScript from "./components/NoFlashScript";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import MagneticButtons from "./components/magnetic-buttons";
 import Halo from "./components/Halo";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import dynamic from "next/dynamic";
+
+const Pricing = dynamic(() => import("@/app/components/sections/Pricing"), {
+  ssr: false,
+  loading: () => null,
+});
+
+const MagneticButtons = dynamic(() => import("./components/magnetic-buttons"), {
+  ssr: false,
+  loading: () => null,
+});
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -115,15 +124,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 radial-gradient(150% 110% at 100% 50%, rgba(12,18,32,0.60) 0%, rgba(12,18,32,0.0) 56%)
               `,
               backgroundRepeat: "no-repeat",
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url(/img/background/grain.png)",
-              backgroundSize: "200px 200px",
-              mixBlendMode: "overlay",
-              opacity: 0.56,
             }}
           />
         </div>
