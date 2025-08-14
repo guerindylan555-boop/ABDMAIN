@@ -167,7 +167,7 @@ html.dark {
 @media (max-width: 640px) {
   .site-bg {
     background:
-      radial-gradient(circle 75vh at 50% 115vh,
+      radial-gradient(circle 75vh at 50% 95vh,
         #f27601 0%,            /* orange plein */
         #f27601 20%,           /* orange visible ~15% bas */
         #ff5a2a 27%,           /* orange-rouge */
@@ -187,7 +187,7 @@ html.dark {
   }
   .dark .site-bg {
     background:
-      radial-gradient(circle 75vh at 50% 115vh,
+      radial-gradient(circle 75vh at 50% 95vh,
         #f27601 0%,
         #f27601 20%,          /* orange visible ~15% */
         #ff5a2a 27%,
