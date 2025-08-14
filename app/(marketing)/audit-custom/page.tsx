@@ -1,6 +1,7 @@
 export const dynamic = "force-static";
 import type { Metadata } from "next";
-import Scheduler from "./Scheduler";
+import nextDynamic from "next/dynamic";
+const Scheduler = nextDynamic(() => import("./Scheduler"), { ssr: false });
 import { ButtonLink } from "@/app/components/ui/button";
 
 export const metadata: Metadata = {
