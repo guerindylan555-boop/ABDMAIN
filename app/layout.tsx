@@ -11,17 +11,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import Halo from "./components/Halo";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import dynamic from "next/dynamic";
-
-const Pricing = dynamic(() => import("@/app/components/sections/Pricing"), {
-  ssr: false,
-  loading: () => null,
-});
-
-const MagneticButtons = dynamic(() => import("./components/magnetic-buttons"), {
-  ssr: false,
-  loading: () => null,
-});
+import DeferredClient from "./components/DeferredClient";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -89,7 +79,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="font-sans antialiased site-bg text-[--text] dark" data-halo-anim="on">
         {/* Lovable background image + grain + halo */}
         <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-<<<<<<< HEAD
           {/* LCP background rendered via Next/Image for optimal preload */}
           <div
             className="absolute left-1/2 -translate-x-1/2"
@@ -113,8 +102,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               }}
             />
           </div>
-=======
->>>>>>> e4fafff2ff6cab2cf8b34b84ff3a833ba214852d
           {/* Halo layer (between PNG ellipse and overlays) */}
           <Halo />
           {/* dark tint to reduce blue and give more room to black */}
@@ -133,11 +120,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <NoFlashScript />
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded focus:bg-neutral-900 focus:text-white focus:px-3 focus:py-2">Aller au contenu</a>
         <SmoothScroll />
-        <MagneticButtons />
         <SeoJsonLd />
         <Header />
         <main id="main">{children}</main>
-        <Pricing />
+        <DeferredClient />
         <Footer />
         <SpeedInsights />
       </body>
