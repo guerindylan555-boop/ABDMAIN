@@ -1,6 +1,6 @@
 ## 2025-08-14
 
-- Performance — Smooth scroll (Lenis): interrupteur runtime pour diagnostic et accessibilité.
+- Performance — Smooth scroll (Lenis): interrupteur runtime pour diagnostic et accessibilité. A
   - Désactivé par défaut au runtime; activer via `?lenis=on` (`on`/`1`/`true`).
   - Respect de `prefers-reduced-motion: reduce` (désactivation automatique).
   - Fichier modifié: `app/smooth-scroll.tsx`.
