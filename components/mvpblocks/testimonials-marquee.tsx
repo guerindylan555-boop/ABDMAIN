@@ -5,7 +5,7 @@ import { useState } from 'react';
 // framer-motion retiré pour compatibilité RSC/Next build
 import { Star } from 'lucide-react';
 import { Marquee } from '@/components/ui/marquee';
-import Image from 'next/image';
+// Utiliser <img> natif pour les avatars SVG (meilleure compatibilité)
 
 export function Highlight({
   children,
@@ -68,14 +68,15 @@ export function TestimonialCard({
       </div>
 
       <div className="flex w-full items-center justify-start gap-5 select-none">
-        <Image
+        <img
           width={40}
           height={40}
           src={avatarSrc}
           alt={name}
           loading="lazy"
+          decoding="async"
+          fetchPriority="low"
           className="size-10 rounded-full ring-1 ring-brand-20 ring-offset-2 object-cover"
-          sizes="40px"
           onError={() => setAvatarSrc('/img/testimonials/avatar-default.svg')}
         />
 
