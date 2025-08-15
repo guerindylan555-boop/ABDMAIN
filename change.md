@@ -119,3 +119,8 @@
   - Ajout du conteneur `GTM-5BQLR36H`.
   - Insertion du script GTM dans le `<body>` avec `strategy="beforeInteractive"` et du bloc `<noscript>` tout en haut du `<body>`.
   - Fichier modifié: `app/layout.tsx`.
+
+- Rework — Background "Prismatic Aurora Burst"
+  - Remplacement du fond `.site-bg` par un multi‑gradient façon aurora (couches radiales) sur fond noir.
+  - Desktop: `background-attachment: fixed`; Mobile: `scroll` pour éviter l’écrasement iOS/Android.
+  - Fichier modifié: `app/globals.css`.

@@ -118,92 +118,32 @@ html.dark {
 
 /* Full-page gradient: orange → pink core fading to background (light: white, dark: black) */
 .site-bg {
-  /* Light theme: replicate Lovable-style sunset ellipse with blue halo */
+  /* Prismatic Aurora Burst - Multi-layered Gradient */
   background:
-    /* farthest-corner pour atteindre les bords, ajoute une bande rouge avant le rose */
-    radial-gradient(ellipse farthest-corner at 50% 124%,
-      #f27601 0%,            /* orange */
-      #f27601 19%,           /* orange ÷2 */
-      #ff5a2a 22%,           /* orange-rouge */
-      #ff3d3d 25%,           /* rouge court */
-      rgba(241,107,123,1) 29%,
-      #e187b5 33%,           /* roses réduits */
-      #6b85c8 45%,           /* bleu clair */
-      #5775b6 58%,           /* bleu */
-      #8fa3da 70%,           /* bleu adouci */
-      #dbe6ff 88%,           /* vers blanc */
-      #ffffff 100%
-    ),
-    radial-gradient(70% 55% at 50% -6%, rgba(87,117,182,0.25) 0%, rgba(255,255,255,0.00) 74%),
-    #ffffff;
-  background-attachment: fixed;
+    radial-gradient(ellipse 120% 80% at 70% 20%, rgba(255, 20, 147, 0.15), transparent 50%),
+    radial-gradient(ellipse 100% 60% at 30% 10%, rgba(0, 255, 255, 0.12), transparent 60%),
+    radial-gradient(ellipse 90% 70% at 50% 0%, rgba(138, 43, 226, 0.18), transparent 65%),
+    radial-gradient(ellipse 110% 50% at 80% 30%, rgba(255, 215, 0, 0.08), transparent 40%),
+    #000000;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .dark .site-bg {
-  /* Dark theme: orange ÷2, noir ×2, transitions lissées */
   background:
-    radial-gradient(ellipse farthest-corner at 50% 124%,
-      #f27601 0%,
-      #f27601 19%,          /* orange ÷2 */
-      #ff5a2a 22%,
-      #ff3d3d 25%,
-      rgba(241,107,123,1) 30%,
-      #e187b5 35%,          /* roses courts */
-      #6b85c8 50%,          /* bleu clair */
-      #5775b6 62%,          /* bleu */
-      #3b4a7f 72%,          /* indigo */
-      #27314d 80%,          /* navy */
-      #1f242e 86%,          /* quasi-noir */
-      #1a1b1e 90%,          /* noir étendu (≈10% plein noir) */
-      #1a1b1e 100%
-    ),
-    radial-gradient(70% 55% at 50% -6%, rgba(87,117,182,0.22) 0%, rgba(0,0,0,0.00) 74%),
-    #1a1b1e;
+    radial-gradient(ellipse 120% 80% at 70% 20%, rgba(255, 20, 147, 0.15), transparent 50%),
+    radial-gradient(ellipse 100% 60% at 30% 10%, rgba(0, 255, 255, 0.12), transparent 60%),
+    radial-gradient(ellipse 90% 70% at 50% 0%, rgba(138, 43, 226, 0.18), transparent 65%),
+    radial-gradient(ellipse 110% 50% at 80% 30%, rgba(255, 215, 0, 0.08), transparent 40%),
+    #000000;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Mobile tuning: avoid flattened look and start gradient below viewport */
+/* Mobile: avoid iOS/Android flattening by disabling fixed attachment */
 @media (max-width: 640px) {
-  .site-bg {
-    background:
-      radial-gradient(circle 75vh at 50% 95vh,
-        #f27601 0%,            /* orange plein */
-        #f27601 20%,           /* orange visible ~15% bas */
-        #ff5a2a 27%,           /* orange-rouge */
-        #ff3d3d 33%,           /* rouge court */
-        rgba(241,107,123,1) 41%,
-        #e187b5 51%,           /* roses réduits */
-        #6b85c8 63%,           /* bleu clair */
-        #5775b6 75%,           /* bleu */
-        #8fa3da 88%,           /* bleu adouci */
-        #dbe6ff 95%,           /* vers blanc */
-        #ffffff 100%
-      ),
-      radial-gradient(70% 55% at 50% -8%, rgba(87,117,182,0.12) 0%, rgba(255,255,255,0.00) 74%),
-      #ffffff;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
-  .dark .site-bg {
-    background:
-      radial-gradient(circle 75vh at 50% 95vh,
-        #f27601 0%,
-        #f27601 20%,          /* orange visible ~15% */
-        #ff5a2a 27%,
-        #ff3d3d 33%,
-        rgba(241,107,123,1) 41%,
-        #e187b5 51%,          /* roses courts */
-        #6b85c8 63%,          /* bleu clair */
-        #5775b6 75%,          /* bleu */
-        #3b4a7f 88%,          /* indigo */
-        #27314d 95%,          /* navy */
-        #1a1b1e 100%
-      ),
-      radial-gradient(70% 55% at 50% -8%, rgba(87,117,182,0.12) 0%, rgba(0,0,0,0.00) 74%),
-      #1a1b1e;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  .site-bg, .dark .site-bg {
+    background-attachment: scroll;
   }
 }
 
