@@ -38,7 +38,7 @@ export function Select({ value, onValueChange, children }: { value?: string; onV
   );
 }
 
-export function SelectTrigger({ id, size, className }: { id?: string; size?: "sm" | "md" | "lg" | string; className?: string; children?: React.ReactNode; }) {
+export function SelectTrigger({ id, className }: { id?: string; className?: string; children?: React.ReactNode; }) {
   const ctx = React.useContext(SelectContext);
   if (!ctx) return null;
   return (
@@ -61,7 +61,7 @@ export function SelectTrigger({ id, size, className }: { id?: string; size?: "sm
   );
 }
 
-export function SelectValue({ placeholder }: { placeholder?: string }) {
+export function SelectValue() {
   // Rendered via native select above; no-op placeholder
   return null;
 }

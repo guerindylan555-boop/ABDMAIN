@@ -2,15 +2,15 @@
 
 import * as React from "react";
 import {Calendar as HeroCalendar} from "@heroui/react";
-import {today, getLocalTimeZone} from "@internationalized/date";
+import {DateValue} from "@internationalized/date";
 
 export type {DateValue} from "@internationalized/date";
 
 export interface CalendarProps {
-  value?: any | null;
-  defaultValue?: any | null;
-  minValue?: any;
-  maxValue?: any;
+  value?: DateValue | null;
+  defaultValue?: DateValue | null;
+  minValue?: DateValue;
+  maxValue?: DateValue;
   isDisabled?: boolean;
   isReadOnly?: boolean;
   isInvalid?: boolean;
@@ -18,7 +18,7 @@ export interface CalendarProps {
   firstDayOfWeek?: "sun" | "mon" | "tue" | "wed" | "thu" | "fri" | "sat";
   showMonthAndYearPickers?: boolean;
   className?: string;
-  onChange?: (v: any) => void;
+  onChange?: (v: DateValue) => void;
 }
 
 export function Calendar(props: CalendarProps) {

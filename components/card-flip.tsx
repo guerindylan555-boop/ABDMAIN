@@ -13,7 +13,6 @@
 import { cn } from '@/lib/utils';
 import { ArrowRight, Code2, Copy, Rocket, Zap } from 'lucide-react';
 import { useMemo, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
 
 export interface CardFlipProps {
   title?: React.ReactNode;

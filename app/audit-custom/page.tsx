@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Check, CalendarDays, Clock, ChevronDown } from "lucide-react";
+import { Check, CalendarDays, Clock } from "lucide-react";
 import { TimeSelect } from "@/components/ui/time-select";
 
 const TIME_SLOTS = [
@@ -60,7 +60,7 @@ export default function AuditCustomPage() {
               <CalendarDays className="h-3.5 w-3.5" /> Audit stratégique gratuit
             </div>
             <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl">
-              Réservez votre visio d'audit de 60 minutes
+              Réservez votre visio d&apos;audit de 60 minutes
             </h1>
             <p className="mt-5 max-w-prose text-lg text-foreground/80">
               Nous analysons votre présence, vos parcours et vos priorités business, puis nous vous remettons un plan d’action clair et directement actionnable.
