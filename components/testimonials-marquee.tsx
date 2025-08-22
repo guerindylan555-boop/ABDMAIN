@@ -50,7 +50,7 @@ export function TestimonialsMarquee({
 }) {
   const animationName = reverse ? 'marquee-reverse' : 'marquee';
   return (
-    <div className={cn('relative w-full overflow-hidden py-16 sm:py-16', className)}>
+    <div className={cn('relative w-full overflow-hidden py-16 sm:py-16 will-change-transform', className)}>
       <div
         className={cn(
           'flex w-max gap-4',

@@ -1,11 +1,13 @@
+import dynamic from "next/dynamic";
 import { ABHero } from "@/components/ab-hero";
 import { BentoGrid } from "@/components/bento-grid";
 import { CustomerJourneySection } from "@/components/customer-journey-section";
 import { TestimonialsMarquee } from "@/components/testimonials-marquee";
 import { PlansSection } from "@/components/plans-section";
-import PricingSection from "@/components/pricing-section";
-import CTAOld from "@/components/cta-old";
-import FaqSection from "@/components/faq-section";
+
+const PricingSection = dynamic(() => import("@/components/pricing-section"), { loading: () => null });
+const CTAOld = dynamic(() => import("@/components/cta-old"), { loading: () => null });
+const FaqSection = dynamic(() => import("@/components/faq-section"), { loading: () => null });
 
 export default function Home() {
   return (

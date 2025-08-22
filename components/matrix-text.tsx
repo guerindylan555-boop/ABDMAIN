@@ -77,6 +77,9 @@ export default function MatrixText({
   }, [animateLetter, text, isAnimating, letterInterval]);
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
     const timer = setTimeout(startAnimation, initialDelay);
     return () => clearTimeout(timer);
   }, [startAnimation, initialDelay]);

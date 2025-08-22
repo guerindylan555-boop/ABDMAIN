@@ -19,11 +19,18 @@ export const HeroHeader = () => {
     const [isScrolled, setIsScrolled] = React.useState(false)
 
     React.useEffect(() => {
+        let ticking = false
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50)
+            if (ticking) return
+            ticking = true
+            requestAnimationFrame(() => {
+                setIsScrolled(window.scrollY > 50)
+                ticking = false
+            })
         }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll, { passive: true })
+        handleScroll()
+        return () => window.removeEventListener('scroll', handleScroll as EventListener)
     }, [])
     return (
         <header>
