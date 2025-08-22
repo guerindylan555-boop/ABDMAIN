@@ -13,14 +13,8 @@ export type ABHeroProps = {
 };
 
 export function ABHero({ className }: ABHeroProps) {
-  React.useEffect(() => {
-    const fallback = document.getElementById('hero-fallback');
-    if (fallback) {
-      try { fallback.remove(); } catch { /* no-op */ }
-    }
-  }, []);
   return (
-    <section className={"relative min-h-[85vh] w-full overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-16 scroll-mt-32 " + (className ?? "")}
+    <section className={"relative min-h-[85vh] w-full overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-16 scroll-mt-32 contain-paint " + (className ?? "")}
       aria-label="AB Digital - Hero">
       {/* Decorative: single subtle radial */}
       <div className="pointer-events-none absolute inset-0 -z-0">
@@ -33,7 +27,7 @@ export function ABHero({ className }: ABHeroProps) {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto max-w-5xl text-center"
+          className="mx-auto max-w-5xl text-center will-change-transform"
         >
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-wide">
             Cabinet digital — Sites performants, SEO & IA

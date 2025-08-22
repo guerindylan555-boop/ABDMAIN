@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import { ABHero } from "@/components/ab-hero";
-import { BentoGrid } from "@/components/bento-grid";
-import { CustomerJourneySection } from "@/components/customer-journey-section";
+const BentoGrid = dynamic(() => import("@/components/bento-grid").then(m => m.BentoGrid), { loading: () => null });
+const CustomerJourneySection = dynamic(() => import("@/components/customer-journey-section").then(m => m.CustomerJourneySection), { loading: () => null });
 import { TestimonialsMarquee } from "@/components/testimonials-marquee";
 import { PlansSection } from "@/components/plans-section";
 
@@ -12,22 +12,24 @@ const FaqSection = dynamic(() => import("@/components/faq-section"), { loading: 
 export default function Home() {
   return (
     <main className="min-h-screen w-full">
-      {/* SSR fallback lightweight hero (will be removed on client effect) */}
-      <section id="hero-fallback" className="relative w-full overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-16">
-        <div className="relative z-10 px-6 mx-auto max-w-5xl text-center">
-          <div className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-wide">
-            Cabinet digital — Sites performants, SEO & IA
+      {/* Noscript fallback only (no layout impact when JS active) */}
+      <noscript>
+        <section className="relative w-full overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-16">
+          <div className="relative z-10 px-6 mx-auto max-w-5xl text-center">
+            <div className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-wide">
+              Cabinet digital — Sites performants, SEO & IA
+            </div>
+            <h1 className="mt-4 text-balance text-5xl font-semibold leading-tight tracking-tight text-white md:text-6xl">
+              Des sites qui convertissent.
+              <br className="hidden md:block" />
+              Des process qui travaillent pour vous.
+            </h1>
+            <p className="mt-6 text-pretty text-lg text-white/80 md:text-xl">
+              Stratégie, design, SEO et automatisations IA — réunis dans un écosystème clair et exigeant.
+            </p>
           </div>
-          <h1 className="mt-4 text-balance text-5xl font-semibold leading-tight tracking-tight text-white md:text-6xl">
-            Des sites qui convertissent.
-            <br className="hidden md:block" />
-            Des process qui travaillent pour vous.
-          </h1>
-          <p className="mt-6 text-pretty text-lg text-white/80 md:text-xl">
-            Stratégie, design, SEO et automatisations IA — réunis dans un écosystème clair et exigeant.
-          </p>
-        </div>
-      </section>
+        </section>
+      </noscript>
 
       <ABHero />
       <BentoGrid />

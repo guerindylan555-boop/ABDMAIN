@@ -37,7 +37,7 @@ export const HeroHeader = () => {
             <nav
                 data-state={menuState && 'active'}
                 className="fixed z-50 w-full px-2">
-                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5 bg-white/10 dark:bg-white/5 supports-[backdrop-filter]:bg-white/7.5')}>
+                <div className={cn('mx-auto mt-2 max-w-6xl px-6 lg:px-12', isScrolled && 'max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5 bg-white/10 dark:bg-white/5 supports-[backdrop-filter]:bg-white/7.5')}>
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
                         <div className="flex w-full justify-between lg:w-auto">
                             <Link
