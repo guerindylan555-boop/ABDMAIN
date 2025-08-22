@@ -37,12 +37,24 @@ export const GeneratedBackground = () => {
     };
 
     const onVisibility = () => setActive(!document.hidden);
+    const root = document.getElementById('app-root');
+    let io: IntersectionObserver | null = null;
+    if (root) {
+      io = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry) {
+          setActive(entry.isIntersecting && !document.hidden);
+        }
+      }, { root: null, rootMargin: '0px', threshold: 0.01 });
+      io.observe(root);
+    }
     document.addEventListener("visibilitychange", onVisibility, { passive: true });
     schedule(() => {
       setActive(true);
     });
     return () => {
       document.removeEventListener("visibilitychange", onVisibility);
+      if (io) io.disconnect();
     };
   }, []);
 

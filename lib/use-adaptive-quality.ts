@@ -6,27 +6,26 @@ export type QualityLevel = {
 };
 
 export type UseAdaptiveQualityOptions = {
-  targetFps?: number; // default 30
   degradeThresholdFps?: number; // default 28
-  improveThresholdFps?: number; // default 36
-  degradeHoldMs?: number; // default 700
-  improveHoldMs?: number; // default 1500
+  improveThresholdFps?: number; // default 38 (slower up)
+  degradeHoldMs?: number; // default 500 (faster down)
+  improveHoldMs?: number; // default 2000 (slower up)
   levels?: QualityLevel[]; // high -> low
   startLevelIndex?: number;
   isActive?: boolean; // if false, pauses measurement
 };
 
 export function useAdaptiveQuality({
-  targetFps = 30,
   degradeThresholdFps = 28,
-  improveThresholdFps = 36,
-  degradeHoldMs = 700,
-  improveHoldMs = 1500,
+  improveThresholdFps = 38,
+  degradeHoldMs = 500,
+  improveHoldMs = 2000,
   levels = [
-    { scale: 1.0, speed: 0.12 },
-    { scale: 0.75, speed: 0.09 },
-    { scale: 0.5, speed: 0.07 },
-    { scale: 0.35, speed: 0.05 },
+    { scale: 1.0, speed: 0.14 },
+    { scale: 0.75, speed: 0.11 },
+    { scale: 0.5, speed: 0.09 },
+    { scale: 0.35, speed: 0.07 },
+    { scale: 0.3, speed: 0.06 },
   ],
   startLevelIndex,
   isActive = true,
@@ -111,7 +110,7 @@ export function useAdaptiveQuality({
   const { scale, speed } = levels[levelIndex]!;
 
   // Always return at least a minimal speed to remain visibly animated
-  const clampedSpeed = Math.max(speed, 0.04);
+  const clampedSpeed = Math.max(speed, 0.06);
 
   return { renderScale: Math.min(Math.max(scale, 0.3), 1), speed: clampedSpeed, levelIndex };
 }
