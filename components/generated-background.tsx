@@ -46,7 +46,7 @@ export const GeneratedBackground = () => {
     };
   }, []);
 
-  const { renderScale, speed, levelIndex } = useAdaptiveQuality({ isActive: active });
+  const { renderScale, speed, levelIndex } = useAdaptiveQuality({ isActive: active, startLevelIndex: 2 });
 
   return (
     <div className="relative w-full h-full overflow-hidden bg-black gradient-background" aria-hidden>

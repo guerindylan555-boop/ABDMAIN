@@ -13,6 +13,12 @@ export type ABHeroProps = {
 };
 
 export function ABHero({ className }: ABHeroProps) {
+  React.useEffect(() => {
+    const fallback = document.getElementById('hero-fallback');
+    if (fallback) {
+      try { fallback.remove(); } catch { /* no-op */ }
+    }
+  }, []);
   return (
     <section className={"relative min-h-[85vh] w-full overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-16 scroll-mt-32 " + (className ?? "")}
       aria-label="AB Digital - Hero">
