@@ -15,7 +15,7 @@ export const GeneratedBackground = () => {
 
     const schedule = (cb: () => void) => {
       // Defer to idle or after a small delay to avoid blocking TTI
-      // @ts-expect-error
+      // @ts-expect-error requestIdleCallback is not available in all browser types
       const rif = window.requestIdleCallback as undefined | ((fn: () => void, opts?: { timeout: number }) => number);
       if (typeof rif === "function") {
         rif(cb, { timeout: 1500 });
